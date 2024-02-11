@@ -18,7 +18,7 @@ run "npm install" in the terminal to install the node modules. (Only needs to be
 ## After development:
 
 1- run "ctrl + c" to stop the application from running.
-2 - run "git add \*".
+2 - run "git add \*" but without the \.
 3- run "git commit -a -m "Your message"".
 4 - run "git push origin main".
 

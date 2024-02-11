@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --background-color: #00dcea;
+  --window-background: #fffaed;
+}
+
+.PreLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: fade-out 2s forwards;
+  animation: color-change 2s forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes color-change {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: var(--background-color);
+  }
+}
+.Age {
+  height: 100%;
+}
+.Age__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.Age__bottom {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.Wrapper {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Wrapper__window {
+  border: 4px solid #000000;
+  background-color: var(--window-background);
+  width: 620px;
+  border-radius: 20px;
+}
+
+.GreenBtn,
+.RedBtn {
+  width: 216px;
+  height: 60px;
+  border-radius: 14px;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.GreenBtn {
+  background-color: #1fcc7b;
+}
+
+.RedBtn {
+  background-color: #f9295a;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+.Age {
+  height: 100%;
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__bottom {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+}

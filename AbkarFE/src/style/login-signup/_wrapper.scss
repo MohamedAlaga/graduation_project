@@ -1,0 +1,14 @@
+.Wrapper {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__window {
+    border: 4px solid #000000;
+    background-color: var(--window-background);
+    width: 620px;
+    border-radius: 20px;
+  }
+}

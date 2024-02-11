@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/home/Home";
+import "./style/login-signup/main.css";
+import Age from "./components/login-signup/Age";
+import Teen from "./components/login-signup/Teen";
+import LogIn from "./components/login-signup/LogIn";
 
 function App() {
   return (
@@ -7,10 +10,11 @@ function App() {
       <div className="App">
         <Routes>
           {/* Login - Signup flow */}
+          <Route path="/" element={<Age />} />
+          <Route path="/13-18" element={<Teen />} />
+          <Route path="/login" element={<LogIn />} />
 
           {/* Home flow */}
-
-          <Route path="/" element={<Home />} />
 
           {/* Quiz flow */}
 
