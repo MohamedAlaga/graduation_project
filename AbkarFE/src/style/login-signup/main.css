@@ -21,7 +21,7 @@
   0% {
     opacity: 1;
   }
-  50% {
+  70% {
     opacity: 1;
   }
   100% {
@@ -32,7 +32,7 @@
   0% {
     background-color: white;
   }
-  50% {
+  70% {
     background-color: white;
   }
   100% {
@@ -85,4 +85,27 @@
 
 .RedBtn {
   background-color: #f9295a;
+}
+
+.Teen {
+  text-align: center;
+}
+.Teen > img {
+  margin-top: 50px;
+}
+.Teen__shape {
+  position: relative;
+}
+.Teen__shape img:last-of-type {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Teen .text {
+  margin-bottom: 40px;
+}
+
+.LogIn {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
