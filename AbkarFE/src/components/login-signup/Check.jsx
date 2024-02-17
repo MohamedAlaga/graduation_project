@@ -1,12 +1,12 @@
 import Wrapper from "./reusable/Wrapper";
-import sad from "../../assets/sad.svg";
+import face from "../../assets/Thinkingface.svg";
 import Green from "./reusable/Green";
 
-function Forgot() {
+function Check() {
   return (
     <Wrapper height="600px">
-      <div className="Forgot">
-        <div className="title">نسيت كلمة المرور</div>
+      <div className="Check">
+        <div className="title">التحقق</div>
         <div className="shape">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,12 +23,15 @@ function Forgot() {
               strokeLinecap="round"
             />
           </svg>
-          <img src={sad} alt="sad face" />
+          <img src={face} alt="sad face" />
         </div>
-        <p>ادخل بريدك الالكتروني الذي سجلت به في المنصة</p>
-        <p>سوف نرسل لك رسالة لإعادة تعين كلمة مرورك</p>
+        <p>ادخل كود التحقق الذي تم ارساله لك الأن</p>
         <form>
-          <input type="text" id="mail" placeholder="البريد الالكتروني" />
+          <input type="text" id="mail" placeholder="كود التفعيل" />
+          <div className="another">
+            <span>اذا لم تكن استلمت الكود!</span>
+            <button>إعادة الارسال</button>
+          </div>
           <Green>الـتـالــي</Green>
         </form>
       </div>
@@ -36,4 +39,4 @@ function Forgot() {
   );
 }
 
-export default Forgot;
+export default Check;

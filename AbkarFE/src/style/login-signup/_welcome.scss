@@ -1,0 +1,35 @@
+.Welcome {
+  direction: rtl;
+  padding-top: 40px;
+  text-align: center;
+
+  .title {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 4px 0px #000;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #000;
+    font-family: AA-GALAXY;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    margin: 0 0 50px 0;
+  }
+
+  p {
+    color: #000;
+    text-align: center;
+    font-family: "Omnes Arabic";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: -0.408px;
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+}

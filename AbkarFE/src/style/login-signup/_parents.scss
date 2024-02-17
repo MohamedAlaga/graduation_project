@@ -1,0 +1,47 @@
+.Parents {
+  text-align: center;
+  padding-top: 46px;
+
+  .shape {
+    position: relative;
+    margin-bottom: 20px;
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      text-shadow: 0px 4px 0px #000;
+      -webkit-text-stroke-width: 2;
+      -webkit-text-stroke-color: #000;
+      font-family: AA-GALAXY;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 88px;
+      letter-spacing: -0.408px;
+    }
+  }
+
+  .another {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 2px 0px #000;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    font-family: "Omnes Arabic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: var(--Green, #1fcc7b);
+    }
+  }
+}

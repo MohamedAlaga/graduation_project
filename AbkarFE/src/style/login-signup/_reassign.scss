@@ -1,0 +1,66 @@
+.Reassign {
+  padding-top: 46px;
+  text-align: center;
+
+  .title {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 4px 0px #000;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #000;
+    font-family: AA-GALAXY;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+  }
+
+  .shape {
+    position: relative;
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  form {
+    input {
+      width: 80%;
+      text-align: right;
+      font-family: "Omnes Arabic";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: -0.408px;
+      background: var(--Background, #fffaed);
+      margin: 10px 0;
+      border-bottom: 1px solid black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+
+      &:placeholder-shown {
+        color: var(--Gray-mid, #888);
+      }
+
+      &:focus {
+        border-bottom: 1px solid black !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+      }
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  }
+}

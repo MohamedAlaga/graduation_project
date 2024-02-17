@@ -332,4 +332,312 @@
 }
 .LogIn .btns img {
   margin-right: 4px;
+}
+
+.Forgot {
+  padding-top: 46px;
+}
+.Forgot .title {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 0px #000;
+  -webkit-text-stroke-width: 2;
+  -webkit-text-stroke-color: #000;
+  font-family: AA-GALAXY;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+}
+.Forgot .shape {
+  position: relative;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+.Forgot .shape img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Forgot p:first-of-type {
+  font-family: Omnes Arabic;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.4079999924px;
+  text-align: center;
+}
+.Forgot p:last-of-type {
+  font-family: Omnes Arabic;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.4079999924px;
+  text-align: center;
+}
+.Forgot form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.Forgot form input {
+  color: var(--Gray-mid, #888);
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  width: 80%;
+  background: var(--Background, #fffaed);
+  margin: 10px 0 20px 0;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.Forgot form input:-moz-placeholder-shown {
+  color: var(--Gray-mid, #888);
+}
+.Forgot form input:placeholder-shown {
+  color: var(--Gray-mid, #888);
+}
+.Forgot form input:focus {
+  border-bottom: 1px solid black !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.Check {
+  padding-top: 46px;
+}
+.Check .title {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 0px #000;
+  -webkit-text-stroke-width: 2;
+  -webkit-text-stroke-color: #000;
+  font-family: AA-GALAXY;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+}
+.Check .shape {
+  position: relative;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+.Check .shape img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Check p:first-of-type {
+  font-family: Omnes Arabic;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.4079999924px;
+  text-align: center;
+}
+.Check p:last-of-type {
+  font-family: Omnes Arabic;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.4079999924px;
+  text-align: center;
+}
+.Check form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.Check form .another {
+  font-family: Omnes Arabic;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.4079999924px;
+  text-align: center;
+  direction: rtl;
+}
+.Check form .another button {
+  color: #f9295a;
+  margin: 5px 6px 10px;
+  border: none;
+  background-color: transparent;
+}
+.Check form input {
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  width: 80%;
+  background: var(--Background, #fffaed);
+  margin: 10px 0 20px 0;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.Check form input:-moz-placeholder-shown {
+  color: var(--Gray-mid, #888);
+}
+.Check form input:placeholder-shown {
+  color: var(--Gray-mid, #888);
+}
+.Check form input:focus {
+  border-bottom: 1px solid black !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.Reassign {
+  padding-top: 46px;
+  text-align: center;
+}
+.Reassign .title {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 0px #000;
+  -webkit-text-stroke-width: 2;
+  -webkit-text-stroke-color: #000;
+  font-family: AA-GALAXY;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+}
+.Reassign .shape {
+  position: relative;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+.Reassign .shape img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Reassign form input {
+  width: 80%;
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  background: var(--Background, #fffaed);
+  margin: 10px 0;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.Reassign form input:-moz-placeholder-shown {
+  color: var(--Gray-mid, #888);
+}
+.Reassign form input:placeholder-shown {
+  color: var(--Gray-mid, #888);
+}
+.Reassign form input:focus {
+  border-bottom: 1px solid black !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.Reassign form button {
+  margin-top: 20px;
+}
+
+.Parents {
+  text-align: center;
+  padding-top: 46px;
+}
+.Parents .shape {
+  position: relative;
+  margin-bottom: 20px;
+}
+.Parents .shape p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 0px #000;
+  -webkit-text-stroke-width: 2;
+  -webkit-text-stroke-color: #000;
+  font-family: AA-GALAXY;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 88px;
+  letter-spacing: -0.408px;
+}
+.Parents .another {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 2px 0px #000;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #000;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+}
+.Parents .another button {
+  background-color: transparent;
+  border: none;
+  color: var(--Green, #1fcc7b);
+}
+
+.Welcome {
+  direction: rtl;
+  padding-top: 40px;
+  text-align: center;
+}
+.Welcome .title {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 0px #000;
+  -webkit-text-stroke-width: 2;
+  -webkit-text-stroke-color: #000;
+  font-family: AA-GALAXY;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  margin: 0 0 50px 0;
+}
+.Welcome p {
+  color: #000;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px;
+  letter-spacing: -0.408px;
+}
+.Welcome .button {
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */

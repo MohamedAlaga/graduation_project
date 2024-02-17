@@ -29,8 +29,8 @@ function LogIn() {
           <img src={boy} alt="boy" />
         </div>
         <form>
-          <input type="text" id="mail" placeholder="البريد الالكتروني" />
-          <input type="text" id="pass" placeholder="كلمة المرور" />
+          <input type="email" id="mail" placeholder="البريد الالكتروني" />
+          <input type="password" id="pass" placeholder="كلمة المرور" />
         </form>
         <div className="password">
           <div className="forget">
