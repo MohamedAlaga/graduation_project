@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "Ala Typoo Medium";
+    src: url("../../../assets/AlaTypoo-Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Omnes Arabic";
+    src: url("../../../assets/OMNES-ARABIC-REGULAR.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "AA-GALAXY";
+    src: url("../../../assets/AA-GALAXY.otf") format('truetype');
+}
+
+body {
+    overflow-x: hidden !important;
+    background-color: var(--window-background) !important
+}
+
+/* head content bar */
+
+.head {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    height: 180px;
+
+}
+
+.headimage {
+    position: absolute;
+    top: -20px;
+    bottom: 0;
+    right: 0px;
+    left: -80px;
+    width: 110%;
+    height: 187px;
+}
+
+.editIconP {
+    color: #EA9F3F;
+    text-align: right;
+    font-family: "Omnes Arabic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    /* 162.5% */
+    letter-spacing: -0.408px;
+}
+
+.editIcon3bkr {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+    left: -35px;
+}
+
+.P3bkr {
+    color: var(--Yellow, #FFD200);
+    text-align: center;
+    text-shadow: 0px 4px 0px #000;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #000;
+    font-family: "Ala Typoo Medium";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    /* 34.375% */
+    letter-spacing: -0.408px;
+    width: 84px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////// انا الكمبيوتر     //////////////////////////////////////// */
+.computer {
+   
+    font-family: "AA-GALAXY";
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: center;
+    color: #fff;
+    text-shadow: -3px 4px 0px #000,-3px 1px 0px #000;
+    margin-bottom: 70px;
+
+}
+.computerParagraph{
+font-family: "Omnes Arabic";
+font-size: 24px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: -0.40799999237060547px;
+color: rgba(0, 0, 0, 1);
+
+}
+.computerParagraph2{
+font-family: "Omnes Arabic";
+font-size: 28px;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: -0.40799999237060547px;
+color: rgba(0, 0, 0, 1);
+}
+.rowparagraph{
+    font-family: "Omnes Arabic";
+font-size: 24px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: -0.40799999237060547px;
+text-align: right;
+}
+.rowparagraph2{
+    font-family: "Omnes Arabic";
+font-size: 24px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: -0.40799999237060547px;
+text-align: left;
+
+}
+.btn{
+font-family: "Omnes Arabic";
+font-size: 32px;
+font-weight: 600;
+line-height: 22px;
+letter-spacing: -0.40799999237060547px;
+text-align: center;
+color: rgba(255, 255, 255, 1) !important;
+background: linear-gradient(0deg, #1FCC7B, #1FCC7B),
+linear-gradient(0deg, #000000, #000000) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    .head {
+        width: 100vw;
+        overflow: hidden !important;
+    }
+
+    .headimage {
+        position: absolute;
+        top: -20px;
+        bottom: 0;
+        right: 0;
+        left: -20px;
+        width:110%;
+        height: 187px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .rowparagraph{
+        text-align: center;
+    }
+    .rowparagraph2{
+        text-align: center;
+    }
+}
