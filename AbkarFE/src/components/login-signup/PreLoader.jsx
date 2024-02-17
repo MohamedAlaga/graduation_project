@@ -1,9 +1,12 @@
-import logo from "../../assets/logo.png";
+import Arrows from "../../assets/Arrows.png";
 
 function PreLoader() {
   return (
     <div className="PreLoader">
-      <img src={logo} alt="Logo" />
+      <div className="logo">
+        <img src={Arrows} alt="Arrows" />
+        <span>عبقر</span>
+      </div>
     </div>
   );
 }

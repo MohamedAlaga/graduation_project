@@ -5,6 +5,22 @@
     justify-content: center;
     align-items: center;
     margin-top: 15px;
+    position: relative;
+
+    p {
+      position: absolute;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0px 4px 0px #000;
+      -webkit-text-stroke-width: 2;
+      -webkit-text-stroke-color: #000;
+      font-family: AA-GALAXY;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22px; /* 36.667% */
+      letter-spacing: -0.408px;
+    }
   }
 
   &__bottom {

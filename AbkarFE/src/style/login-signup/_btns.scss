@@ -5,6 +5,15 @@
   border-radius: 14px;
   border: 2px solid #000000;
   cursor: pointer;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 55% */
+  letter-spacing: -0.408px;
 }
 
 .GreenBtn {
@@ -13,4 +22,25 @@
 
 .RedBtn {
   background-color: #f9295a;
+}
+
+.long {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  border: 2px solid #000;
+  background: var(--Green, #1fcc7b);
+  box-shadow: 0px 4px 0px 0px #000;
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  width: 490px;
+  height: 48px;
+  flex-shrink: 0;
 }

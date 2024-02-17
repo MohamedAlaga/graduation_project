@@ -8,6 +8,21 @@
   --window-background: #fffaed;
 }
 
+@font-face {
+  font-family: "Ala Typoo Medium";
+  src: url("../../assets/AlaTypoo-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Omnes Arabic";
+  src: url("../../assets/OMNES-ARABIC-REGULAR.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AA-GALAXY";
+  src: url("../../assets/AA-GALAXY.otf") format("truetype");
+}
+
 .PreLoader {
   display: flex;
   justify-content: center;
@@ -15,28 +30,49 @@
   height: 100vh;
   animation: fade-out 2s forwards;
   animation: color-change 2s forwards;
-}
 
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+  .logo {
+    position: relative;
 
-@keyframes color-change {
-  0% {
-    background-color: white;
+    span {
+      position: absolute;
+      top: 14%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--Yellow, #ffd200);
+      text-align: center;
+      text-shadow: 0px 4px 0px #000;
+      -webkit-text-stroke-color: #000;
+      font-family: "Ala Typoo Medium";
+      font-size: 200px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: -0.408px;
+    }
   }
-  70% {
-    background-color: white;
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-  100% {
-    background-color: var(--background-color);
+
+  @keyframes color-change {
+    0% {
+      background-color: white;
+    }
+    70% {
+      background-color: white;
+    }
+    100% {
+      background-color: var(--background-color);
+    }
   }
 }

@@ -1,14 +1,25 @@
 .Teen {
   text-align: center;
+  padding-top: 46px;
 
-  > img {
-    margin-top: 50px;
+  .title {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 4px 0px #000;
+    -webkit-text-stroke-color: #000;
+    font-family: AA-GALAXY;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.408px;
   }
 
   &__shape {
+    margin-top: 65px;
     position: relative;
 
-    img:last-of-type {
+    img {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -16,7 +27,15 @@
     }
   }
 
-  .text {
-    margin-bottom: 40px;
+  p {
+    color: #000;
+    text-align: center;
+    font-family: "Omnes Arabic";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.408px;
+    margin: 46px 0;
   }
 }

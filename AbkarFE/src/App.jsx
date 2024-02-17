@@ -2,32 +2,28 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./style/login-signup/main.css";
 import Teen from "./components/login-signup/Teen";
 import LogIn from "./components/login-signup/LogIn";
-import { Suspense, lazy } from "react";
-import PreLoader from "./components/login-signup/PreLoader";
+import Age from "./components/login-signup/Age";
 import PageOne from "./components/OnBoard/PageOne/PageOne";
-const Age = lazy(() => import("./components/login-signup/Age"));
 
 function App() {
   return (
-    <Suspense fallback={<PreLoader />}>
-      <Router>
-        <div className="App">
-          <Routes>
-            {/* Login - Signup flow */}
-            <Route path="/" element={<Age />} />
-            <Route path="/13-18" element={<Teen />} />
-            <Route path="/login" element={<LogIn />} />
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Login - Signup flow */}
+          <Route path="/" element={<Age />} />
+          <Route path="/13-18" element={<Teen />} />
+          <Route path="/login" element={<LogIn />} />
 
-            {/* Home flow */}
-            <Route path="/pageone" element={<PageOne />} />
+          {/* Home flow */}
+          <Route path="/pageone" element={<PageOne />} />
 
-            {/* Quiz flow */}
+          {/* Quiz flow */}
 
-            {/* Settings flow */}
-          </Routes>
-        </div>
-      </Router>
-    </Suspense>
+          {/* Settings flow */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
