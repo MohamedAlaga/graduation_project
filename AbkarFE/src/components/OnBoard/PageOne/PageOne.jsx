@@ -1,8 +1,13 @@
 import React from 'react'
 import style from './PageOne.module.css'
 import headimage from '../../../assets/Vector 1702.png'
+import { useNavigate } from 'react-router-dom'
 
 const PageOne = () => {
+  let navigate=useNavigate()
+  function toCourse(){
+    navigate('/Course')
+  }
   return (<>
     <div className="3bkr  w-100 mb-5 ">
       <div className={`${style.head} `}>
@@ -77,10 +82,11 @@ const PageOne = () => {
         </div>
       </div>
       <div className="computerBtn d-flex justify-content-center mt-md-5 p-md-5 mb-5">
-        <button className={`${style.btn} btn  px-4`}>الـتـالــي</button>
+        <button onClick={toCourse} className={`${style.btn} btn  px-4`}>الـتـالــي</button>
       </div>
 
     </div>
+    
 
 
 

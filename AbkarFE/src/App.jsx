@@ -10,6 +10,7 @@ import Parents from "./components/login-signup/Parents";
 import Welcome from "./components/login-signup/Welcome";
 import FForm from "./components/login-signup/FForm";
 import PageOne from "./components/OnBoard/PageOne/PageOne";
+import Course from "./components/OnBoard/Course/Course";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
 
           {/* Home flow */}
           <Route path="/pageone" element={<PageOne />} />
+          <Route path="/course" element={<Course />} />
 
           {/* Quiz flow */}
 
