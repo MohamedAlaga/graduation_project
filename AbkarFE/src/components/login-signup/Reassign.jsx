@@ -28,7 +28,7 @@ function Reassign() {
         <form>
           <input type="password" id="mail" placeholder="كلمة المرور الجديدة" />
           <input type="password" id="pass" placeholder="كلمة المرور" />
-          <Green>إنهاء</Green>
+          <Green path="/parents">إنهاء</Green>
         </form>
       </div>
     </Wrapper>

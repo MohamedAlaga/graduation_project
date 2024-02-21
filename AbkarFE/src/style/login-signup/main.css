@@ -31,6 +31,11 @@
 .PreLoader .logo {
   position: relative;
 }
+@media (max-width: 680px) {
+  .PreLoader .logo img {
+    display: none;
+  }
+}
 .PreLoader .logo span {
   position: absolute;
   top: 14%;
@@ -46,6 +51,11 @@
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.408px;
+}
+@media (max-width: 680px) {
+  .PreLoader .logo span {
+    font-size: 128px;
+  }
 }
 @keyframes fade-out {
   0% {
@@ -68,6 +78,11 @@
   100% {
     background-color: var(--background-color);
   }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
 .Age {
@@ -94,6 +109,11 @@
   line-height: 22px; /* 36.667% */
   letter-spacing: -0.408px;
 }
+@media (max-width: 680px) {
+  .Age__top p {
+    font-size: 48px;
+  }
+}
 .Age__bottom {
   height: 40%;
   display: flex;
@@ -114,6 +134,11 @@
   background-color: var(--window-background);
   width: 620px;
   border-radius: 20px;
+}
+@media (max-width: 680px) {
+  .Wrapper__window {
+    width: 320px;
+  }
 }
 
 .GreenBtn,
@@ -178,6 +203,11 @@
   line-height: 22px;
   letter-spacing: -0.408px;
 }
+@media (max-width: 680px) {
+  .Teen .title {
+    font-size: 48px;
+  }
+}
 .Teen__shape {
   margin-top: 65px;
   position: relative;
@@ -216,6 +246,11 @@
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.408px;
+}
+@media (max-width: 680px) {
+  .LogIn .title {
+    font-size: 48px;
+  }
 }
 .LogIn .shape {
   position: relative;
@@ -350,6 +385,11 @@
   line-height: 22px;
   letter-spacing: -0.408px;
 }
+@media (max-width: 680px) {
+  .Forgot .title {
+    font-size: 48px;
+  }
+}
 .Forgot .shape {
   position: relative;
   margin-top: 45px;
@@ -427,6 +467,11 @@
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.408px;
+}
+@media (max-width: 680px) {
+  .Check .title {
+    font-size: 48px;
+  }
 }
 .Check .shape {
   position: relative;
@@ -521,6 +566,11 @@
   line-height: 22px;
   letter-spacing: -0.408px;
 }
+@media (max-width: 680px) {
+  .Reassign .title {
+    font-size: 48px;
+  }
+}
 .Reassign .shape {
   position: relative;
   margin-top: 45px;
@@ -590,6 +640,11 @@
   line-height: 88px;
   letter-spacing: -0.408px;
 }
+@media (max-width: 680px) {
+  .Parents .shape p {
+    font-size: 48px;
+  }
+}
 .Parents .another {
   color: #fff;
   text-align: center;
@@ -628,6 +683,11 @@
   letter-spacing: -0.408px;
   margin: 0 0 50px 0;
 }
+@media (max-width: 680px) {
+  .Welcome .title {
+    font-size: 48px;
+  }
+}
 .Welcome p {
   color: #000;
   text-align: center;
@@ -640,4 +700,115 @@
 }
 .Welcome .button {
   margin-top: 20px;
+}
+
+.FForm {
+  padding-top: 46px;
+}
+.FForm .title {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 0px #000;
+  -webkit-text-stroke-color: #000;
+  font-family: AA-GALAXY;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  margin-bottom: 14px;
+}
+@media (max-width: 680px) {
+  .FForm .title {
+    font-size: 48px;
+  }
+}
+.FForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.FForm form input {
+  width: 80%;
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  background: var(--Background, #fffaed);
+  margin: 10px 0;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.FForm form input:-moz-placeholder-shown {
+  color: var(--Gray-mid, #888);
+}
+.FForm form input:placeholder-shown {
+  color: var(--Gray-mid, #888);
+}
+.FForm form input:focus {
+  border-bottom: 1px solid black !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.FForm .another {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 2px 0px #000;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #000;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  margin-top: 14px;
+}
+.FForm .another button {
+  border: none;
+  background-color: transparent;
+  color: var(--Green, #1fcc7b);
+}
+.FForm .or {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+.FForm .or .line {
+  height: 1px;
+  width: 70%;
+  background-color: black;
+}
+.FForm .or span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--Gray-mid, #888);
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  background-color: var(--window-background);
+  width: 184px;
+}
+.FForm .btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+  gap: 10px;
+}
+.FForm .btns img {
+  margin-right: 4px;
 }/*# sourceMappingURL=main.css.map */

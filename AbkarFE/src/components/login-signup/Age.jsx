@@ -1,13 +1,10 @@
 import Wrapper from "./reusable/Wrapper";
 import Green from "./reusable/Green";
 import Red from "./reusable/Red";
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PreLoader from "./PreLoader";
 
 function Age() {
-  const navigate = useNavigate();
-
   const [loading, setLoading] = useState(true);
   const [initialLoad, setInitialLoad] = useState(true);
 
@@ -44,8 +41,8 @@ function Age() {
           <p>كم عمرك</p>
         </div>
         <div className="Age__bottom">
-          <Green onClick={() => navigate("/login")}>6 - 12</Green>
-          <Red onClick={() => navigate("/13-18")}>13 - 18</Red>
+          <Green path="/login">6 - 12</Green>
+          <Red path="/13-18">13 - 18</Red>
         </div>
       </div>
     </Wrapper>

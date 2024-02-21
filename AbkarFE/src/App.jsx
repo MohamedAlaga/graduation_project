@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./style/login-signup/main.css";
 import Teen from "./components/login-signup/Teen";
@@ -17,6 +18,7 @@ function App() {
       <div className="App">
         <Routes>
           {/* Login - Signup flow */}
+
           <Route path="/" element={<Age />} />
           <Route path="/13-18" element={<Teen />} />
           <Route path="/login" element={<LogIn />} />

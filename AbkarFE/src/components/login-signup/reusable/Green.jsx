@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
-function Green({ onClick, children }) {
+import { useNavigate } from "react-router-dom";
+
+function Green({ path, children }) {
+  const navigate = useNavigate();
+
   return (
-    <button className="GreenBtn" onClick={onClick}>
+    <button className="GreenBtn" onClick={() => navigate(path)}>
       {children}
     </button>
   );

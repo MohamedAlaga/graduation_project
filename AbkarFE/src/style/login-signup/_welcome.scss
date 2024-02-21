@@ -16,6 +16,10 @@
     line-height: 22px;
     letter-spacing: -0.408px;
     margin: 0 0 50px 0;
+
+    @media (max-width: 680px) {
+      font-size: 48px;
+    }
   }
 
   p {

@@ -33,7 +33,7 @@ function Parents() {
             flexDirection: "column",
           }}
         >
-          <Long>انشاء حساب جديد</Long>
+          <Long path="/welcome">انشاء حساب جديد</Long>
           <div className="another" style={{ margin: "20px 0 0 0" }}>
             <button onClick={() => navigate("/login")}>
               {" "}

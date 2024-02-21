@@ -10,5 +10,9 @@
     background-color: var(--window-background);
     width: 620px;
     border-radius: 20px;
+
+    @media (max-width: 680px) {
+      width: 320px;
+    }
   }
 }
