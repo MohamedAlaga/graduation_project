@@ -41,5 +41,21 @@
     line-height: 32px;
     letter-spacing: -0.408px;
     margin: 46px 0;
+
+    @media (max-width: 680px) {
+      font-size: 24px;
+    }
+  }
+
+  .big {
+    @media (max-width: 680px) {
+      display: none;
+    }
+  }
+
+  .small {
+    @media (min-width: 680px) {
+      display: none;
+    }
   }
 }

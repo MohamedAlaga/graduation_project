@@ -101,6 +101,10 @@
     letter-spacing: -0.408px;
     margin-top: 14px;
 
+    @media (max-width: 680px) {
+      font-size: 20px;
+    }
+
     button {
       border: none;
       background-color: transparent;
@@ -136,6 +140,11 @@
       letter-spacing: -0.408px;
       background-color: var(--window-background);
       width: 184px;
+
+      @media (max-width: 680px) {
+        font-size: 16px;
+        width: 132px;
+      }
     }
   }
 
@@ -144,6 +153,13 @@
     justify-content: center;
     margin-top: 22px;
     gap: 10px;
+
+    button {
+      @media (max-width: 680px) {
+        font-size: 25px !important;
+        width: 140px !important;
+      }
+    }
 
     img {
       margin-right: 4px;

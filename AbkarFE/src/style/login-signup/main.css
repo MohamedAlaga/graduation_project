@@ -114,12 +114,28 @@
     font-size: 48px;
   }
 }
+@media (max-width: 680px) {
+  .Age__top .big {
+    display: none;
+  }
+}
+@media (min-width: 680px) {
+  .Age__top .small {
+    display: none;
+  }
+}
 .Age__bottom {
   height: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 35px;
+}
+@media (max-width: 680px) {
+  .Age__bottom {
+    margin-top: 40px;
+    flex-direction: column;
+  }
 }
 
 .Wrapper {
@@ -154,8 +170,9 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 55% */
+  line-height: 22px;
   letter-spacing: -0.408px;
+  width: 216px;
 }
 
 .GreenBtn {
@@ -185,6 +202,11 @@
   width: 490px;
   height: 48px;
   flex-shrink: 0;
+}
+@media (max-width: 680px) {
+  .long {
+    width: 280px;
+  }
 }
 
 .Teen {
@@ -228,6 +250,21 @@
   line-height: 32px;
   letter-spacing: -0.408px;
   margin: 46px 0;
+}
+@media (max-width: 680px) {
+  .Teen p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 680px) {
+  .Teen .big {
+    display: none;
+  }
+}
+@media (min-width: 680px) {
+  .Teen .small {
+    display: none;
+  }
 }
 
 .LogIn {
@@ -326,6 +363,11 @@
   letter-spacing: -0.408px;
   margin-top: 14px;
 }
+@media (max-width: 680px) {
+  .LogIn .another {
+    font-size: 20px;
+  }
+}
 .LogIn .another button {
   border: none;
   background-color: transparent;
@@ -359,11 +401,23 @@
   background-color: var(--window-background);
   width: 184px;
 }
+@media (max-width: 680px) {
+  .LogIn .or span {
+    font-size: 16px;
+    width: 132px;
+  }
+}
 .LogIn .btns {
   display: flex;
   justify-content: center;
   margin-top: 22px;
   gap: 10px;
+}
+@media (max-width: 680px) {
+  .LogIn .btns button {
+    font-size: 25px !important;
+    width: 140px !important;
+  }
 }
 .LogIn .btns img {
   margin-right: 4px;
@@ -410,6 +464,11 @@
   letter-spacing: -0.4079999924px;
   text-align: center;
 }
+@media (max-width: 680px) {
+  .Forgot p:first-of-type {
+    font-size: 28px;
+  }
+}
 .Forgot p:last-of-type {
   font-family: Omnes Arabic;
   font-size: 20px;
@@ -417,6 +476,11 @@
   line-height: 32px;
   letter-spacing: -0.4079999924px;
   text-align: center;
+}
+@media (max-width: 680px) {
+  .Forgot p:last-of-type {
+    font-size: 16px;
+  }
 }
 .Forgot form {
   display: flex;
@@ -663,6 +727,16 @@
   border: none;
   color: var(--Green, #1fcc7b);
 }
+@media (max-width: 680px) {
+  .Parents .big {
+    display: none;
+  }
+}
+@media (min-width: 680px) {
+  .Parents .small {
+    display: none;
+  }
+}
 
 .Welcome {
   direction: rtl;
@@ -770,6 +844,11 @@
   letter-spacing: -0.408px;
   margin-top: 14px;
 }
+@media (max-width: 680px) {
+  .FForm .another {
+    font-size: 20px;
+  }
+}
 .FForm .another button {
   border: none;
   background-color: transparent;
@@ -802,6 +881,12 @@
   letter-spacing: -0.408px;
   background-color: var(--window-background);
   width: 184px;
+}
+@media (max-width: 680px) {
+  .FForm .or span {
+    font-size: 16px;
+    width: 132px;
+  }
 }
 .FForm .btns {
   display: flex;

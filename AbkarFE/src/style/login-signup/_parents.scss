@@ -48,4 +48,16 @@
       color: var(--Green, #1fcc7b);
     }
   }
+
+  .big {
+    @media (max-width: 680px) {
+      display: none;
+    }
+  }
+
+  .small {
+    @media (min-width: 680px) {
+      display: none;
+    }
+  }
 }

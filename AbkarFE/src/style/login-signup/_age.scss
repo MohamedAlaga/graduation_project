@@ -25,6 +25,18 @@
         font-size: 48px;
       }
     }
+
+    .big {
+      @media (max-width: 680px) {
+        display: none;
+      }
+    }
+
+    .small {
+      @media (min-width: 680px) {
+        display: none;
+      }
+    }
   }
 
   &__bottom {
@@ -33,5 +45,10 @@
     justify-content: center;
     align-items: center;
     gap: 35px;
+
+    @media (max-width: 680px) {
+      margin-top: 40px;
+      flex-direction: column;
+    }
   }
 }

@@ -40,6 +40,10 @@
     line-height: 44px;
     letter-spacing: -0.40799999237060547px;
     text-align: center;
+
+    @media (max-width: 680px) {
+      font-size: 28px;
+    }
   }
 
   p:last-of-type {
@@ -49,6 +53,10 @@
     line-height: 32px;
     letter-spacing: -0.40799999237060547px;
     text-align: center;
+
+    @media (max-width: 680px) {
+      font-size: 16px;
+    }
   }
 
   form {
