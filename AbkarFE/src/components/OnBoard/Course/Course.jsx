@@ -2,10 +2,11 @@ import React from 'react'
 import style from './Course.module.css'
 import headimage from '../../../assets/Vector 1702.png'
 import video from '../../../assets/videoo.mp4'
+import emogi from '../../../assets/Thinkingface.svg'
 
 const Course = () => {
     return (<>
-        <div className="3bkr  w-100 mb-5 ">
+        <div className="3bkr  w-100 mb-5 fixed-top ">
             <div className={`${style.head} `}>
                 <div className="editIcon d-flex flex-column">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -52,42 +53,56 @@ const Course = () => {
             </div>
             <img className={`${style.headimage}`} src={headimage} alt="" />
         </div>
-        <div className="container">
-        <div className="row">
-        <div className="col-lg-4">
-                <div className={`${style.videocontent} rounded-5 mb-3`}>
-                   <div className='p-3'> <video className={`${style.video} w-100`} src={video}></video></div>
-                    <p className={`${style.videoParagraph} pb-2`}>✨   رحلة تحويل الأفكار إلى الاختراعات  </p>
-                    <div className={`${style.videoIcon}`}>3</div>
+        <div className={`${style.couresConatinar} container`}>
+            <div className={`${style.progress}`}>
+
+                <div className={`${style.skillProgress}`} style={{ width: "23px" }}></div>
+                <div className={`${style.progressContent}`}>
+                    <p className={`${style.progressPragraph}`}>تقدمك </p>
+                    <p className={`${style.progressPragraph}`}>0%</p>
                 </div>
-                <div className={`${style.note} w-100 p-3 rounded-4`}>
-                    <p className={`${style.noteParagraph}`}>💡 تعلم اكثر عن عالم الافكار </p>
-                </div>
+
             </div>
-        <div className="col-lg-4">
-                <div className={`${style.videocontent} rounded-5 mb-3`}>
-                   <div className='p-3'> <video className={`${style.video} w-100`} src={video}></video></div>
-                    <p className={`${style.videoParagraph} pb-2`}>✨   رحلة تحويل الأفكار إلى الاختراعات  </p>
-                    <div className={`${style.videoIcon}`}>2</div>
+
+
+            <div className="row gy-5 my-5">
+
+                <div className="col-lg-4">
+                    <div className={`${style.videocontent} rounded-5 mb-3`}>
+                        <div className='p-3'> <video className={`${style.video} w-100`} src={video}></video></div>
+                        <p className={`${style.videoParagraph} pb-2`}>✨   رحلة تحويل الأفكار إلى الاختراعات  </p>
+                        <div className={`${style.videoIcon}`}>1</div>
+                    </div>
+                    <div className={`${style.note} w-100 p-3 rounded-4`}>
+                        <p className={`${style.noteParagraph}`}>💡 تعلم اكثر عن عالم الافكار </p>
+                    </div>
                 </div>
-                <div className={`${style.note} w-100 p-3 rounded-4`}>
-                    <p className={`${style.noteParagraph}`}>💡 تعلم اكثر عن عالم الافكار </p>
+
+                <div className="col-lg-4">
+                    <div className={`${style.videocontent} rounded-5 mb-3`}>
+                        <div className='p-3'> <video className={`${style.video} w-100`} src={video}></video></div>
+                        <p className={`${style.videoParagraph} pb-2`}>✨   رحلة تحويل الأفكار إلى الاختراعات  </p>
+                        <div className={`${style.videoIcon}`}>2</div>
+                    </div>
+                    <div className={`${style.note} w-100 p-3 rounded-4`}>
+                        <p className={`${style.noteParagraph}`}>💡 تعلم اكثر عن عالم الافكار </p>
+                    </div>
                 </div>
+
+                
+
+                <div className="col-lg-4">
+                    <div className={`${style.iconContent} rounded-5 mb-3`}>
+                            <img height={245} className='w-100' src={emogi} alt="" />
+                        <p className={`${style.iconParagraph} mt-3 `}> اختبار بسيط </p>
+                    </div>
+
+                </div>
+                
+
             </div>
-            <div className="col-lg-4">
-                <div className={`${style.videocontent} rounded-5 mb-3`}>
-                   <div className='p-3'> <video className={`${style.video} w-100`} src={video}></video></div>
-                    <p className={`${style.videoParagraph} pb-2`}>✨   رحلة تحويل الأفكار إلى الاختراعات  </p>
-                    <div className={`${style.videoIcon}`}>1</div>
-                </div>
-                <div className={`${style.note} w-100 p-3 rounded-4`}>
-                    <p className={`${style.noteParagraph}`}>💡 تعلم اكثر عن عالم الافكار </p>
-                </div>
-            </div>
-            
         </div>
-        </div>
-        
+
 
 
     </>
