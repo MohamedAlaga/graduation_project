@@ -20,6 +20,15 @@
   font-family: "AA-GALAXY";
   src: url("../../assets/AA-GALAXY.otf") format("truetype");
 }
+.page {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page.fade-out {
+  opacity: 0;
+}
+
 .PreLoader {
   display: flex;
   justify-content: center;
@@ -156,6 +165,7 @@
   background-color: var(--window-background);
   width: 620px;
   border-radius: 20px;
+  animation: fade-in 1s ease-in-out;
 }
 @media (max-width: 680px) {
   .Wrapper__window {
@@ -166,6 +176,14 @@
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .GreenBtn,
 .RedBtn {
   width: 216px;

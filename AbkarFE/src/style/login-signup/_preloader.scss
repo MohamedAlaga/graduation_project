@@ -23,6 +23,15 @@
   src: url("../../assets/AA-GALAXY.otf") format("truetype");
 }
 
+.page {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page.fade-out {
+  opacity: 0;
+}
+
 .PreLoader {
   display: flex;
   justify-content: center;

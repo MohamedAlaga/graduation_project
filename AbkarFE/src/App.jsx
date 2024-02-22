@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./style/login-signup/main.css";
 import Teen from "./components/login-signup/Teen";

@@ -10,6 +10,7 @@
     background-color: var(--window-background);
     width: 620px;
     border-radius: 20px;
+    animation: fade-in 1s ease-in-out;
 
     @media (max-width: 680px) {
       width: 100%;
@@ -17,5 +18,14 @@
       border: none;
       border-radius: 0;
     }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
