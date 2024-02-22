@@ -2,6 +2,11 @@
   text-align: center;
   padding-top: 46px;
 
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 100px;
+  }
+
   .shape {
     position: relative;
     margin-bottom: 20px;

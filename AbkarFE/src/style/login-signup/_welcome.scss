@@ -3,6 +3,10 @@
   padding-top: 40px;
   text-align: center;
 
+  @media (max-width: 680px) {
+    padding: 66px 16px 0;
+  }
+
   .title {
     color: #fff;
     text-align: center;

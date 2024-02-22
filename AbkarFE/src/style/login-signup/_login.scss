@@ -52,13 +52,6 @@
       &:placeholder-shown {
         color: var(--Gray-mid, #888);
       }
-
-      &:focus {
-        border-bottom: 1px solid black !important;
-        border-top: none !important;
-        border-left: none !important;
-        border-right: none !important;
-      }
     }
   }
 
@@ -164,5 +157,9 @@
     img {
       margin-right: 4px;
     }
+  }
+
+  input:focus {
+    outline: none;
   }
 }

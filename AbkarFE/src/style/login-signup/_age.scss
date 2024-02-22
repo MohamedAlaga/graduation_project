@@ -1,5 +1,11 @@
 .Age {
   height: 100%;
+
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 100px;
+  }
+
   &__top {
     display: flex;
     justify-content: center;

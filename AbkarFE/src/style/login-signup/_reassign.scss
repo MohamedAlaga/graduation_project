@@ -2,6 +2,11 @@
   padding-top: 46px;
   text-align: center;
 
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 60px;
+  }
+
   .title {
     color: #fff;
     text-align: center;
@@ -66,5 +71,9 @@
     button {
       margin-top: 20px;
     }
+  }
+
+  input:focus {
+    outline: none;
   }
 }

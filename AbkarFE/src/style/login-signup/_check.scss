@@ -1,6 +1,11 @@
 .Check {
   padding-top: 46px;
 
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 30px;
+  }
+
   .title {
     color: #fff;
     text-align: center;
@@ -103,5 +108,9 @@
       &:focus {
       }
     }
+  }
+
+  input:focus {
+    outline: none;
   }
 }
