@@ -5,14 +5,13 @@
   border-radius: 14px;
   border: 2px solid #000000;
   cursor: pointer;
-
   color: #fff;
   text-align: center;
   font-family: "Omnes Arabic";
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 55% */
+  line-height: 22px;
   letter-spacing: -0.408px;
 }
 
@@ -43,4 +42,8 @@
   width: 490px;
   height: 48px;
   flex-shrink: 0;
+
+  @media (max-width: 680px) {
+    width: 280px;
+  }
 }

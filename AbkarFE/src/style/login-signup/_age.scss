@@ -1,5 +1,11 @@
 .Age {
   height: 100%;
+
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 100px;
+  }
+
   &__top {
     display: flex;
     justify-content: center;
@@ -20,6 +26,22 @@
       font-weight: 700;
       line-height: 22px; /* 36.667% */
       letter-spacing: -0.408px;
+
+      @media (max-width: 680px) {
+        font-size: 48px;
+      }
+    }
+
+    .big {
+      @media (max-width: 680px) {
+        display: none;
+      }
+    }
+
+    .small {
+      @media (min-width: 680px) {
+        display: none;
+      }
     }
   }
 
@@ -29,5 +51,10 @@
     justify-content: center;
     align-items: center;
     gap: 35px;
+
+    @media (max-width: 680px) {
+      margin-top: 40px;
+      flex-direction: column;
+    }
   }
 }

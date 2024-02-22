@@ -2,6 +2,11 @@
   text-align: center;
   padding-top: 46px;
 
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 100px;
+  }
+
   .title {
     color: #fff;
     text-align: center;
@@ -13,6 +18,10 @@
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.408px;
+
+    @media (max-width: 680px) {
+      font-size: 48px;
+    }
   }
 
   &__shape {
@@ -37,5 +46,21 @@
     line-height: 32px;
     letter-spacing: -0.408px;
     margin: 46px 0;
+
+    @media (max-width: 680px) {
+      font-size: 24px;
+    }
+  }
+
+  .big {
+    @media (max-width: 680px) {
+      display: none;
+    }
+  }
+
+  .small {
+    @media (min-width: 680px) {
+      display: none;
+    }
   }
 }

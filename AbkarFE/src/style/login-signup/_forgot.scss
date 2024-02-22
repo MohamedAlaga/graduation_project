@@ -1,6 +1,13 @@
 .Forgot {
   padding-top: 46px;
 
+  height: 100%;
+
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 30px;
+  }
+
   .title {
     color: #fff;
     text-align: center;
@@ -13,6 +20,10 @@
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.408px;
+
+    @media (max-width: 680px) {
+      font-size: 48px;
+    }
   }
 
   .shape {
@@ -36,6 +47,10 @@
     line-height: 44px;
     letter-spacing: -0.40799999237060547px;
     text-align: center;
+
+    @media (max-width: 680px) {
+      font-size: 28px;
+    }
   }
 
   p:last-of-type {
@@ -45,6 +60,10 @@
     line-height: 32px;
     letter-spacing: -0.40799999237060547px;
     text-align: center;
+
+    @media (max-width: 680px) {
+      font-size: 16px;
+    }
   }
 
   form {
@@ -83,5 +102,9 @@
       &:focus {
       }
     }
+  }
+
+  input:focus {
+    outline: none;
   }
 }

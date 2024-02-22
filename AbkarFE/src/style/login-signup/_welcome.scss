@@ -3,6 +3,10 @@
   padding-top: 40px;
   text-align: center;
 
+  @media (max-width: 680px) {
+    padding: 66px 16px 0;
+  }
+
   .title {
     color: #fff;
     text-align: center;
@@ -16,6 +20,10 @@
     line-height: 22px;
     letter-spacing: -0.408px;
     margin: 0 0 50px 0;
+
+    @media (max-width: 680px) {
+      font-size: 48px;
+    }
   }
 
   p {

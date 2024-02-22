@@ -18,6 +18,7 @@ function App() {
       <div className="App">
         <Routes>
           {/* Login - Signup flow */}
+
           <Route path="/" element={<Age />} />
           <Route path="/13-18" element={<Teen />} />
           <Route path="/login" element={<LogIn />} />

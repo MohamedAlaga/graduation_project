@@ -23,6 +23,15 @@
   src: url("../../assets/AA-GALAXY.otf") format("truetype");
 }
 
+.page {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page.fade-out {
+  opacity: 0;
+}
+
 .PreLoader {
   display: flex;
   justify-content: center;
@@ -33,6 +42,12 @@
 
   .logo {
     position: relative;
+
+    img {
+      @media (max-width: 680px) {
+        display: none;
+      }
+    }
 
     span {
       position: absolute;
@@ -49,6 +64,10 @@
       font-weight: 700;
       line-height: 22px;
       letter-spacing: -0.408px;
+
+      @media (max-width: 680px) {
+        font-size: 128px;
+      }
     }
   }
 
@@ -75,4 +94,9 @@
       background-color: var(--background-color);
     }
   }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }

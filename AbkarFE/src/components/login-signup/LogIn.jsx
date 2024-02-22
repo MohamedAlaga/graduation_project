@@ -36,7 +36,7 @@ function LogIn() {
           <div className="forget">
             <button>نسيت كلمة المرور؟</button>
           </div>
-          <Long>تسجيل الدخول</Long>
+          <Long path="/password">تسجيل الدخول</Long>
         </div>
         <div className="another">
           <button>إنشاء حساب جديد</button>

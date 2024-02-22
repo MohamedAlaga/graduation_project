@@ -1,6 +1,11 @@
 .Check {
   padding-top: 46px;
 
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 30px;
+  }
+
   .title {
     color: #fff;
     text-align: center;
@@ -13,6 +18,10 @@
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.408px;
+
+    @media (max-width: 680px) {
+      font-size: 48px;
+    }
   }
 
   .shape {
@@ -99,5 +108,9 @@
       &:focus {
       }
     }
+  }
+
+  input:focus {
+    outline: none;
   }
 }

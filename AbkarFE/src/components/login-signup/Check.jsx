@@ -32,7 +32,7 @@ function Check() {
             <span>اذا لم تكن استلمت الكود!</span>
             <button>إعادة الارسال</button>
           </div>
-          <Green>الـتـالــي</Green>
+          <Green path="/reassign-password">الـتـالــي</Green>
         </form>
       </div>
     </Wrapper>

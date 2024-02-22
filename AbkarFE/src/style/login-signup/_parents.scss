@@ -2,6 +2,11 @@
   text-align: center;
   padding-top: 46px;
 
+  @media (max-width: 680px) {
+    height: 86%;
+    margin-top: 100px;
+  }
+
   .shape {
     position: relative;
     margin-bottom: 20px;
@@ -22,6 +27,10 @@
       font-weight: 700;
       line-height: 88px;
       letter-spacing: -0.408px;
+
+      @media (max-width: 680px) {
+        font-size: 48px;
+      }
     }
   }
 
@@ -42,6 +51,18 @@
       background-color: transparent;
       border: none;
       color: var(--Green, #1fcc7b);
+    }
+  }
+
+  .big {
+    @media (max-width: 680px) {
+      display: none;
+    }
+  }
+
+  .small {
+    @media (min-width: 680px) {
+      display: none;
     }
   }
 }

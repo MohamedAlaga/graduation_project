@@ -29,7 +29,7 @@ function Forgot() {
         <p>سوف نرسل لك رسالة لإعادة تعين كلمة مرورك</p>
         <form>
           <input type="text" id="mail" placeholder="البريد الالكتروني" />
-          <Green>الـتـالــي</Green>
+          <Green path="/check-password">الـتـالــي</Green>
         </form>
       </div>
     </Wrapper>
