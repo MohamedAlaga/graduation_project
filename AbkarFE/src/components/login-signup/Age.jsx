@@ -1,23 +1,23 @@
+/* eslint-disable react/prop-types */
 import Wrapper from "./reusable/Wrapper";
 import Green from "./reusable/Green";
 import Red from "./reusable/Red";
 import { useState, useEffect } from "react";
 import PreLoader from "./PreLoader";
 
-function Age() {
+function Age({ first, handleFirst }) {
   const [loading, setLoading] = useState(true);
-  const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-      setInitialLoad(false);
+      handleFirst(false);
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, [initialLoad]);
+  }, []);
 
-  return loading && initialLoad ? (
+  return loading && first ? (
     <PreLoader />
   ) : (
     <Wrapper height="500px">

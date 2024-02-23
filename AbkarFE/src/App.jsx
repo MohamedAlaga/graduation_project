@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState } from "react";
 import "./style/login-signup/main.css";
 import Teen from "./components/login-signup/Teen";
 import LogIn from "./components/login-signup/LogIn";
@@ -13,13 +14,22 @@ import PageOne from "./components/OnBoard/PageOne/PageOne";
 import Course from "./components/OnBoard/Course/Course";
 
 function App() {
+  const [first, setFirst] = useState(true);
+
+  const handleFirst = () => {
+    setFirst(false);
+  };
+
   return (
     <Router>
       <div className="App">
         <Routes>
           {/* Login - Signup flow */}
 
-          <Route path="/" element={<Age />} />
+          <Route
+            path="/"
+            element={<Age first={first} handleFirst={handleFirst} />}
+          />
           <Route path="/13-18" element={<Teen />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/password" element={<Forgot />} />
