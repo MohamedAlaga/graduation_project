@@ -6,9 +6,7 @@
 :root {
   --background-color: #00dcea;
   --window-background: #fffaed;
-  
 }
-
 
 @font-face {
   font-family: "Ala Typoo Medium";
@@ -161,6 +159,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+@media (max-width: 680px) {
+  .Wrapper {
+    background-color: var(--window-background);
+  }
 }
 .Wrapper__window {
   border: 4px solid #000000;
