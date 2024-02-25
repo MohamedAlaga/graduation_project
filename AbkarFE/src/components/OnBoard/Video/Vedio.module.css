@@ -1,0 +1,182 @@
+.head {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    height: 180px;
+
+}
+
+.headimage {
+    position: absolute;
+    top: -20px;
+    bottom: 0;
+    right: 0px;
+    left: -80px;
+    width: 110%;
+    height: 187px;
+}
+
+.editIconP {
+    color: #EA9F3F;
+    text-align: right;
+    font-family: "Omnes Arabic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    /* 162.5% */
+    letter-spacing: -0.408px;
+}
+
+.pointerIcon {
+    cursor: pointer;
+}
+
+.editIcon3bkr {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+    left: -35px;
+}
+
+.P3bkr {
+    color: var(--Yellow, #FFD200);
+    text-align: center;
+    text-shadow: 0px 4px 0px #000;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #000;
+    font-family: "Ala Typoo Medium";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    /* 34.375% */
+    letter-spacing: -0.408px;
+    width: 84px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.watchVideo {
+
+    font-family: "AA-GALAXY";
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: #fff;
+    /* text-shadow: -3px 4px 0px #000, -3px 1px 0px #000; */
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 1);
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 1);
+
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    .head {
+        width: 100vw;
+        overflow: hidden !important;
+    }
+
+    .headimage {
+        position: absolute;
+        top: -20px;
+        bottom: 0;
+        right: 0;
+        left: -20px;
+        width: 110%;
+        height: 187px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .watchVideo {
+        font-size: 30px;
+    }
+
+    .videoIcon {
+        width: 30px !important;
+        margin-left: 10px;
+    }
+    .editIconP{
+        font-size: 14px;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+/*                                     video content                                 */
+
+.videoContant {
+    margin-top: 200px;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoParagraph {
+    margin-top: 20px;
+    align-self: flex-start;
+    font-family: "Omnes Arabic";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: right;
+
+}
+
+.frame {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 861px;
+}
+
+.videoBtn1 {
+    background: rgba(31, 204, 123, 1) !important;
+    font-family: "Omnes Arabic";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1) !important;
+    width: 112px;
+    height: 48px;
+    top: 711px;
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
+    border-radius: 15px;
+    margin-left: 20px;
+}
+.videoBtn2 {
+    background: rgba(249, 41, 90, 1);
+    font-family: "Omnes Arabic";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1) !important;
+    width: 112px;
+    height: 48px;
+    top: 711px;
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
+    border-radius: 15px;
+}

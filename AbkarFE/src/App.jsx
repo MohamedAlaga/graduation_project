@@ -12,6 +12,8 @@ import Welcome from "./components/login-signup/Welcome";
 import FForm from "./components/login-signup/FForm";
 import PageOne from "./components/OnBoard/PageOne/PageOne";
 import Course from "./components/OnBoard/Course/Course";
+import Video from "./components/OnBoard/Video/Video";
+import MoreLearning from "./components/OnBoard/MoreLearning/MoreLearning";
 
 function App() {
   const [first, setFirst] = useState(true);
@@ -42,6 +44,8 @@ function App() {
           {/* Home flow */}
           <Route path="/pageone" element={<PageOne />} />
           <Route path="/course" element={<Course />} />
+          <Route path="/video" element={<Video />} />
+          <Route path="/MoreLearning" element={<MoreLearning />} />
 
           {/* Quiz flow */}
 
