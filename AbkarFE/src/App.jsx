@@ -14,6 +14,7 @@ import PageOne from "./components/OnBoard/PageOne/PageOne";
 import Course from "./components/OnBoard/Course/Course";
 import Video from "./components/OnBoard/Video/Video";
 import MoreLearning from "./components/OnBoard/MoreLearning/MoreLearning";
+import Community from "./components/OnBoard/Community/Community";
 
 function App() {
   const [first, setFirst] = useState(true);
@@ -46,6 +47,7 @@ function App() {
           <Route path="/course" element={<Course />} />
           <Route path="/video" element={<Video />} />
           <Route path="/MoreLearning" element={<MoreLearning />} />
+          <Route path="/community" element={<Community />} />
 
           {/* Quiz flow */}
 

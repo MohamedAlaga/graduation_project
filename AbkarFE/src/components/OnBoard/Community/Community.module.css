@@ -1,0 +1,138 @@
+.head {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    /* justify-content:center; */
+    align-items: center;
+    padding: 0 28px;
+    height: 180px;
+
+}
+
+.headimage {
+    position: absolute;
+    top: -20px;
+    bottom: 0;
+    right: 0px;
+    left: -80px;
+    width: 110%;
+    height: 187px;
+}
+
+
+.communityIcon{
+    cursor: pointer;
+
+}
+
+
+.Community {
+
+    font-family: "AA-GALAXY";
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: #fff;
+    /* text-shadow: -3px 4px 0px #000, -3px 1px 0px #000; */
+    -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 1);
+  text-shadow: 0px 4px 0px  rgba(0, 0, 0, 1);
+  margin-left: 800px;
+  
+  
+
+  
+}
+
+@media only screen and (max-width: 900px) {
+    .head {
+        width: 100vw;
+        overflow: hidden !important;
+    }
+
+    .headimage {
+        position: absolute;
+        top: -20px;
+        bottom: 0;
+        right: 0;
+        left: -20px;
+        width: 110%;
+        height: 187px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+@media screen and (max-width: 440px) {
+    .Community{
+        font-size: 35px;
+        margin-left: 70px;
+    }
+    
+    .communityIcon{
+        width: 30px !important;
+        margin-left: 10px;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/*                                            community content                                    */
+.communityContent{
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.communitySite{
+    width: 663px;
+    
+}
+.communityVideo{
+    position: relative;
+}
+.communityFrame{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+.CommunityParagraph{
+    font-family: "Omnes Arabic";
+font-size: 20px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: -0.40799999237060547px;
+color: rgba(0, 0, 0, 1);
+
+}
+.CommunityBtn{
+    width: 313px;
+height: 48px;
+background: rgba(31, 204, 123, 1);
+border: 2px solid rgba(0, 0, 0, 1);
+box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
+font-family: "Omnes Arabic";
+font-size: 32px;
+font-weight: 600;
+line-height: 22px;
+letter-spacing: -0.40799999237060547px;
+text-align: center;
+color: rgba(255,255,255,1);
+border-radius: 15px;
+
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+/*                                      media screen                                  */
+@media screen and (max-width: 440px) {
+   .communitySite{
+    width:360px ;
+   }
+}

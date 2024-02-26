@@ -54,6 +54,9 @@ body {
     /* 162.5% */
     letter-spacing: -0.408px;
 }
+.editIcon{
+    cursor: pointer;
+}
 
 .editIcon3bkr {
     position: absolute;
