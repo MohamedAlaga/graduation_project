@@ -3,7 +3,7 @@ import Green from "./reusable/Green";
 
 function Welcome() {
   return (
-    <Wrapper height="600px">
+    <Wrapper height="570px">
       <div className="Welcome">
         <div className="title">أهلا بك في عبقر </div>
         <p>

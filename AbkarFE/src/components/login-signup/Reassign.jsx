@@ -4,7 +4,7 @@ import Green from "./reusable/Green";
 
 function Reassign() {
   return (
-    <Wrapper height="600px">
+    <Wrapper height="540px">
       <div className="Reassign">
         <div className="title">إعادة تعين كلمة المرور</div>
         <div className="shape">

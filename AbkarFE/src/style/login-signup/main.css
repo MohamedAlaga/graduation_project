@@ -175,7 +175,7 @@
 @media (max-width: 680px) {
   .Wrapper__window {
     width: 100%;
-    height: 100% !important;
+    height: 100%;
     border: none;
     border-radius: 0;
   }
@@ -306,7 +306,7 @@
 
 .LogIn {
   text-align: center;
-  padding-top: 46px;
+  padding-top: 26px;
 }
 .LogIn .title {
   color: #fff;
@@ -328,7 +328,7 @@
 }
 .LogIn .shape {
   position: relative;
-  margin-top: 45px;
+  margin-top: 36px;
 }
 .LogIn .shape img {
   position: absolute;
@@ -408,7 +408,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 22px;
   position: relative;
 }
 .LogIn .or .line {
@@ -441,7 +441,7 @@
 .LogIn .btns {
   display: flex;
   justify-content: center;
-  margin-top: 22px;
+  margin-top: 16px;
   gap: 10px;
 }
 @media (max-width: 680px) {
@@ -458,7 +458,7 @@
 }
 
 .Forgot {
-  padding-top: 46px;
+  padding-top: 26px;
   height: 100%;
 }
 @media (max-width: 680px) {
@@ -487,7 +487,7 @@
 }
 .Forgot .shape {
   position: relative;
-  margin-top: 45px;
+  margin-top: 36px;
   display: flex;
   justify-content: center;
 }
@@ -562,7 +562,7 @@
 }
 
 .Check {
-  padding-top: 46px;
+  padding-top: 26px;
 }
 @media (max-width: 680px) {
   .Check {
@@ -590,7 +590,7 @@
 }
 .Check .shape {
   position: relative;
-  margin-top: 45px;
+  margin-top: 36px;
   display: flex;
   justify-content: center;
 }
@@ -669,7 +669,7 @@
 }
 
 .Reassign {
-  padding-top: 46px;
+  padding-top: 26px;
   text-align: center;
 }
 @media (max-width: 680px) {
@@ -698,7 +698,7 @@
 }
 .Reassign .shape {
   position: relative;
-  margin-top: 45px;
+  margin-top: 36px;
   display: flex;
   justify-content: center;
 }
@@ -745,7 +745,7 @@
 
 .Parents {
   text-align: center;
-  padding-top: 46px;
+  padding-top: 26px;
 }
 @media (max-width: 680px) {
   .Parents {
@@ -852,7 +852,7 @@
 }
 
 .FForm {
-  padding-top: 46px;
+  padding-top: 26px;
 }
 .FForm .title {
   color: #fff;

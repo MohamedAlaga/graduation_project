@@ -6,7 +6,7 @@ import Red from "./reusable/Red";
 
 function FForm() {
   return (
-    <Wrapper height="700px">
+    <Wrapper height="660px">
       <div className="FForm">
         <div className="title">بياناتك</div>
         <form onSubmit={(e) => e.preventDefault}>

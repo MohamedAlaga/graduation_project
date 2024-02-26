@@ -4,7 +4,7 @@ import Green from "./reusable/Green";
 
 function Forgot() {
   return (
-    <Wrapper height="600px">
+    <Wrapper height="580px">
       <div className="Forgot">
         <div className="title">نسيت كلمة المرور</div>
         <div className="shape">

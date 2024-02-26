@@ -7,7 +7,7 @@ import facebook from "../../assets/facebook.svg";
 
 function LogIn() {
   return (
-    <Wrapper height="700px">
+    <Wrapper height="650px">
       <div className="LogIn">
         <div className="title">تسجيل الدخول</div>
         <div className="shape">

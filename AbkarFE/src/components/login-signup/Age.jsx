@@ -20,7 +20,7 @@ function Age({ first, handleFirst }) {
   return loading && first ? (
     <PreLoader />
   ) : (
-    <Wrapper height="500px">
+    <Wrapper height="430px">
       <div className="Age">
         <div className="Age__top">
           <svg

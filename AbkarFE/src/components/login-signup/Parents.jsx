@@ -6,7 +6,7 @@ function Parents() {
   const navigate = useNavigate();
 
   return (
-    <Wrapper height="500px">
+    <Wrapper height="470px">
       <div className="Parents">
         <div className="shape">
           <svg

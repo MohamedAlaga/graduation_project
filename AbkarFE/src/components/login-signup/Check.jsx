@@ -4,7 +4,7 @@ import Green from "./reusable/Green";
 
 function Check() {
   return (
-    <Wrapper height="600px">
+    <Wrapper height="580px">
       <div className="Check">
         <div className="title">التحقق</div>
         <div className="shape">

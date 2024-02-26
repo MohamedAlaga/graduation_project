@@ -4,7 +4,7 @@ import glass from "../../assets/Hourglass done.svg";
 
 function Teen() {
   return (
-    <Wrapper height="650px">
+    <Wrapper height="630px">
       <div className="Teen">
         <div className="title">جاري العمل عليه</div>
         <div className="Teen__shape">
