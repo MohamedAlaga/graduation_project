@@ -180,3 +180,72 @@
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
     border-radius: 15px;
 }
+
+
+@media screen and (max-width: 390px) {
+    .iframe{
+        width: 100% !important;
+        height: 303px !important;
+        /* padding: 0 10px; */
+    }
+    .frame{
+        width: 360px;
+        padding: 0 10px;
+    }
+    .videoParagraph{
+        font-size: 24px;
+    }
+    
+}
+@media screen and (min-width: 391px) and (max-width:440px) {
+    .iframe{
+        width: 100% !important;
+        height: 303px !important;
+        /* padding: 0 10px; */
+    }
+    .frame{
+        width: 410px;
+        padding: 0 10px;
+    }
+    .videoParagraph{
+        font-size: 28px;
+    }
+    
+}
+@media screen and (min-width: 441px) and (max-width:550px) {
+    .iframe{
+        width: 100% !important;
+        height: 403px !important;
+        /* padding: 0 10px; */
+    }
+    .frame{
+        width: 530px;
+        padding: 0 10px;
+    }
+   
+    
+}
+@media screen and (min-width: 551px) and (max-width:780px) {
+    .iframe{
+        width: 100% !important;
+        height: 503px !important;
+    }
+    .frame{
+        width: 770px;
+        padding: 0 15px;
+    }
+   
+    
+}
+@media screen and (min-width: 781px) and (max-width:860px) {
+    .iframe{
+        width: 100% !important;
+        height: 522px !important;
+    }
+    .frame{
+        width: 810px;
+        padding: 0 15px;
+    }
+   
+    
+}

@@ -83,7 +83,7 @@
 
 @media only screen and (max-width: 900px) {
     .head {
-        width: 100vw;
+        width: 100%;
         overflow: hidden !important;
     }
 
@@ -93,7 +93,7 @@
         bottom: 0;
         right: 0;
         left: -20px;
-        width: 110%;
+        width: 105%;
         height: 187px;
     }
 
@@ -101,7 +101,7 @@
         overflow-x: hidden;
     }
 }
-
+/* 
 @media screen and (max-width: 440px) {
     .moreLearning {
         font-size: 25px;
@@ -111,7 +111,7 @@
         width: 35px !important;
         margin-left: 10px;
     }
-}
+} */
 /* ////////////////////////////////////////////////////////////////////////////////////// */
 /*                            learnContainer                                */
 .learnContainer{
@@ -167,4 +167,63 @@ text-align: right;
     border: 2px solid rgba(0, 0, 0, 1);
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
     border-radius: 15px;
+}
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/*                                    media screen                            */
+
+@media screen and (max-width:390px) {
+    .learnAdress{
+        font-size: 24px;
+    }
+    .abuotLearn{
+        font-size: 20px;
+    }
+    .moreLearning {
+        font-size: 25px;
+    }
+
+    .videoIcon {
+        width: 35px !important;
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width:391px) and (max-width:440px) {
+    .learnAdress{
+        font-size: 28px;
+    }
+    .abuotLearn{
+        font-size: 24px;
+    }
+    .moreLearning {
+        font-size: 30px;
+    }
+
+    .videoIcon {
+        width: 35px !important;
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width:441px) and (max-width:560px) {
+    .learnAdress{
+        font-size: 34px;
+    }
+    .abuotLearn{
+        font-size: 28px;
+    }
+    .moreLearning {
+        font-size: 48px;
+    }
+
+    .videoIcon {
+        width: 40px !important;
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width:561px) and (max-width:880px) {
+    .learnAdress{
+        font-size: 38px;
+    }
+    .abuotLearn{
+        font-size: 32px;
+    }
 }

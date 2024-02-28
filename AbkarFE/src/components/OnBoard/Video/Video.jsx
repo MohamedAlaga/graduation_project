@@ -65,7 +65,7 @@ const Video = () => {
         </div>
         <div className={`${style.videoContant}`}>
             <div className={`${style.frame}`}>
-                <iframe width={861} height={522} src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1" frameborder="0"></iframe>
+                <iframe className={`${style.iframe}`} width={861} height={522} src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1" frameborder="0"></iframe>
                 <p className={`${style.videoParagraph}`}>رحلة تحويل الأفكار إلى الاختراعات ✨ </p>
                 <div className="viedoBtn d-flex align-self-baseline mb-sm-5 mb-lg-0 mt-5">
                     <button onClick={toMoreLearning} className={`${style.videoBtn1}`}>التالي</button>

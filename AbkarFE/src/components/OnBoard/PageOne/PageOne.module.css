@@ -146,6 +146,15 @@ background: linear-gradient(0deg, #1FCC7B, #1FCC7B),
 linear-gradient(0deg, #000000, #000000) !important;
 }
 
+@media screen and (max-width: 912px) {
+    .rowparagraph{
+        font-size: 20px;
+    }
+    .rowparagraph2{
+        font-size: 20px;
+    }
+}
+
 
 
 

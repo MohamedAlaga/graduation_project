@@ -1,11 +1,11 @@
+
 .head {
     width: 100%;
     overflow: hidden;
     position: relative;
     z-index: 1;
     display: flex;
-    /* justify-content:center; */
-    align-items: center;
+    align-items:center;
     padding: 0 28px;
     height: 180px;
 
@@ -15,16 +15,15 @@
     position: absolute;
     top: -20px;
     bottom: 0;
-    right: 0px;
-    left: -80px;
-    width: 110%;
+    right: 0;
+    left: -20px;
+    width: 105%;
     height: 187px;
 }
 
 
 .communityIcon{
     cursor: pointer;
-
 }
 
 
@@ -35,13 +34,11 @@
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.4px;
-    text-align: center;
     color: #fff;
     /* text-shadow: -3px 4px 0px #000, -3px 1px 0px #000; */
     -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: rgba(0, 0, 0, 1);
   text-shadow: 0px 4px 0px  rgba(0, 0, 0, 1);
-  margin-left: 800px;
   
   
 
@@ -50,7 +47,7 @@
 
 @media only screen and (max-width: 900px) {
     .head {
-        width: 100vw;
+        width: 100%;
         overflow: hidden !important;
     }
 
@@ -59,19 +56,18 @@
         top: -20px;
         bottom: 0;
         right: 0;
-        left: -20px;
-        width: 110%;
+        left: -10px;
+        width: 102.7%;
         height: 187px;
+        overflow-x: hidden !important;
     }
 
-    body {
-        overflow-x: hidden;
-    }
+    
 }
 @media screen and (max-width: 440px) {
     .Community{
         font-size: 35px;
-        margin-left: 70px;
+        margin-left: 100px;
     }
     
     .communityIcon{
@@ -89,13 +85,11 @@
     flex-direction: column;
     align-items: center;
 }
-.communitySite{
-    width: 663px;
-    
-}
+
 .communityVideo{
     position: relative;
 }
+
 .communityFrame{
     position: absolute;
     top: 0;
@@ -132,7 +126,40 @@ border-radius: 15px;
 /* ///////////////////////////////////////////////////////////////////////////////////////////////// */
 /*                                      media screen                                  */
 @media screen and (max-width: 440px) {
-   .communitySite{
-    width:360px ;
-   }
+    .communitySite{
+width: 330px;  
+    }
+    
+    .iframe{
+        width: 350px;
+        height: 220px;
+        margin-top: 70px;
+    }
+    
+    .communityFrame{
+        width: 340px;
+    }
+    
+    
+}
+@media screen and (min-width: 441px) and (max-width:580px) {
+    .communitySite{
+width: 530px;  
+    }
+    
+    .iframe{
+        width: 520px;
+        height: 310px;
+        margin-top: 30px;
+    }
+    
+    .communityFrame{
+        width: 530px;
+    }
+    .CommunityParagraph{
+        font-size: 30px;
+        padding-right: 10px;
+    }
+    
+    
 }
