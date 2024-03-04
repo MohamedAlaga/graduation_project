@@ -1,3 +1,5 @@
+
+
 .head {
     width: 100%;
     overflow: hidden;
@@ -23,13 +25,11 @@
 
 .editIconP {
     color: #EA9F3F;
-    text-align: right;
-    font-family: "Omnes Arabic";
+    font-family: "Omnes Arabic Bold";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 26px;
-    /* 162.5% */
     letter-spacing: -0.408px;
 }
 
@@ -37,48 +37,34 @@
     cursor: pointer;
 }
 
-.editIcon3bkr {
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    right: 0;
-    left: -35px;
-}
+/*  */
 
-.P3bkr {
-    color: var(--Yellow, #FFD200);
-    text-align: center;
-    text-shadow: 0px 4px 0px #000;
-    -webkit-text-stroke-width: 2;
-    -webkit-text-stroke-color: #000;
-    font-family: "Ala Typoo Medium";
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22px;
-    /* 34.375% */
-    letter-spacing: -0.408px;
-    width: 84px;
-    height: 50px;
-    flex-shrink: 0;
-}
+
 
 .moreLearning {
-
+margin-bottom: 20px;
     font-family: "AA-GALAXY";
     font-size: 60px;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.4px;
-    text-align: center;
     color: #fff;
-    /* text-shadow: -3px 4px 0px #000, -3px 1px 0px #000; */
-    -webkit-text-stroke-width: 1.3px;
-    -webkit-text-stroke-color: rgba(0, 0, 0, 1);
-    text-shadow: 0px 4px 0px rgba(0, 0, 0, 1);
-
-
-
+    --s:3px;
+  text-shadow: 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000,
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000;
 }
 
 @media only screen and (max-width: 900px) {
@@ -93,7 +79,7 @@
         bottom: 0;
         right: 0;
         left: -20px;
-        width: 105%;
+        width: 106%;
         height: 187px;
     }
 
@@ -116,10 +102,11 @@
 /*                            learnContainer                                */
 .learnContainer{
     direction: rtl;
+    width: 75% !important;
 }
 .learnAdress{
-    font-family: "Omnes Arabic";
-font-size: 40px;
+    font-family: "Omnes Arabic Semi Bold";
+font-size: 32px;
 font-weight: 600;
 line-height: 26px;
 letter-spacing: -0.40799999237060547px;
@@ -127,12 +114,14 @@ color: rgba(0, 0, 0, 1);
 
 }
 .abuotLearn{
-    font-family: "Omnes Arabic";
-font-size: 28px;
+    font-family: "Omnes Arabic Medium";
+font-size: 20px;
 font-weight: 500;
 line-height: 36px;
 letter-spacing: -0.40799999237060547px;
 text-align: right;
+margin: 0;
+margin-left: 50px;
 
 }
 .learnBtnDirection1 {
@@ -146,10 +135,10 @@ text-align: right;
     color: rgba(255, 255, 255, 1) !important;
     width: 112px;
     height: 48px;
-    top: 711px;
+    /* top: 711px; */
     border: 2px solid rgba(0, 0, 0, 1);
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
-    border-radius: 15px;
+    border-radius: 14px;
     margin-left: 20px;
 }
 .learnBtnDirection2 {
@@ -166,17 +155,18 @@ text-align: right;
     top: 711px;
     border: 2px solid rgba(0, 0, 0, 1);
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
-    border-radius: 15px;
+    border-radius: 14px;
 }
 /* /////////////////////////////////////////////////////////////////////////////////// */
 /*                                    media screen                            */
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:380px) {
     .learnAdress{
-        font-size: 24px;
+        font-size: 20px;
     }
     .abuotLearn{
         font-size: 20px;
+        margin: 0;
     }
     .moreLearning {
         font-size: 25px;
@@ -186,16 +176,44 @@ text-align: right;
         width: 35px !important;
         margin-left: 10px;
     }
+    .learnContainer{
+        width: 100% !important;
+    }
 }
-@media screen and (min-width:391px) and (max-width:440px) {
+@media screen and (min-width:381px) and (max-width:400px) {
     .learnAdress{
-        font-size: 28px;
+        font-size: 25px;
+    }
+    .abuotLearn{
+        font-size: 20px;
+        margin: 0;
+    }
+    .moreLearning {
+        font-size: 25px;
+    }
+    .learnContainer{
+        width: 100% !important;
+    }
+
+    .videoIcon {
+        width: 35px !important;
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width:401px) and (max-width:440px) {
+    .learnAdress{
+        font-size: 26px;
+        
     }
     .abuotLearn{
         font-size: 24px;
+        margin: 0;
     }
     .moreLearning {
         font-size: 30px;
+    }
+    .learnContainer{
+        width: 100% !important;
     }
 
     .videoIcon {
@@ -209,9 +227,13 @@ text-align: right;
     }
     .abuotLearn{
         font-size: 28px;
+        margin: 0;
     }
     .moreLearning {
         font-size: 48px;
+    }
+    .learnContainer{
+        width: 100% !important;
     }
 
     .videoIcon {
@@ -225,5 +247,9 @@ text-align: right;
     }
     .abuotLearn{
         font-size: 32px;
+        margin: 0;
+    }
+    .learnContainer{
+        width: 100% !important;
     }
 }

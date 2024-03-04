@@ -24,7 +24,7 @@
 .editIconP {
     color: #EA9F3F;
     text-align: right;
-    font-family: "Omnes Arabic";
+    font-family: "Omnes Arabic Bold";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -44,23 +44,7 @@
     left: -35px;
 }
 
-.P3bkr {
-    color: var(--Yellow, #FFD200);
-    text-align: center;
-    text-shadow: 0px 4px 0px #000;
-    -webkit-text-stroke-width: 2;
-    -webkit-text-stroke-color: #000;
-    font-family: "Ala Typoo Medium";
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22px;
-    /* 34.375% */
-    letter-spacing: -0.408px;
-    width: 84px;
-    height: 50px;
-    flex-shrink: 0;
-}
+
 
 .computer {
 
@@ -71,10 +55,26 @@
     letter-spacing: -0.4px;
     text-align: center;
     color: #fff;
-    /* text-shadow: -3px 4px 0px #000, -3px 1px 0px #000; */
-    -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: rgba(0, 0, 0, 1);
-  text-shadow: 0px 4px 0px  rgba(0, 0, 0, 1);
+  --s:3px;
+  text-shadow: 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 4px var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000,
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000, 
+   0 0 var(--s) #000;
   
 
   
@@ -94,6 +94,7 @@
         left: -20px;
         width: 110%;
         height: 187px;
+        overflow: hidden;
     }
 
     body {
@@ -102,13 +103,13 @@
 }
 @media screen and (max-width: 440px) {
     .computer{
-        font-size: 35px;
+        font-size: 40px;
     }
     .editIconP{
-        font-size: 14px;
+        font-size: 18px;
     }
     .computerIcon{
-        width: 30px !important;
+        width: 35px !important;
         margin-left: 10px;
     }
 }
