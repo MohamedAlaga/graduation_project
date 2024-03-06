@@ -56,7 +56,7 @@
     letter-spacing: -0.4px;
     text-align: center;
     color: #fff;
-    --s: 3px;
+    --s: 2.5px;
     text-shadow:
         0 4px var(--s) #000,
         0 4px var(--s) #000,
@@ -75,6 +75,36 @@
         0 0 var(--s) #000,
         0 0 var(--s) #000,
         0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
         0 0 var(--s) #000;
 
 
@@ -83,7 +113,7 @@
 
 @media only screen and (max-width: 900px) {
     .head {
-        width: 100vw;
+        /* width: 100vw; */
         overflow: hidden !important;
     }
 
@@ -151,6 +181,7 @@
     left: 0;
     z-index: -1;
 }
+
 .videoParagraph {
     margin-top: 20px;
     align-self: flex-start;
@@ -160,35 +191,40 @@
     line-height: 26px;
     letter-spacing: -0.40799999237060547px;
     text-align: right;
+    margin-bottom: 3rem;
 
 }
-.aboutVideoParagraph{
-font-family: "Omnes Arabic Semi Bold";
-font-size: 20px;
-font-weight: 600;
-line-height: 40px;
-letter-spacing: -0.40799999237060547px;
-text-align: right;
-color: #000;
-width: 813px;
-height: 207px;
-top: 619px;
-left: 47px;
+
+.aboutVideoParagraph {
+    font-family: "Omnes Arabic Semi Bold";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.40799999237060547px;
+    text-align: right;
+    color: #000;
+    width: 813px;
+    height: 207px;
+    top: 619px;
+    left: 47px;
 
 
 
 }
-.aboutVideo{
+
+.aboutVideo {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.aboutVideoFrame{
+
+.aboutVideoFrame {
     position: absolute;
     top: -20px;
     z-index: -1;
 }
+
 .videoBtn1 {
     background: rgba(31, 204, 123, 1) !important;
     font-family: "Omnes Arabic";
@@ -206,6 +242,7 @@ left: 47px;
     border-radius: 15px;
     margin-left: 20px;
 }
+
 .videoBtn2 {
     background: rgba(249, 41, 90, 1);
     font-family: "Omnes Arabic";
@@ -227,128 +264,165 @@ left: 47px;
 /* ////////////////////////////////////////////////////////////////////////// */
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 391px) {
     .communitySite {
         width: 380px;
 
     }
 
     .iframe {
-        width: 370px !important;
-        height: 220px !important;
+        width: 400px !important;
+        height: 280px !important;
 
     }
 
     .communityFrame {
         width: 360px !important;
-        top: -140px;
-        right: 14px;
+        top: -110px;
+        right: 22px;
+    }
+
+    .videoParagraph {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .aboutVideoFrame {
+        width: 360px !important;
+        top: -82px;
+    }
+
+    .aboutVideoParagraph {
+        width: 340px;
+        font-size: 12px;
+        margin: 0;
+        line-height: 13px;
+        height: 80px;
     }
 
 }
 
-@media screen and (min-width: 391px) and (max-width:440px) {
-    .iframe {
-        width: 100% !important;
-        height: 303px !important;
-        /* padding: 0 10px; */
+@media screen and (min-width: 392px) and (max-width:440px) {
+    .communitySite {
+        width: 380px;
+
     }
 
-    .frame {
-        width: 410px;
-        padding: 0 10px;
+    .iframe {
+        width: 400px !important;
+        height: 280px !important;
+
+    }
+
+    .communityFrame {
+        width: 360px !important;
+        top: -110px;
+        right: 22px;
     }
 
     .videoParagraph {
-        font-size: 28px;
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .aboutVideoFrame {
+        width: 360px !important;
+        top: -82px;
+    }
+
+    .aboutVideoParagraph {
+        width: 340px;
+        font-size: 12px;
+        margin: 0;
+        line-height: 13px;
+        height: 80px;
     }
 
 }
 
 @media screen and (min-width: 441px) and (max-width:550px) {
-    .iframe {
-        width: 100% !important;
-        height: 403px !important;
-        /* padding: 0 10px; */
-    }
-
-    .frame {
-        width: 530px;
-        padding: 0 10px;
-    }
-
-
-}
-
-@media screen and (min-width: 551px) and (max-width:780px) {
-    .iframe {
-        width: 100% !important;
-        height: 503px !important;
-    }
-
-    .frame {
-        width: 770px;
-        padding: 0 15px;
-    }
-
-
-}
-
-@media screen and (min-width: 781px) and (max-width:860px) {
-    .iframe {
-        width: 100% !important;
-        height: 522px !important;
-    }
-
-    .frame {
-        width: 810px;
-        padding: 0 15px;
-    }
-
-
-}
-
-/* //////////////////////////////////////////// */
-/* @media screen and (max-width: 440px) {
     .communitySite {
-        width: 390px;
+        width: 520px;
 
     }
 
     .iframe {
-        width: 380px !important;
-        height: 220px !important;
+        width: 550px !important;
+        height: 340px !important;
+        
 
     }
 
     .communityFrame {
-        width: 370px !important;
-        top: -140px;
-        right: 20px;
+        width:500px !important;
+        top: -80px;
+        right: 22px;
     }
 
-
-} */
-
-@media screen and (min-width: 441px) and (max-width:580px) {
-    .communitySite {
-        width: 520px;
+    .videoParagraph {
+        font-size: 32px;
+        margin: 0;
+        margin-bottom: 3rem;
     }
 
-    .iframe {
-        width: 510px;
-        height: 310px;
-        margin-top: 30px;
+    .aboutVideoFrame {
+        width: 500px !important;
+        top: -70px;
     }
 
-    .communityFrame {
-        width: 520px;
-    }
-
-    .CommunityParagraph {
-        font-size: 30px;
-        padding-right: 10px;
+    .aboutVideoParagraph {
+        width: 475px;
+        font-size: 16px;
+        margin: 0;
+        line-height: 17px;
+        height: 100px;
     }
 
 
 }
+
+@media screen and (min-width: 551px) and (max-width:880px) {
+    .communitySite {
+        width: 750px;
+
+    }
+
+    .iframe {
+        width: 780px !important;
+        height: 470px !important;
+        
+
+    }
+
+    .communityFrame {
+        width:750px !important;
+        top: -20px;
+        right: 15px;
+    }
+
+    .videoParagraph {
+        font-size: 32px;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+
+    .aboutVideoFrame {
+        width: 720px !important;
+        top: -40px;
+    }
+
+    .aboutVideoParagraph {
+        width: 680px;
+        font-size: 20px;
+        margin: 0;
+        line-height: 30px;
+        height: 180px;
+    }
+
+
+}
+
+
+

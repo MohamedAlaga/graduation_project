@@ -115,8 +115,56 @@ body {
     letter-spacing: -0.40799999237060547px;
     text-align: center;
     color: #fff;
-    text-shadow: -3px 4px 0px #000,-3px 1px 0px #000;
-    /* margin-bottom: 70px; */
+    --s: 2.5px;
+    text-shadow:
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000;
 
 }
 .computerParagraph{
@@ -129,7 +177,7 @@ color: rgba(0, 0, 0, 1);
 
 }
 .computerParagraph2{
-font-family: "Omnes Arabic";
+font-family: "Omnes Arabic Bold";
 font-size: 28px;
 font-weight: 700;
 line-height: 26px;
