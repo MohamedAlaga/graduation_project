@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './Course.module.css'
 import headimage from '../../../assets/Vector 1702.png'
 import video from '../../../assets/videoo.mp4'

@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './Vedio.module.css'
 import headimage from '../../../assets/Vector 1702.png'
 import frameImage from '../../../assets/Rectangle 10.svg'

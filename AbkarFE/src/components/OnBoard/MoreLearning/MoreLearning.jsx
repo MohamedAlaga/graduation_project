@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './MoreLearning.module.css'
 import headimage from '../../../assets/Vector 1702.png'
 import { useNavigate } from 'react-router-dom'
