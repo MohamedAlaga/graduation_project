@@ -1,6 +1,6 @@
 import style from './Community.module.css'
 import headimage from '../../../assets/Vector 1702.png'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Community = () => {

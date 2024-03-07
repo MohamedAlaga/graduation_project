@@ -1,0 +1,239 @@
+.body {
+	background-color: #fffaed;
+}
+.header {
+	position: relative;
+	z-index: 1;
+	height: 187px;
+}
+
+.image {
+	position: absolute;
+	flex-shrink: 0;
+	fill: var(--Background, #fffaed);
+	stroke-width: 8px;
+	stroke: var(--Green, #1fcc7b);
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+    height: 215px;
+    top: -30px;
+}
+.title {
+	color: #ffffff;
+	text-align: center;
+
+	/* Main shadow */
+	font-family: "AA-GALAXY";
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 0px;
+	letter-spacing: -0.408px;
+	z-index: 10;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	  --s: 2.5px;
+    text-shadow:
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 4px var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000,
+        0 0 var(--s) #000;
+}
+.arr {
+	z-index: 10;
+	position: absolute;
+	left: 4%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+/* ------------------------------------------------------ */
+.content {
+	/* margin-top: 200px; */
+	color: #000;
+	text-align: center;
+	font-family: "Omnes Arabic";
+	font-size: 56px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 26px; /* 46.429% */
+	letter-spacing: -0.408px;
+	margin-top: 20px;
+	padding-top: 15px;
+}
+.certificate {
+	/* width: 234px;
+	height: 372px; */
+	/* transform: rotate(-90deg); */
+	flex-shrink: 0;
+	position: relative;
+	z-index: 2;
+}
+.certificate_text {
+	width: 220px;
+	height: 41.17px;
+	top: 401px;
+	left: 610px;
+	font-family: "Omnes Arabic";
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 26px;
+	letter-spacing: -0.40799999237060547px;
+	text-align: center;
+	position: absolute;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.btn1 {
+	width: 229px;
+	height: 48px;
+	flex-shrink: 0;
+	border-radius: 14px;
+	border: 2px solid #000;
+	background: var(--Blue, #00dcea);
+
+	/* Main shadow */
+	box-shadow: 0px 4px 0px 0px #000;
+}
+.certificate_text1{
+	padding-top: 5px;
+	flex-shrink: 0;
+	color: #fff;
+	text-align: center;
+	font-family: "Omnes Arabic";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 68.75% */
+	letter-spacing: -0.408px;
+}
+.certificate_text2 {
+	color: #000;
+	text-align: center;
+	font-family: "Omnes Arabic";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 40px; /* 166.667% */
+	letter-spacing: -0.408px;
+	padding: 15px 0 0;
+}
+.btn2 {
+	width: 314px;
+	height: 48px;
+	flex-shrink: 0;
+	border-radius: 14px;
+	border: 2px solid #000;
+	background: var(--Green, #1fcc7b);
+
+	/* Main shadow */
+	box-shadow: 0px 4px 0px 0px #000;
+	margin-bottom: 20px;
+}
+.certificate_text3 {
+	padding-top: 5px;
+	flex-shrink: 0;
+	color: #fff;
+	text-align: center;
+	font-family: "Omnes Arabic";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 68.75% */
+	letter-spacing: -0.408px;
+	
+}
+/* ---------------------------Media queries--------------------- */
+@media only screen and (max-width: 480px) {
+	.title {
+		font-size: 34px;
+		letter-spacing: 1px;
+	}
+	.arr {
+		width: 36px;
+		height: 36px;
+		left: 5%;
+		margin-right: 3px;
+	}
+	.content p {
+		font-size: 34px;
+	}
+	.certificate img {
+		width: 250px;
+		height: 200px;
+	}
+	.certificate p {
+		font-size: 34px;
+	}
+	.btn1,
+	.btn2 {
+		width: 230px;
+	}
+	.certificate_text1,.certificate_text3 {
+		font-size: 24px;
+	}
+}
+@media only screen and (max-width: 969px) {
+	.title {
+		
+		letter-spacing: 0px;
+		/* line-height: 40px; */
+	}
+
+}
+@media only screen and (min-width: 670px){
+	.title {
+		font-size: 60px;
+		/* letter-spacing: 0px; */
+		/* line-height: 40px; */
+	}
+}
