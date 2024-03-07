@@ -5,10 +5,20 @@ import eye from "../../../assets/bedo/mdi_eye-off-outline.svg";
 import delacc from "../../../assets/bedo/deleteicon.svg";
 import signout from "../../../assets/bedo/sign_out.svg";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 function Setting() {
   let navigate = useNavigate();
 	function toHello() {
 		navigate("/hello");
+	}
+	let [eyee ,setEyee ] = useState("password");
+	function removeEye() {
+		if (eyee == "password") {
+			setEyee("text");
+			
+		}else{
+			setEyee("password");
+		}
 	}
 	return (
 		<>
@@ -74,11 +84,11 @@ function Setting() {
 							<label className={styles.label} htmlFor="3">
 								كلمة المرور
 							</label>
-							<img className={styles.eye} src={eye} alt="arrow-back" />
+							<img onClick={removeEye} className={styles.eye} src={eye} alt="arrow-back" />
 							<input
 								className={styles.input}
 								id="1"
-								type="password"
+								type={eyee}
 								name="name1"
 							/>
 						</div>

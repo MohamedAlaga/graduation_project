@@ -125,7 +125,7 @@
 .question {
 	color: #000;
 	text-align: right;
-	font-family: "Omnes Arabic";
+	font-family: "Omnes Arabic Semi Bold";
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 600;
@@ -140,7 +140,7 @@
 	justify-items: center;
 	color: #000;
 	text-align: right;
-	font-family: "Omnes Arabic";
+	font-family: "Omnes Arabic Medium";
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 500;
@@ -188,7 +188,7 @@
 	flex-shrink: 0;
 	color: #fff;
 	text-align: center;
-	font-family: "Omnes Arabic";
+	font-family: "Omnes Arabic Semi Bold";
 	font-size: 32px;
 	font-style: normal;
 	font-weight: 600;
