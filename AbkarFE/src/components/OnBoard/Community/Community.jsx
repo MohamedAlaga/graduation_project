@@ -1,6 +1,6 @@
 import style from './Community.module.css'
 import headimage from '../../../assets/Vector 1702.png'
-import { Navigate, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 
 const Community = () => {
@@ -9,7 +9,8 @@ const Community = () => {
         navigate('/MoreLearning')
     }
     return (<>
-        <div className="3bkr w-100 mb-lg-3">
+    
+    <div className="3bkr w-100 mb-lg-3">
             <div className={`${style.head} `}>
                 <div onClick={toVedio} className={` ${style.pointerIcon}  `}>
                     <svg className={`${style.communityIcon} `} width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,6 +44,8 @@ const Community = () => {
             </div>
 
         </div>
+   
+       
     </>
     )
 }
