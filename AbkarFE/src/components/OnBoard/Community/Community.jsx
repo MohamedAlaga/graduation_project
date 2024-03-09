@@ -3,6 +3,7 @@ import headimage from '../../../assets/Vector 1702.png'
 import {useNavigate } from 'react-router-dom'
 
 
+
 const Community = () => {
     let navigate =useNavigate()
     function toVedio(){

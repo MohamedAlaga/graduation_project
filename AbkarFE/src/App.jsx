@@ -15,6 +15,11 @@ import Course from "./components/OnBoard/Course/Course";
 import Video from "./components/OnBoard/Video/Video";
 import MoreLearning from "./components/OnBoard/MoreLearning/MoreLearning";
 import Community from "./components/OnBoard/Community/Community";
+import Hello from "./components/Quiz/Hello/hello";
+import Exam from "./components/Quiz/exam/Exam";
+import Result from "./components/Quiz/result/Result";
+import Level from "./components/Quiz/level/Level";
+import Setting from "./components/Quiz/seting/Setting";
 
 function App() {
   const [first, setFirst] = useState(true);
@@ -50,6 +55,12 @@ function App() {
           <Route path="/community" element={<Community />} />
 
           {/* Quiz flow */}
+             <Route path="/hello" element={<Hello />} />
+             <Route path="/Exam" element={<Exam />} />
+             <Route path="/Result" element={<Result />} />
+             <Route path="/Level" element={<Level />} />
+             <Route path="/Setting" element={<Setting />} />
+      
 
           {/* Settings flow */}
         </Routes>
