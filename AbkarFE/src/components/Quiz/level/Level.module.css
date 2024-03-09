@@ -99,7 +99,7 @@
 	/* margin-top: 200px; */
 	color: #000;
 	text-align: center;
-	font-family: "Omnes Arabic";
+	font-family: "Omnes Arabic Semi Bold";
 	font-size: 56px;
 	font-style: normal;
 	font-weight: 600;
@@ -121,7 +121,7 @@
 	height: 41.17px;
 	top: 401px;
 	left: 610px;
-	font-family: "Omnes Arabic";
+	font-family: "Omnes Arabic Semi Bold";
 	font-size: 36px;
 	font-weight: 600;
 	line-height: 26px;
@@ -149,7 +149,7 @@
 	flex-shrink: 0;
 	color: #fff;
 	text-align: center;
-	font-family: "Omnes Arabic";
+	font-family: "Omnes Arabic Semi Bold";
 	font-size: 32px;
 	font-style: normal;
 	font-weight: 600;
@@ -159,7 +159,7 @@
 .certificate_text2 {
 	color: #000;
 	text-align: center;
-	font-family: "Omnes Arabic";
+	font-family: "Omnes Arabic Semi Bold";
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 600;
@@ -184,8 +184,8 @@
 	flex-shrink: 0;
 	color: #fff;
 	text-align: center;
-	font-family: "Omnes Arabic";
-	font-size: 32px;
+	font-family: "Omnes Arabic Semi Bold";
+	font-size: 30px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 22px; /* 68.75% */
@@ -219,7 +219,7 @@
 		width: 230px;
 	}
 	.certificate_text1,.certificate_text3 {
-		font-size: 24px;
+		font-size: 22px;
 	}
 }
 @media only screen and (max-width: 969px) {

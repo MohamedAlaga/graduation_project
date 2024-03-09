@@ -16,8 +16,8 @@
 	object-fit: cover;
 	object-position: center;
 	width: 100%;
-    height: 215px;
-    top: -30px;
+	height: 215px;
+	top: -30px;
 }
 .title {
 	color: #ffffff;
@@ -35,56 +35,20 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	  --s: 2.5px;
-    text-shadow:
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000;
+	--s: 2.5px;
+	text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+		0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+		0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 .arr {
 	z-index: 10;
@@ -129,32 +93,51 @@
 	margin-top: 20px;
 	padding-top: 15px;
 }
+.score_text {
+	color: #000;
+	text-align: center;
+	font-family: "Omnes Arabic Semi Bold";
+	font-size: 56px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 26px; /* 46.429% */
+	letter-spacing: -0.408px;
+}
 .score {
 	color: #fff;
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 20px;
 	/* Main shadow */
-	text-shadow: 0px 4px 0px #000;
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: var(--stroke, #000);
-	font-family: AA-GALAXY;
+	font-family: "AA-GALAXY";
 	font-size: 104px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 22px; /* 21.154% */
 	letter-spacing: -0.408px;
 	margin-top: 5px;
-	/* padding: 50px; */
+	--s: 2.5px;
+	text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+		0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+		0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 .buttons {
 	gap: 15px;
 	padding: 16px;
-	display:grid;
+	display: grid;
 	justify-content: center;
 	grid-template-columns: auto auto auto;
 	grid-template-rows: auto;
-	
 }
 .btn1,
 .btn2,
@@ -193,7 +176,7 @@
 	flex-shrink: 0;
 	color: #fff;
 	text-align: center;
-	font-family: "Omnes Arabic";
+	font-family: "Omnes Arabic Semi Bold";
 	font-size: 32px;
 	font-style: normal;
 	font-weight: 600;
@@ -207,16 +190,15 @@
 		font-size: 34px;
 		letter-spacing: 0px;
 		line-height: 50px;
-		
 	}
 	.arr {
 		width: 36px;
 		height: 36px;
-		
+
 		left: 5%;
 		margin-right: 3px;
 	}
-	
+
 	.vector {
 		width: 233px;
 		height: 239.976px;
@@ -235,15 +217,13 @@
 		grid-template-rows: auto auto auto;
 		grid-template-columns: auto;
 	}
-
 }
 @media only screen and (max-width: 920px) {
 	.title {
 		font-size: 45px;
 		letter-spacing: 0px;
-		
 	}
-	
+
 	.content {
 		padding-bottom: 15px;
 	}
@@ -259,9 +239,8 @@
 		grid-template-rows: auto auto auto;
 		grid-template-columns: auto;
 	}
-	
 }
-@media only screen and (max-width: 405px){
+@media only screen and (max-width: 405px) {
 	.score_text {
 		font-size: 35px;
 		line-height: 70px;
@@ -270,29 +249,30 @@
 		font-size: 70px;
 		padding-top: 0;
 	}
-	.logo{
+	.logo {
 		margin-bottom: 0;
 	}
 }
-@media only screen and (max-width: 330px){.score_text {
+@media only screen and (max-width: 330px) {
+	.score_text {
 		font-size: 28px;
 		line-height: 70px;
-	}}
+	}
+}
 @media only screen and (max-width: 969px) {
 	.title {
 		font-size: 45px;
 		letter-spacing: 0px;
 		/* line-height: 40px; */
 	}
-	
 }
-@media only screen and (min-width: 670px){
+@media only screen and (min-width: 670px) {
 	.title {
 		font-size: 60px;
 	}
 }
 @media only screen and (max-width: 300px) {
-	.arr{
+	.arr {
 		margin-left: 10px;
 	}
 }
