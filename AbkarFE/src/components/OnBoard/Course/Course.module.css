@@ -202,8 +202,8 @@ color: #fff;
     margin-top: 220px;
     position: relative;
     width: 100%;
-    height: 40px;
-    border-radius: 20px;
+    height: 50px;
+    border-radius: 200px;
     border: 2px;
     background: linear-gradient(0deg, #00DCEA, #00DCEA),
         linear-gradient(0deg, #000000, #000000);
@@ -211,15 +211,17 @@ color: #fff;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
-    border: 2px solid rgba(0, 0, 0, 1)
+    border: 3px solid rgba(0, 0, 0, 1);
+    direction: ltr;
 }
 
 .skillProgress {
+    position: absolute;
     width: 23px;
-    height: 36px;
-    top: 2px;
-    border-radius: 4px 20px 20px 4px;
-    background: rgba(249, 41, 90, 1);
+    height: 46px;
+    border-radius: 200px;
+    background: #FF5F84;
+
 
 
 }
@@ -238,7 +240,7 @@ color: #fff;
 }
 .progressPragraph{
 font-family: "Omnes Arabic";
-font-size: 24px;
+font-size: 28px;
 font-weight: 600;
 line-height: 26px;
 letter-spacing: -0.40799999237060547px;
@@ -250,7 +252,7 @@ color: rgba(255, 255, 255, 1);
 
 .videoParagraph {
     font-family: "Omnes Arabic";
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 26px;
     letter-spacing: -0.40799999237060547px;
@@ -261,24 +263,25 @@ color: rgba(255, 255, 255, 1);
 .videocontent {
     position: relative;
     background-color: #1FCC7B;
-    border: 2px solid #000;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
+    border: 3px solid #000;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 1);
 
 }
 
 .video {
-    border: 2px solid #000;
+    border: 3px solid #000;
     border-radius: 15px;
 }
 
+
 .videoIcon {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     background-color: var(--Yellow, #FFD200);
     position: absolute;
-    top: -16px;
-    right: -10px;
+    top: -20px;
+    right: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,19 +292,30 @@ color: rgba(255, 255, 255, 1);
     letter-spacing: -0.40799999237060547px;
     text-align: center;
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
-    border: 2px solid #000;
+    border: 3px solid #000;
+}
+.videoLayer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,0.5);
+    border-radius: 50%;
 }
 
 .note {
-    background: linear-gradient(0deg, #F9295A, #F9295A),
-        linear-gradient(0deg, #000000, #000000);
+    background: #FF5F84;
     text-align: center;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
-    border: 2px solid #000;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 1);
+    border: 3px solid #000;
     height: 60px;
+margin-top: 20px;
+border-radius: 24px;
 
 
 }
+
 
 .noteParagraph {
     font-family: "Omnes Arabic";
@@ -314,10 +328,10 @@ color: rgba(255, 255, 255, 1);
 
 }
 .iconContent{
-    position: relative;
     background-color: #FFD200;
-    border: 2px solid #000;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
+    position: relative;
+    border: 3px solid #000;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 1);
     cursor: pointer;
 }
 .iconParagraph{

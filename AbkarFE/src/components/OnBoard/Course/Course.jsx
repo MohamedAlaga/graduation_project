@@ -52,13 +52,17 @@ const Course = () => {
             </div>
             <img className={`${style.headimage}`} src={headimage} alt="" />
         </div>
-        <div className={`${style.couresConatinar} container`}>
+
+
+        
+        <div className={`${style.couresConatinar} container w-75`}>
             <div className={`${style.progress}`}>
 
-                <div className={`${style.skillProgress}`} style={{ width: "23px" }}></div>
+                <div className={`${style.skillProgress}`} style={{ width: "15%" }}></div>
                 <div className={`${style.progressContent}`}>
+                <p className={`${style.progressPragraph}`}>0%</p>
                     <p className={`${style.progressPragraph}`}>تقدمك </p>
-                    <p className={`${style.progressPragraph}`}>0%</p>
+                    
                 </div>
 
             </div>
@@ -68,11 +72,11 @@ const Course = () => {
 
                 <div className="col-lg-4">
                     <div className={`${style.videocontent} rounded-5 mb-3`}>
-                        <div className=' p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src={video}></video></div>
-                        <p className={`${style.videoParagraph} pb-2`}>✨   رحلة تحويل الأفكار إلى الاختراعات  </p>
+                        <div  className=' p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src={video}></video></div>
+                        <p className={`${style.videoParagraph} p-2`}>  رحلة تحويل الأفكار إلى الاختراعات ✨  </p>
                         <div className={`${style.videoIcon}`}>1</div>
                     </div>
-                    <div className={`${style.note} w-100 p-3 rounded-4`}>
+                    <div className={`${style.note} w-100 p-3 `}>
                         <p className={`${style.noteParagraph}`}>💡 تعلم اكثر عن عالم الافكار </p>
                     </div>
                 </div>
@@ -80,10 +84,13 @@ const Course = () => {
                 <div className="col-lg-4">
                     <div className={`${style.videocontent} rounded-5 mb-3`}>
                         <div className='p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src={video}></video></div>
-                        <p className={`${style.videoParagraph} pb-2`}>✨   رحلة تحويل الأفكار إلى الاختراعات  </p>
-                        <div className={`${style.videoIcon}`}>2</div>
+                        <p className={`${style.videoParagraph} p-2`}>   رحلة تحويل الأفكار إلى الاختراعات ✨ </p>
+                        <div className={`${style.videoIcon}`}>
+                            <div className={`${style.videoLayer}`}></div>
+                            2
+                        </div>
                     </div>
-                    <div className={`${style.note} w-100 p-3 rounded-4`}>
+                    <div className={`${style.note} w-100 p-3  `}>
                         <p className={`${style.noteParagraph}`}>💡 تعلم اكثر عن عالم الافكار </p>
                     </div>
                 </div>
@@ -91,8 +98,8 @@ const Course = () => {
 
 
                 <div className="col-lg-4">
-                    <div className={`${style.iconContent} rounded-5 mb-3`}>
-                        <img height={240} className='w-100' src={emogi} alt="" />
+                    <div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
+                        <img height={248} className='w-100' src={emogi} alt="" />
                         <p className={`${style.iconParagraph} mt-3 `}> اختبار بسيط </p>
                     </div>
 

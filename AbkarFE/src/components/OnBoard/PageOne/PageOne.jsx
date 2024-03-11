@@ -61,20 +61,20 @@ const PageOne = () => {
     <div className="container text-center ">
       <h1 className={`${style.computer} mb-3 `}>أنا  الكمبيوتر</h1>
       <p className={`${style.computerParagraph}  mt-5 mb-4 `}>هو كــورس عن تـاريخ الكمبيوتر بشكل بـســيط وممتع، يقدمه لكم ثمانية أصدقاء مبرمجين</p>
-      <p className={`${style.computerParagraph2} mb-4`}>🌟 فصول الكورس 🌟</p>
-      <div className="row d-flex justify-content-center mb-3 ">
-        <div className="col-md-6 px-md-4">
-          <p className={`${style.rowparagraph} mb-4 `}> شرح مكونات الكمبيوتر ونظام التشغيل  ⭐   </p>
-          <p className={`${style.rowparagraph} mb-4`}>شرح الانترنت والشبكات والفرق بينهم  ⭐   </p>
-          <p className={`${style.rowparagraph} mb-4`}> كيف تبحث عن حلول فعالة للمشكلات  ⭐   </p>
-          <p className={`${style.rowparagraph} mb-4 `}> تمهيد لمنهج المستوى الثاني من الكورس  ⭐   </p>
+      <p className={`${style.computerParagraph2}`}>🌟 فصول الكورس 🌟</p>
+      <div className={`${style.direction} row d-flex justify-content-center mb-3 `}>
+        <div className="col-md-6">
+          <p className={`${style.rowparagraph} mb-4 `}> ⭐ شرح مكونات الكمبيوتر ونظام التشغيل     </p>
+          <p className={`${style.rowparagraph} mb-4`}>  ⭐شرح الانترنت والشبكات والفرق بينهم     </p>
+          <p className={`${style.rowparagraph} mb-4`}>  ⭐ كيف تبحث عن حلول فعالة للمشكلات    </p>
+          <p className={`${style.rowparagraph} mb-4 `}> ⭐ تمهيد لمنهج المستوى الثاني من الكورس    </p>
 
         </div>
-        <div className="col-md-6 px-md-4">
-          <p className={`${style.rowparagraph2} ms-md-4 mb-4`}>مراجعة ممتعة عن تطور التكنولوجيا   ⭐   </p>
-          <p className={`${style.rowparagraph2} mb-4`}> شرح واجهة الكمبيوتر وكيفية التحكم به  ⭐   </p>
-          <p className={`${style.rowparagraph2} ms-md-2 mb-4 `}>  خطر الانترنت وكيفية حماية نفسك منه ⭐   </p>
-          <p className={`${style.rowparagraph2} mb-4`}>  مقدمة عن البرمجة الحديثة وأساسياتها   ⭐   </p>
+        <div className="col-md-6 ">
+          <p className={`${style.rowparagraph2} ms-md-4 mb-4`}> ⭐مراجعة ممتعة عن تطور التكنولوجيا      </p>
+          <p className={`${style.rowparagraph2} mb-4`}>⭐ شرح واجهة الكمبيوتر وكيفية التحكم به     </p>
+          <p className={`${style.rowparagraph2} ms-md-2 mb-4 `}> ⭐ خطر الانترنت وكيفية حماية نفسك منه   </p>
+          <p className={`${style.rowparagraph2} mb-4`}> ⭐ مقدمة عن البرمجة الحديثة وأساسياتها      </p>
 
         </div>
       </div>

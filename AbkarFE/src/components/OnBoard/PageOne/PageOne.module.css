@@ -250,6 +250,9 @@ letter-spacing: -0.40799999237060547px;
 color: rgba(0, 0, 0, 1);
 
 }
+.direction{
+    direction: rtl;
+}
 .computerParagraph2{
 font-family: "Omnes Arabic Bold";
 font-size: 28px;
@@ -257,6 +260,7 @@ font-weight: 700;
 line-height: 26px;
 letter-spacing: -0.40799999237060547px;
 color: rgba(0, 0, 0, 1);
+margin: 40px 0px;
 }
 .rowparagraph{
     font-family: "Omnes Arabic";
@@ -265,6 +269,7 @@ font-weight: 600;
 line-height: 26px;
 letter-spacing: -0.40799999237060547px;
 text-align: right;
+margin-right: 250px;
 }
 .rowparagraph2{
     font-family: "Omnes Arabic";
@@ -272,7 +277,8 @@ font-size: 24px;
 font-weight: 600;
 line-height: 26px;
 letter-spacing: -0.40799999237060547px;
-text-align: left;
+text-align: right;
+margin-right: 20px;
 
 }
 .btn{
@@ -297,6 +303,8 @@ box-shadow: 0px 4px 0px 0px #000000;
 @media screen and (max-width: 912px) {
     .rowparagraph{
         font-size: 20px;
+        margin-right: 0px;
+    text-align: right;
     }
     .rowparagraph2{
         font-size: 20px;
