@@ -21,7 +21,6 @@ const Exam = () => {
 						<img className={styles.img} src={up} alt="Landscape picture" />
 						<div>
 							<p className={styles.title}>لا تتوتر</p>
-
 							<img
 								onClick={toHello}
 								className={styles.arr}
@@ -232,7 +231,7 @@ const Exam = () => {
 									</button>
 								</div>
 								<div className={styles.btn1}>
-									<button onClick={toResult} className="btn main-btn te">
+									<button type="submit" onClick={toResult} className="btn main-btn">
 										<p className={styles.btn_text}>انهاء</p>
 									</button>
 								</div>

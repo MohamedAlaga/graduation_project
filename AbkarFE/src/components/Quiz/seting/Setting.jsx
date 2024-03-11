@@ -1,6 +1,6 @@
 import styles from "./Setting.module.css";
-import up from "../../../assets/bedo/Vector 1701 (3.svg";
-import arrow from "../../../assets/bedo/arrow_back (1).svg";
+import up from "../../../assets/bedo/Vector 1701g.svg";
+import arrow from "../../../assets/bedo/arrow_backg.svg";
 import eye from "../../../assets/bedo/mdi_eye-off-outline.svg";
 import delacc from "../../../assets/bedo/deleteicon.svg";
 import signout from "../../../assets/bedo/sign_out.svg";
@@ -49,13 +49,25 @@ function Setting() {
 							<label className={styles.label} htmlFor="3">
 								اسم العبقري
 							</label>
-							<input className={styles.input} id="1" type="text" name="name1" />
+							<input
+								className={styles.input}
+								id="1"
+								type="text"
+								name="name1"
+								required
+							/>
 						</div>
 						<div className={styles.info}>
 							<label className={styles.label} htmlFor="3">
 								اسمك
 							</label>
-							<input className={styles.input} id="1" type="text" name="name1" />
+							<input
+								className={styles.input}
+								id="1"
+								type="text"
+								name="name1"
+								required
+							/>
 						</div>
 						<div className={styles.info}>
 							<label className={styles.label} htmlFor="3">
@@ -67,6 +79,7 @@ function Setting() {
 								type="number"
 								maxLength={2}
 								name="name1"
+								required
 							/>
 						</div>
 						<div className={styles.info}>
@@ -78,18 +91,25 @@ function Setting() {
 								id="1"
 								type="email"
 								name="name1"
+								required
 							/>
 						</div>
 						<div className={styles.info}>
 							<label className={styles.label} htmlFor="3">
 								كلمة المرور
 							</label>
-							<img onClick={removeEye} className={styles.eye} src={eye} alt="arrow-back" />
+							<img
+								onClick={removeEye}
+								className={styles.eye}
+								src={eye}
+								alt="arrow-back"
+							/>
 							<input
 								className={styles.input}
 								id="1"
 								type={eyee}
 								name="name1"
+								required
 							/>
 						</div>
 						<div className={styles.info}>
@@ -102,6 +122,7 @@ function Setting() {
 								type="tel"
 								maxLength={11}
 								name="name1"
+								required
 							/>
 						</div>
 						{/* ---------------------------------------------------- */}
@@ -110,17 +131,12 @@ function Setting() {
 						>
 							<div className={styles.icons}>
 								<div>
-										<img className={styles.delacc} src={delacc} alt="delete" />
+									<img className={styles.delacc} src={delacc} alt="delete" />
 									<p className={styles.caption}>حذف الحساب</p>
 								</div>
 								<div>
-									
-										<img
-											className={styles.signout}
-											src={signout}
-											alt="signout"
-										/>
-									
+									<img className={styles.signout} src={signout} alt="signout" />
+
 									<p className={styles.caption}>تسجيل الخروج</p>
 								</div>
 							</div>
@@ -130,7 +146,7 @@ function Setting() {
 								</button>
 							</div>
 							<div className={styles.btn2}>
-								<button className="btn main-btn">
+								<button type="submit" className="btn main-btn">
 									<p className={styles.btext}>حفظ</p>
 								</button>
 							</div>
