@@ -10,17 +10,17 @@
 
 @font-face {
   font-family: "Ala Typoo Medium";
-  src: url("../../assets/AlaTypoo-Medium.ttf") format("truetype");
+  src: url("../../../assets/AlaTypoo-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Omnes Arabic";
-  src: url("../../assets/OMNES-ARABIC-REGULAR.ttf") format("truetype");
+  src: url("../../../assets/OMNES-ARABIC-REGULAR.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "AA-GALAXY";
-  src: url("../../assets/AA-GALAXY.otf") format("truetype");
+  src: url("../../../assets/AA-GALAXY.otf") format("truetype");
 }
 
 .page {
@@ -57,6 +57,7 @@
       color: var(--Yellow, #ffd200);
       text-align: center;
       text-shadow: 0px 4px 0px #000;
+      -webkit-text-stroke-width: 2;
       -webkit-text-stroke-color: #000;
       font-family: "Ala Typoo Medium";
       font-size: 200px;
@@ -64,6 +65,7 @@
       font-weight: 700;
       line-height: 22px;
       letter-spacing: -0.408px;
+      text-shadow: #000000;
 
       @media (max-width: 680px) {
         font-size: 128px;

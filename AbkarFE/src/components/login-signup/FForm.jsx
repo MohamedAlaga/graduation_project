@@ -3,8 +3,11 @@ import Long from "./reusable/Long";
 import google from "../../assets/google.svg";
 import facebook from "../../assets/facebook.svg";
 import Red from "./reusable/Red";
+import { useNavigate } from "react-router-dom";
 
 function FForm() {
+  const navigate = useNavigate();
+
   return (
     <Wrapper height="660px">
       <div className="FForm">
@@ -19,8 +22,8 @@ function FForm() {
           <Long>إنشاء حساب جديد</Long>
         </form>
         <div className="another">
-          <button>إنشاء حساب جديد</button>
-          <span>ليس لديك حساب ؟ </span>
+          <button onClick={() => navigate("/login")}>تسجيل الدخول</button>
+          <span>لديك حساب علي عبقر ؟</span>
         </div>
         <div className="or">
           <div className="line"></div>

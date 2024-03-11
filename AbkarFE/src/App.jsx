@@ -36,10 +36,10 @@ function App() {
 
           <Route
             path="/"
-            element={<Age first={first} handleFirst={handleFirst} />}
+            element={<LogIn first={first} handleFirst={handleFirst} />}
           />
           <Route path="/13-18" element={<Teen />} />
-          <Route path="/login" element={<LogIn />} />
+          <Route path="/age" element={<Age />} />
           <Route path="/password" element={<Forgot />} />
           <Route path="/check-password" element={<Check />} />
           <Route path="/reassign-password" element={<Reassign />} />
@@ -54,14 +54,12 @@ function App() {
           <Route path="/MoreLearning" element={<MoreLearning />} />
           <Route path="/community" element={<Community />} />
 
-          {/* Quiz flow */}
+          {/* Quiz & settings flow */}
           <Route path="/hello" element={<Hello />} />
           <Route path="/Exam" element={<Exam />} />
           <Route path="/Result" element={<Result />} />
           <Route path="/Level" element={<Level />} />
           <Route path="/Setting" element={<Setting />} />
-
-          {/* Settings flow */}
         </Routes>
       </div>
     </Router>

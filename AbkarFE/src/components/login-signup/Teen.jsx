@@ -43,7 +43,7 @@ function Teen() {
           <img src={glass} alt="glass" />
         </div>
         <p>سيتم إضافة قسم (18 - 13) في التحديث القادم</p>
-        <Green path="/">رجوع</Green>
+        <Green path="/age">رجوع</Green>
       </div>
     </Wrapper>
   );

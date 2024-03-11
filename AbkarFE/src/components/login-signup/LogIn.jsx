@@ -1,12 +1,31 @@
+/* eslint-disable react/prop-types */
 import Wrapper from "./reusable/Wrapper";
 import boy from "../../assets/boy.svg";
 import Long from "./reusable/Long";
 import Red from "./reusable/Red";
 import google from "../../assets/google.svg";
 import facebook from "../../assets/facebook.svg";
+import PreLoader from "./PreLoader";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-function LogIn() {
-  return (
+function LogIn({ first, handleFirst }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+      handleFirst(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const navigate = useNavigate();
+
+  return loading && first ? (
+    <PreLoader />
+  ) : (
     <Wrapper height="650px">
       <div className="LogIn">
         <div className="title">تسجيل الدخول</div>
@@ -34,12 +53,14 @@ function LogIn() {
         </form>
         <div className="password">
           <div className="forget">
-            <button>نسيت كلمة المرور؟</button>
+            <button onClick={() => navigate("/password")}>
+              نسيت كلمة المرور؟
+            </button>
           </div>
-          <Long path="/password">تسجيل الدخول</Long>
+          <Long path="/welcome">تسجيل الدخول</Long>
         </div>
         <div className="another">
-          <button>إنشاء حساب جديد</button>
+          <button onClick={() => navigate("/form")}>إنشاء حساب جديد</button>
           <span>ليس لديك حساب ؟ </span>
         </div>
         <div className="or">

@@ -25,7 +25,7 @@ function Welcome() {
           ويعد البداية لتعليم البرمجة المتطورة للعبقري بعدما تم تأسيسه في
           المستوي الأول .
         </p>
-        <Green path="/form">الـتـالــي</Green>
+        <Green path="/age">الـتـالــي</Green>
       </div>
     </Wrapper>
   );
