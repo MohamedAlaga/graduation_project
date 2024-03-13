@@ -55,7 +55,7 @@ const Course = () => {
 
 
         
-        <div className={`${style.couresConatinar} container w-75`}>
+        <div className={`${style.couresConatinar} container `}>
             <div className={`${style.progress}`}>
 
                 <div className={`${style.skillProgress}`} style={{ width: "15%" }}></div>

@@ -196,6 +196,7 @@ color: #fff;
 
 .couresConatinar {
     direction: rtl;
+    width: 75% !important;
 }
 
 .progress {
@@ -341,4 +342,17 @@ font-weight: 600;
 line-height: 26px;
 letter-spacing: -0.40799999237060547px;
 text-align: center;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+   .couresConatinar{
+    width: 95% !important;
+   }
 }
