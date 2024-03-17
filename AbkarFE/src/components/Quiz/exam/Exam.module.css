@@ -35,56 +35,20 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	  --s: 2.5px;
-    text-shadow:
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 4px var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000,
-        0 0 var(--s) #000;
+	--s: 2.5px;
+	text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+		0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+		0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+		0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 .arr {
 	z-index: 10;
@@ -99,7 +63,14 @@
 	padding-top: 200px;
 	display: flex;
 	justify-content: flex-end;
-	margin-right: 300px;
+	margin-right: 400px;
+	/* margin-left: 400px; */
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: flex-end;
 }
 .qbox {
 	/* padding: 5px; */
@@ -110,6 +81,7 @@
 	/* left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%); */
+	width: 70%;
 }
 .qbox1 {
 	padding: 5px;
@@ -132,6 +104,9 @@
 	line-height: 26px; /* 108.333% */
 	letter-spacing: -0.408px;
 }
+.question p {
+	line-height: 32px;
+}
 .answer {
 	display: flex;
 	gap: 10px;
@@ -149,10 +124,20 @@
 	padding: 5px;
 }
 .label {
+	appearance: none;
 	width: 24px;
 	height: 24px;
 	outline: auto;
-	accent-color: #FFD200;
+	accent-color: #ffd200;
+	border-radius: 34px;
+	border: 3px solid #000;
+	background: #fffaed;
+}
+.label:checked {
+	background: #ffd200;
+}
+.label:hover {
+	cursor: pointer;
 }
 
 .buttons {
@@ -160,6 +145,7 @@
 	padding: 20px;
 	display: flex;
 	justify-content: flex-end;
+	width: 70%;
 }
 .btn1 {
 	width: 112px;
@@ -182,7 +168,7 @@
 	/*Mainshadow*/
 	box-shadow: 0px 4px 0px 0px #000;
 }
-.btn_text{
+.btn_text {
 	/* width: 224px;
 	height: 22px; */
 	flex-shrink: 0;
@@ -194,11 +180,11 @@
 	font-weight: 600;
 	line-height: 22px; /* 68.75% */
 	letter-spacing: -0.408px;
-	width: 91px;
+	/* width: 91px; */
 	height: 22px;
 	top: 13px;
 	left: 10px;
-	padding-top:5px;
+	padding-top: 5px;
 }
 /* ---------------------------------------------------------------------  */
 @media only screen and (max-width: 480px) {
@@ -230,7 +216,7 @@
 		font-size: 45px;
 	}
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
 	.form_edit {
 		padding-top: 200px;
 		/* width: 781px; */
@@ -239,5 +225,9 @@
 		display: flex;
 		justify-content: center;
 		margin-right: 0;
+		/* margin-left: 0; */
+	}
+	.form {
+		align-items: center;
 	}
 }

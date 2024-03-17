@@ -128,9 +128,9 @@
 
 /* Mobile */
 @media (max-width: 700px) {
-	.content {
+	/* .content {
 		padding: 4rem;
-	}
+	} */
 
 	.grid {
 		grid-template-columns: 1fr;
@@ -359,7 +359,8 @@
 	line-height: 32px;
 	letter-spacing: -0.408px;
 	text-align: center;
-	padding-top: 15px;
+	/* padding-top: 15px; */
+	padding-bottom: 8px;
 	margin-top: 4px;
 }
 .btn {
@@ -375,7 +376,7 @@
 	box-shadow: 0px 4px 0px 0px #000;
 }
 .button_p {
-	width: 224px;
+	/* width: 224px; */
 	height: 22px;
 	flex-shrink: 0;
 	color: #fff;

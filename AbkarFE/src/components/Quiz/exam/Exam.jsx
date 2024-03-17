@@ -31,11 +31,16 @@ const Exam = () => {
 					</div>
 					{/* F-2 */}
 					<div className={`${styles.form_edit}`}>
-						<form>
+						<form className={styles.form}>
 							{/* qqqqqqqqqqqqqqqqqqq */}
 							<div className={styles.qbox}>
 								<div className={styles.question}>
-									<p>١- ما اسم اول جهاز كمبيوتر تم اختراعه؟</p>
+									<p>
+										١- ما اسم اول جهاز كمبيوتر تم اختراعهما اسم اول جهاز كمبيوتر
+										تم اختراعهما اسم اول جهاز كمبيوتر تم اختراعهما اسم اول جهاز
+										كمبيوتر تم اختراعه جهاز كمبيوتر تم اختراعهما اسم اول جهاز
+										كمبيوتر تم اختراعه؟؟
+									</p>
 								</div>
 								<div className={styles.answers}>
 									<div className={styles.answer}>
@@ -231,7 +236,11 @@ const Exam = () => {
 									</button>
 								</div>
 								<div className={styles.btn1}>
-									<button type="submit" onClick={toResult} className="btn main-btn">
+									<button
+										type="submit"
+										onClick={toResult}
+										className="btn main-btn"
+									>
 										<p className={styles.btn_text}>انهاء</p>
 									</button>
 								</div>
