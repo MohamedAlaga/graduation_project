@@ -151,8 +151,8 @@ margin-bottom: 20px;
         top: -20px;
         bottom: 0;
         right: 0;
-        left: -20px;
-        width: 106%;
+        left: -5px;
+        width: 102%;
         height: 187px;
     }
 
@@ -178,7 +178,7 @@ color: rgba(0, 0, 0, 1);
 margin: 0;
 margin-left: 50px;
 font-family:"Omnes Arabic";
-font-size: 20px;
+font-size: 22px;
 font-weight: 500;
 line-height: 36px;
 letter-spacing: -0.40799999237060547px;
@@ -198,9 +198,9 @@ text-align: right;
     width: 112px;
     height: 48px;
     /* top: 711px; */
-    border: 2px solid rgba(0, 0, 0, 1);
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
-    border-radius: 14px;
+    border: 3px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 1);
+    border-radius: 16px;
     margin-left: 20px;
 }
 .learnBtnDirection2 {
@@ -215,23 +215,23 @@ text-align: right;
     width: 112px;
     height: 48px;
     top: 711px;
-    border: 2px solid rgba(0, 0, 0, 1);
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
-    border-radius: 14px;
+    border: 3px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 1);
+    border-radius: 16px;
 }
 /* /////////////////////////////////////////////////////////////////////////////////// */
 /*                                    media screen                            */
 
 @media screen and (max-width:380px) {
     .learnAdress{
-        font-size: 20px;
+        font-size: 24px;
     }
     .abuotLearn{
-        font-size: 20px;
+        font-size: 21px;
         margin: 0;
     }
     .moreLearning {
-        font-size: 25px;
+        font-size: 34px;
     }
 
     .videoIcon {
@@ -251,16 +251,13 @@ text-align: right;
         margin: 0;
     }
     .moreLearning {
-        font-size: 25px;
+        font-size: 35px;
     }
     .learnContainer{
         width: 100% !important;
     }
 
-    .videoIcon {
-        width: 35px !important;
-        margin-left: 10px;
-    }
+    
 }
 @media screen and (min-width:401px) and (max-width:440px) {
     .learnAdress{
@@ -272,23 +269,20 @@ text-align: right;
         margin: 0;
     }
     .moreLearning {
-        font-size: 30px;
+        font-size: 36px;
     }
     .learnContainer{
         width: 100% !important;
     }
 
-    .videoIcon {
-        width: 35px !important;
-        margin-left: 10px;
-    }
+   
 }
 @media screen and (min-width:441px) and (max-width:560px) {
     .learnAdress{
-        font-size: 34px;
+        font-size: 32px;
     }
     .abuotLearn{
-        font-size: 28px;
+        font-size: 24px;
         margin: 0;
     }
     .moreLearning {

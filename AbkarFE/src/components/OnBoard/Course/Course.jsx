@@ -58,7 +58,7 @@ const Course = () => {
         <div className={`${style.couresConatinar} container `}>
             <div className={`${style.progress}`}>
 
-                <div className={`${style.skillProgress}`} style={{ width: "15%" }}></div>
+                <div className={`${style.skillProgress}`} style={{ width: "7%" }}></div>
                 <div className={`${style.progressContent}`}>
                 <p className={`${style.progressPragraph}`}>0%</p>
                     <p className={`${style.progressPragraph}`}>تقدمك </p>
@@ -100,7 +100,11 @@ const Course = () => {
                 <div className="col-lg-4">
                     <div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
                         <img height={248} className='w-100' src={emogi} alt="" />
-                        <p className={`${style.iconParagraph} mt-3 `}> اختبار بسيط </p>
+                        <p className={`${style.iconParagraph} mt-3 `}> الاختبار النهائي</p>
+                        <div className={`${style.videoIcon}`}>
+                            <div className={`${style.videoLayer}`}></div>
+                            
+                        </div>
                     </div>
 
                 </div>
