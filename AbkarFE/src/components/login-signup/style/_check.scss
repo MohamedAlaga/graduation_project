@@ -90,6 +90,17 @@
       }
     }
 
+    position: relative;
+
+    label {
+      position: absolute;
+      right: 70px;
+      bottom: 135px;
+      color: gray;
+      font-size: 18px;
+      transition: 0.5s;
+    }
+
     input {
       text-align: center;
       font-family: "Omnes Arabic";

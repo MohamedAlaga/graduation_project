@@ -11,6 +11,8 @@ import { useNavigate } from "react-router-dom";
 
 function LogIn({ first, handleFirst }) {
   const [loading, setLoading] = useState(true);
+  const [focus, setFocus] = useState(false);
+  const [focus2, setFocus2] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -48,8 +50,24 @@ function LogIn({ first, handleFirst }) {
           <img src={boy} alt="boy" />
         </div>
         <form>
-          <input type="email" id="mail" placeholder="البريد الالكتروني" />
-          <input type="password" id="pass" placeholder="كلمة المرور" />
+          <div>
+            <input type="email" id="mail" onFocus={() => setFocus(true)} />
+            <label
+              htmlFor="mail"
+              style={focus ? { bottom: "45px", fontSize: "14px" } : {}}
+            >
+              البريد الالكتروني
+            </label>
+          </div>
+          <div>
+            <input type="password" id="pass" onFocus={() => setFocus2(true)} />
+            <label
+              htmlFor="pass"
+              style={focus2 ? { bottom: "45px", fontSize: "14px" } : {}}
+            >
+              كلمة المرور
+            </label>
+          </div>
         </form>
         <div className="password">
           <div className="forget">

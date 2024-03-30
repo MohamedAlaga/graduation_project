@@ -56,9 +56,6 @@
       transform: translate(-50%, -50%);
       color: var(--Yellow, #ffd200);
       text-align: center;
-      text-shadow: 0px 4px 0px #000;
-      // -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: #000;
       font-family: "Ala Typoo Medium";
       font-size: 200px;
       font-style: normal;
@@ -66,6 +63,24 @@
       line-height: 22px;
       letter-spacing: -0.408px;
       text-shadow: #000000;
+
+      --s: 2.5px;
+      text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+        0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+        0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 
       @media (max-width: 680px) {
         font-size: 128px;

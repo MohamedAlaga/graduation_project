@@ -39,24 +39,33 @@
   }
 
   form {
-    input {
-      width: 80%;
-      text-align: right;
-      font-family: "Omnes Arabic";
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 22px;
-      letter-spacing: -0.408px;
-      background: var(--Background, #fffaed);
-      margin: 10px 0;
-      border-bottom: 1px solid black;
-      border-top: none;
-      border-left: none;
-      border-right: none;
+    div {
+      position: relative;
 
-      &:placeholder-shown {
-        color: var(--Gray-mid, #888);
+      label {
+        position: absolute;
+        right: 70px;
+        bottom: 14px;
+        color: gray;
+        font-size: 18px;
+        transition: 0.5s;
+      }
+
+      input {
+        width: 80%;
+        text-align: right;
+        font-family: "Omnes Arabic";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        background: var(--Background, #fffaed);
+        margin: 10px 0;
+        border-bottom: 1px solid black;
+        border-top: none;
+        border-left: none;
+        border-right: none;
       }
     }
   }

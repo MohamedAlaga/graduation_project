@@ -82,6 +82,16 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+
+    label {
+      position: absolute;
+      right: 70px;
+      bottom: 87px;
+      color: gray;
+      font-size: 18px;
+      transition: 0.5s;
+    }
 
     input {
       color: var(--Gray-mid, #888);

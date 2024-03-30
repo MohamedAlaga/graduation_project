@@ -1,8 +1,11 @@
 import Wrapper from "./reusable/Wrapper";
 import face from "../../assets/Thinkingface.svg";
 import Green from "./reusable/Green";
+import { useState } from "react";
 
 function Check() {
+  const [focus, setFocus] = useState(false);
+
   return (
     <Wrapper height="580px">
       <div className="Check">
@@ -27,7 +30,13 @@ function Check() {
         </div>
         <p>ادخل كود التحقق الذي تم ارساله لك الأن</p>
         <form>
-          <input type="text" id="mail" placeholder="كود التفعيل" />
+          <input type="text" id="mail" onFocus={() => setFocus(true)} />
+          <label
+            htmlFor="mail"
+            style={focus ? { bottom: "170px", fontSize: "14px" } : {}}
+          >
+            كود التفعيل
+          </label>
           <div className="another">
             <span>اذا لم تكن استلمت الكود!</span>
             <button>إعادة الارسال</button>

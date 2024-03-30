@@ -1,8 +1,11 @@
 import Wrapper from "./reusable/Wrapper";
 import sad from "../../assets/sad.svg";
 import Green from "./reusable/Green";
+import { useState } from "react";
 
 function Forgot() {
+  const [focus, setFocus] = useState(false);
+
   return (
     <Wrapper height="580px">
       <div className="Forgot">
@@ -28,7 +31,13 @@ function Forgot() {
         <p>ادخل بريدك الالكتروني الذي سجلت به في المنصة</p>
         <p>سوف نرسل لك رسالة لإعادة تعين كلمة مرورك</p>
         <form>
-          <input type="text" id="mail" placeholder="البريد الالكتروني" />
+          <input type="text" id="mail" onFocus={() => setFocus(true)} />
+          <label
+            htmlFor="mail"
+            style={focus ? { bottom: "120px", fontSize: "14px" } : {}}
+          >
+            البريد الالكتروني
+          </label>
           <Green path="/check-password">الـتـالــي</Green>
         </form>
       </div>

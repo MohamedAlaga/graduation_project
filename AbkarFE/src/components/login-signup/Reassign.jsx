@@ -1,8 +1,12 @@
 import Wrapper from "./reusable/Wrapper";
 import face from "../../assets/peekingEye.svg";
 import Green from "./reusable/Green";
+import { useState } from "react";
 
 function Reassign() {
+  const [focus, setFocus] = useState(false);
+  const [focus2, setFocus2] = useState(false);
+
   return (
     <Wrapper height="540px">
       <div className="Reassign">
@@ -26,8 +30,24 @@ function Reassign() {
           <img src={face} alt="sad face" />
         </div>
         <form>
-          <input type="password" id="mail" placeholder="كلمة المرور الجديدة" />
-          <input type="password" id="pass" placeholder="كلمة المرور" />
+          <div>
+            <input type="password" id="mail" onFocus={() => setFocus(true)} />
+            <label
+              htmlFor="mail"
+              style={focus ? { bottom: "45px", fontSize: "14px" } : {}}
+            >
+              كلمة المرور الجديدة
+            </label>
+          </div>
+          <div>
+            <input type="password" id="pass" onFocus={() => setFocus2(true)} />
+            <label
+              htmlFor="pass"
+              style={focus2 ? { bottom: "45px", fontSize: "14px" } : {}}
+            >
+              كلمة المرور
+            </label>
+          </div>
           <Green path="/parents">إنهاء</Green>
         </form>
       </div>

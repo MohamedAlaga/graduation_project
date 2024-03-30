@@ -4,8 +4,6 @@
   .title {
     color: #fff;
     text-align: center;
-    text-shadow: 0px 4px 0px #000;
-    -webkit-text-stroke-color: #000;
     font-family: AA-GALAXY;
     font-size: 60px;
     font-style: normal;
@@ -13,6 +11,20 @@
     line-height: 22px;
     letter-spacing: -0.408px;
     margin-bottom: 14px;
+    --s: 2.5px;
+    text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+      0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+      0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 
     @media (max-width: 680px) {
       font-size: 48px;
@@ -20,35 +32,46 @@
   }
 
   form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    div {
+      position: relative;
+      display: flex;
+      justify-content: center;
 
-    input {
-      width: 80%;
-      text-align: right;
-      font-family: "Omnes Arabic";
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 22px;
-      letter-spacing: -0.408px;
-      background: var(--Background, #fffaed);
-      margin: 10px 0;
-      border-bottom: 1px solid black;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-
-      &:placeholder-shown {
-        color: var(--Gray-mid, #888);
+      label {
+        position: absolute;
+        right: 70px;
+        bottom: 14px;
+        color: gray;
+        font-size: 18px;
+        transition: 0.5s;
       }
 
-      &:focus {
-        border-bottom: 1px solid black !important;
-        border-top: none !important;
-        border-left: none !important;
-        border-right: none !important;
+      input {
+        width: 80%;
+        text-align: right;
+        font-family: "Omnes Arabic";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        background: var(--Background, #fffaed);
+        margin: 10px 0;
+        border-bottom: 1px solid black;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+        &:placeholder-shown {
+          color: var(--Gray-mid, #888);
+        }
+
+        &:focus {
+          border-bottom: 1px solid black !important;
+          border-top: none !important;
+          border-left: none !important;
+          border-right: none !important;
+        }
       }
     }
   }
@@ -56,9 +79,6 @@
   .another {
     color: #fff;
     text-align: center;
-    text-shadow: 0px 2px 0px #000;
-    -webkit-text-stroke-width: 1;
-    -webkit-text-stroke-color: #000;
     font-family: "Omnes Arabic";
     font-size: 24px;
     font-style: normal;
@@ -66,6 +86,20 @@
     line-height: 22px;
     letter-spacing: -0.408px;
     margin-top: 14px;
+    --s: 1.5px;
+    text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
+      0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
+      0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 
     @media (max-width: 680px) {
       font-size: 20px;
@@ -75,6 +109,23 @@
       border: none;
       background-color: transparent;
       color: var(--Green, #1fcc7b);
+      --s: 1.5px;
+      text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
+        0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
+        0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
     }
   }
 

@@ -52,8 +52,6 @@
   transform: translate(-50%, -50%);
   color: var(--Yellow, #ffd200);
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-color: #000;
   font-family: "Ala Typoo Medium";
   font-size: 200px;
   font-style: normal;
@@ -61,6 +59,8 @@
   line-height: 22px;
   letter-spacing: -0.408px;
   text-shadow: #000000;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .PreLoader .logo span {
@@ -329,7 +329,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.LogIn form input {
+.LogIn form div {
+  position: relative;
+}
+.LogIn form div label {
+  position: absolute;
+  right: 70px;
+  bottom: 14px;
+  color: gray;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.LogIn form div input {
   width: 80%;
   text-align: right;
   font-family: "Omnes Arabic";
@@ -344,12 +355,6 @@
   border-top: none;
   border-left: none;
   border-right: none;
-}
-.LogIn form input:-moz-placeholder-shown {
-  color: var(--Gray-mid, #888);
-}
-.LogIn form input:placeholder-shown {
-  color: var(--Gray-mid, #888);
 }
 .LogIn .password {
   width: 100%;
@@ -521,6 +526,15 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+}
+.Forgot form label {
+  position: absolute;
+  right: 70px;
+  bottom: 87px;
+  color: gray;
+  font-size: 18px;
+  transition: 0.5s;
 }
 .Forgot form input {
   color: var(--Gray-mid, #888);
@@ -613,6 +627,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .Check form .another {
   font-family: Omnes Arabic;
@@ -628,6 +643,14 @@
   margin: 5px 6px 10px;
   border: none;
   background-color: transparent;
+}
+.Check form label {
+  position: absolute;
+  right: 70px;
+  bottom: 135px;
+  color: gray;
+  font-size: 18px;
+  transition: 0.5s;
 }
 .Check form input {
   text-align: center;
@@ -700,7 +723,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.Reassign form input {
+.Reassign form div {
+  position: relative;
+}
+.Reassign form div label {
+  position: absolute;
+  right: 70px;
+  bottom: 14px;
+  color: gray;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.Reassign form div input {
   width: 80%;
   text-align: right;
   font-family: "Omnes Arabic";
@@ -716,22 +750,22 @@
   border-left: none;
   border-right: none;
 }
-.Reassign form input:-moz-placeholder-shown {
+.Reassign form div input:-moz-placeholder-shown {
   color: var(--Gray-mid, #888);
 }
-.Reassign form input:placeholder-shown {
+.Reassign form div input:placeholder-shown {
   color: var(--Gray-mid, #888);
 }
-.Reassign form input:focus {
+.Reassign form div input:focus {
   border-bottom: 1px solid black !important;
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
 }
-.Reassign form button {
+.Reassign form div button {
   margin-top: 20px;
 }
-.Reassign input:focus {
+.Reassign form input:focus {
   outline: none;
 }
 
@@ -848,8 +882,6 @@
 .FForm .title {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-color: #000;
   font-family: AA-GALAXY;
   font-size: 60px;
   font-style: normal;
@@ -857,18 +889,28 @@
   line-height: 22px;
   letter-spacing: -0.408px;
   margin-bottom: 14px;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .FForm .title {
     font-size: 48px;
   }
 }
-.FForm form {
+.FForm form div {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
-.FForm form input {
+.FForm form div label {
+  position: absolute;
+  right: 70px;
+  bottom: 14px;
+  color: gray;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.FForm form div input {
   width: 80%;
   text-align: right;
   font-family: "Omnes Arabic";
@@ -884,13 +926,13 @@
   border-left: none;
   border-right: none;
 }
-.FForm form input:-moz-placeholder-shown {
+.FForm form div input:-moz-placeholder-shown {
   color: var(--Gray-mid, #888);
 }
-.FForm form input:placeholder-shown {
+.FForm form div input:placeholder-shown {
   color: var(--Gray-mid, #888);
 }
-.FForm form input:focus {
+.FForm form div input:focus {
   border-bottom: 1px solid black !important;
   border-top: none !important;
   border-left: none !important;
@@ -899,9 +941,6 @@
 .FForm .another {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 2px 0px #000;
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: #000;
   font-family: "Omnes Arabic";
   font-size: 24px;
   font-style: normal;
@@ -909,6 +948,8 @@
   line-height: 22px;
   letter-spacing: -0.408px;
   margin-top: 14px;
+  --s: 1.5px;
+  text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .FForm .another {
@@ -919,6 +960,8 @@
   border: none;
   background-color: transparent;
   color: var(--Green, #1fcc7b);
+  --s: 1.5px;
+  text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 .FForm .or {
   display: flex;
