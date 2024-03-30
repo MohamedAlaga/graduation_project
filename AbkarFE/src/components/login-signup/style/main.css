@@ -14,21 +14,12 @@
 }
 @font-face {
   font-family: "Omnes Arabic";
-  src: url("../../../assets/OMNES-ARABIC-MEDIUM.ttf") format("truetype");
+  src: url("../../../assets/OMNES-ARABIC-REGULAR.ttf") format("truetype");
 }
 @font-face {
   font-family: "AA-GALAXY";
   src: url("../../../assets/AA-GALAXY.otf") format("truetype");
 }
-@font-face {
-  font-family: "Omnes Arabic Bold";
-  src: url("../../../assets/OMNES-ARABIC-BOLD.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Omnes Arabic Semi Bold";
-  src: url("../../../assets/OMNES-ARABIC-SEMI-BOLD.ttf") format("truetype");
-}
-
 .page {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
@@ -62,7 +53,6 @@
   color: var(--Yellow, #ffd200);
   text-align: center;
   text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-width: 2;
   -webkit-text-stroke-color: #000;
   font-family: "Ala Typoo Medium";
   font-size: 200px;
@@ -125,15 +115,14 @@
   position: absolute;
   color: #fff;
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-width: 2;
-  -webkit-text-stroke-color: #000;
   font-family: AA-GALAXY;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.408px;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .Age__top p {
@@ -264,14 +253,14 @@
 .Teen .title {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-color: #000;
   font-family: AA-GALAXY;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.408px;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .Teen .title {
@@ -320,22 +309,15 @@
   padding-top: 26px;
 }
 .LogIn .title {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-width: 2;
-  -webkit-text-stroke-color: #000;
-  font-family: AA-GALAXY;
+  font-family: "AA-GALAXY";
   font-size: 60px;
-  font-style: normal;
   font-weight: 700;
   line-height: 22px;
-  letter-spacing: -0.408px;
-}
-@media (max-width: 680px) {
-  .LogIn .title {
-    font-size: 48px;
-  }
+  letter-spacing: -0.4079999924px;
+  text-align: center;
+  color: #fff;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 .LogIn .shape {
   position: relative;
@@ -394,8 +376,6 @@
 .LogIn .another {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 2px 0px #000;
-  -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: #000;
   font-family: "Omnes Arabic";
   font-size: 24px;
@@ -404,6 +384,8 @@
   line-height: 22px;
   letter-spacing: -0.408px;
   margin-top: 14px;
+  --s: 1.5px;
+  text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .LogIn .another {
@@ -414,6 +396,8 @@
   border: none;
   background-color: transparent;
   color: var(--Green, #1fcc7b);
+  --s: 1.5px;
+  text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 .LogIn .or {
   display: flex;
@@ -481,15 +465,14 @@
 .Forgot .title {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-width: 2;
-  -webkit-text-stroke-color: #000;
   font-family: AA-GALAXY;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.408px;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .Forgot .title {
@@ -584,15 +567,14 @@
 .Check .title {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-width: 2;
-  -webkit-text-stroke-color: #000;
   font-family: AA-GALAXY;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.408px;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .Check .title {
@@ -692,15 +674,14 @@
 .Reassign .title {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-width: 2;
-  -webkit-text-stroke-color: #000;
   font-family: AA-GALAXY;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.408px;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .Reassign .title {
@@ -775,15 +756,14 @@
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-width: 2;
-  -webkit-text-stroke-color: #000;
   font-family: AA-GALAXY;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 88px;
   letter-spacing: -0.408px;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .Parents .shape p {
@@ -793,20 +773,21 @@
 .Parents .another {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 2px 0px #000;
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: #000;
   font-family: "Omnes Arabic";
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 22px;
   letter-spacing: -0.408px;
+  --s: 1.5px;
+  text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 .Parents .another button {
   background-color: transparent;
   border: none;
   color: var(--Green, #1fcc7b);
+  --s: 1.5px;
+  text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .Parents .big {
@@ -832,9 +813,6 @@
 .Welcome .title {
   color: #fff;
   text-align: center;
-  text-shadow: 0px 4px 0px #000;
-  -webkit-text-stroke-width: 2;
-  -webkit-text-stroke-color: #000;
   font-family: AA-GALAXY;
   font-size: 60px;
   font-style: normal;
@@ -842,6 +820,8 @@
   line-height: 22px;
   letter-spacing: -0.408px;
   margin: 0 0 50px 0;
+  --s: 2.5px;
+  text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
 @media (max-width: 680px) {
   .Welcome .title {

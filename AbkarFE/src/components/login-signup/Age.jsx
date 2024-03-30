@@ -42,7 +42,7 @@ function Age() {
           <p>كم عمرك</p>
         </div>
         <div className="Age__bottom">
-          <Green path="/login">6 - 12</Green>
+          <Green path="/pageone">6 - 12</Green>
           <Red path="/13-18">13 - 18</Red>
         </div>
       </div>

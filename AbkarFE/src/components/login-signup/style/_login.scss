@@ -3,21 +3,27 @@
   padding-top: 26px;
 
   .title {
-    color: #fff;
-    text-align: center;
-    text-shadow: 0px 4px 0px #000;
-    -webkit-text-stroke-width: 2;
-    -webkit-text-stroke-color: #000;
-    font-family: AA-GALAXY;
+    font-family: "AA-GALAXY";
     font-size: 60px;
-    font-style: normal;
     font-weight: 700;
     line-height: 22px;
-    letter-spacing: -0.408px;
-
-    @media (max-width: 680px) {
-      font-size: 48px;
-    }
+    letter-spacing: -0.40799999237060547px;
+    text-align: center;
+    color: #fff;
+    --s: 2.5px;
+    text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+      0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+      0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
   }
 
   .shape {
@@ -83,8 +89,6 @@
   .another {
     color: #fff;
     text-align: center;
-    text-shadow: 0px 2px 0px #000;
-    -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: #000;
     font-family: "Omnes Arabic";
     font-size: 24px;
@@ -93,6 +97,20 @@
     line-height: 22px;
     letter-spacing: -0.408px;
     margin-top: 14px;
+    --s: 1.5px;
+    text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
+      0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
+      0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 
     @media (max-width: 680px) {
       font-size: 20px;
@@ -102,6 +120,23 @@
       border: none;
       background-color: transparent;
       color: var(--Green, #1fcc7b);
+      --s: 1.5px;
+      text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
+        0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
+        0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+        0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
     }
   }
 

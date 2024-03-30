@@ -10,9 +10,6 @@
   .title {
     color: #fff;
     text-align: center;
-    text-shadow: 0px 4px 0px #000;
-    -webkit-text-stroke-width: 2;
-    -webkit-text-stroke-color: #000;
     font-family: AA-GALAXY;
     font-size: 60px;
     font-style: normal;
@@ -20,6 +17,20 @@
     line-height: 22px;
     letter-spacing: -0.408px;
     margin: 0 0 50px 0;
+    --s: 2.5px;
+    text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+      0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000,
+      0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
+      0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 
     @media (max-width: 680px) {
       font-size: 48px;
