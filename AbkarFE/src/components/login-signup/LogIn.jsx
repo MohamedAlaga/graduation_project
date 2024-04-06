@@ -8,8 +8,12 @@ import facebook from "../../assets/facebook.svg";
 import PreLoader from "./PreLoader";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { LogInUser } from "./services/LogIn";
+import { useAuth } from "../../AuthContext";
 
 function LogIn({ first, handleFirst }) {
+  const { login } = useAuth();
+
   const [loading, setLoading] = useState(true);
   const [focus, setFocus] = useState(false);
   const [focus2, setFocus2] = useState(false);
@@ -24,6 +28,20 @@ function LogIn({ first, handleFirst }) {
   }, []);
 
   const navigate = useNavigate();
+
+  const [mail, setMail] = useState("");
+  const [pass, setPass] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { isOK, data } = await LogInUser(mail, pass);
+    if (isOK) {
+      login(data.access_token);
+      navigate("/pageone");
+    } else {
+      console.log("error");
+    }
+  };
 
   return loading && first ? (
     <PreLoader />
@@ -51,7 +69,13 @@ function LogIn({ first, handleFirst }) {
         </div>
         <form>
           <div>
-            <input type="email" id="mail" onFocus={() => setFocus(true)} />
+            <input
+              type="email"
+              id="mail"
+              onFocus={() => setFocus(true)}
+              value={mail}
+              onChange={(e) => setMail(e.target.value)}
+            />
             <label
               htmlFor="mail"
               style={focus ? { bottom: "45px", fontSize: "14px" } : {}}
@@ -60,7 +84,13 @@ function LogIn({ first, handleFirst }) {
             </label>
           </div>
           <div>
-            <input type="password" id="pass" onFocus={() => setFocus2(true)} />
+            <input
+              type="password"
+              id="pass"
+              onFocus={() => setFocus2(true)}
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+            />
             <label
               htmlFor="pass"
               style={focus2 ? { bottom: "45px", fontSize: "14px" } : {}}
@@ -75,7 +105,7 @@ function LogIn({ first, handleFirst }) {
               نسيت كلمة المرور؟
             </button>
           </div>
-          <Long path="/welcome">تسجيل الدخول</Long>
+          <Long onClick={handleSubmit}>تسجيل الدخول</Long>
         </div>
         <div className="another">
           <button onClick={() => navigate("/form")}>إنشاء حساب جديد</button>

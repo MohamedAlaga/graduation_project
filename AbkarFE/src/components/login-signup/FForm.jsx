@@ -5,6 +5,7 @@ import facebook from "../../assets/facebook.svg";
 import Red from "./reusable/Red";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { SignUpUser } from "./services/SignUp";
 
 function FForm() {
   const navigate = useNavigate();
@@ -14,6 +15,24 @@ function FForm() {
   const [focus4, setFocus4] = useState(false);
   const [focus5, setFocus5] = useState(false);
   const [focus6, setFocus6] = useState(false);
+
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [mail, setMail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [father, setFather] = useState("");
+  const [age, setAge] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const result = await SignUpUser(name, password, mail, phone, father, age);
+    if (result) {
+      navigate("/");
+    } else {
+      console.log("error signing up!!!");
+    }
+  };
 
   return (
     <Wrapper height="660px">
@@ -26,6 +45,8 @@ function FForm() {
               id="Pname"
               required
               onFocus={() => setFocus(true)}
+              value={father}
+              onChange={(e) => setFather(e.target.value)}
             />
             <label
               htmlFor="Pname"
@@ -40,6 +61,8 @@ function FForm() {
               id="name"
               required
               onFocus={() => setFocus2(true)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <label
               htmlFor="name"
@@ -54,6 +77,8 @@ function FForm() {
               id="age"
               required
               onFocus={() => setFocus3(true)}
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
             />
             <label
               htmlFor="age"
@@ -68,6 +93,8 @@ function FForm() {
               id="mail"
               required
               onFocus={() => setFocus4(true)}
+              value={mail}
+              onChange={(e) => setMail(e.target.value)}
             />
             <label
               htmlFor="mail"
@@ -78,10 +105,12 @@ function FForm() {
           </div>
           <div>
             <input
-              type="text"
+              type="password"
               id="pass"
               required
               onFocus={() => setFocus5(true)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <label
               htmlFor="pass"
@@ -96,6 +125,8 @@ function FForm() {
               id="phone"
               required
               onFocus={() => setFocus6(true)}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
             <label
               htmlFor="phone"
@@ -105,7 +136,7 @@ function FForm() {
             </label>
           </div>
           <div>
-            <Long>إنشاء حساب جديد</Long>
+            <Long onClick={handleSubmit}>إنشاء حساب جديد</Long>
           </div>
         </form>
         <div className="another">

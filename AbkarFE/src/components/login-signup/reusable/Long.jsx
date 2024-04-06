@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useNavigate } from "react-router-dom";
 
-function Long({ path, children }) {
-  const navigate = useNavigate();
+function Long({ onClick, children }) {
   return (
-    <button className="long" onClick={() => navigate(path)}>
+    <button className="long" onClick={onClick}>
       {children}
     </button>
   );
