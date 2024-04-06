@@ -2,9 +2,24 @@ import Wrapper from "./reusable/Wrapper";
 import sad from "../../assets/sad.svg";
 import Green from "./reusable/Green";
 import { useState } from "react";
+import { ForgetPass } from "./services/ForgetPass";
+import { useNavigate } from "react-router-dom";
 
 function Forgot() {
+  const navigate = useNavigate();
+
   const [focus, setFocus] = useState(false);
+  const [mail, setMail] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await ForgetPass(mail);
+    if (result) {
+      navigate("/reassign-password");
+    } else {
+      console.log("error");
+    }
+  };
 
   return (
     <Wrapper height="580px">
@@ -31,14 +46,20 @@ function Forgot() {
         <p>ادخل بريدك الالكتروني الذي سجلت به في المنصة</p>
         <p>سوف نرسل لك رسالة لإعادة تعين كلمة مرورك</p>
         <form>
-          <input type="text" id="mail" onFocus={() => setFocus(true)} />
+          <input
+            type="text"
+            id="mail"
+            onFocus={() => setFocus(true)}
+            value={mail}
+            onChange={(e) => setMail(e.target.value)}
+          />
           <label
             htmlFor="mail"
             style={focus ? { bottom: "120px", fontSize: "14px" } : {}}
           >
             البريد الالكتروني
           </label>
-          <Green path="/check-password">الـتـالــي</Green>
+          <Green onClick={handleSubmit}>الـتـالــي</Green>
         </form>
       </div>
     </Wrapper>
