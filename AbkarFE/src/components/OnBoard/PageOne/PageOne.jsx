@@ -59,9 +59,9 @@ const PageOne = () => {
       <img className={`${style.headimage}`} src={headimage} alt="" />
     </div>
     <div className="container text-center ">
-      <h1 className={`${style.computer} mb-3 `}>أنا  الكمبيوتر</h1>
-      <p className={`${style.computerParagraph}  mt-5 mb-4 `}>هو كــورس عن تـاريخ الكمبيوتر بشكل بـســيط وممتع، يقدمه لكم ثمانية أصدقاء مبرمجين</p>
-      <p className={`${style.computerParagraph2}`}>🌟 فصول الكورس 🌟</p>
+      <h1 className={`${style.computer} mb-5 `}>أنا  الكمبيوتر</h1>
+      <p className={`${style.computerParagraph}  mt-5 mb-3 `}>هو كــورس عن تـاريخ الكمبيوتر بشكل بـســيط وممتع، يقدمه لكم ثمانية أصدقاء مبرمجين</p>
+      <p className={`${style.computerParagraph2} `}>🌟 فصول الكورس 🌟</p>
       <div className={`${style.direction} row d-flex justify-content-center mb-3 `}>
         <div className="col-md-6">
           <p className={`${style.rowparagraph} mb-4 `}> ⭐ شرح مكونات الكمبيوتر ونظام التشغيل     </p>

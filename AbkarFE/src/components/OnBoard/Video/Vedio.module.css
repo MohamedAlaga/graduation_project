@@ -113,6 +113,7 @@ color: #fff;
     cursor: pointer;
 }
 
+
 .editIcon3bkr {
     position: absolute;
     top: 0px;
@@ -297,7 +298,7 @@ color: #fff;
 
 .videoBtn1 {
     background: rgba(31, 204, 123, 1) !important;
-    font-family: "Omnes Arabic";
+    font-family: "Omnes Arabic Semi Bold";
     font-size: 32px;
     font-weight: 600;
     line-height: 22px;
@@ -314,8 +315,8 @@ color: #fff;
 }
 
 .videoBtn2 {
-    background: rgba(249, 41, 90, 1);
-    font-family: "Omnes Arabic";
+    background: #FF5F84;
+    font-family: "Omnes Arabic Semi Bold";
     font-size: 32px;
     font-weight: 600;
     line-height: 22px;

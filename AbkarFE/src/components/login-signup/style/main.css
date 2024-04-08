@@ -13,8 +13,16 @@
   src: url("../../../assets/AlaTypoo-Medium.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Omnes Arabic";
-  src: url("../../../assets/OMNES-ARABIC-REGULAR.ttf") format("truetype");
+  font-family: "Omnes Arabic Bold";
+  src: url("../../../assets/OMNES-ARABIC-BOLD.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Omnes Arabic Semi Bold";
+  src: url("../../../assets/OMNES-ARABIC-SEMI-BOLD.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Omnes Arabic Medium";
+  src: url("../../../assets/OMNES-ARABIC-MEDIUM.ttf") format("truetype");
 }
 @font-face {
   font-family: "AA-GALAXY";
