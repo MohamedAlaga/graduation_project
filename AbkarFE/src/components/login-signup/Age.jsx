@@ -4,7 +4,7 @@ import Red from "./reusable/Red";
 
 function Age() {
   return (
-    <Wrapper height="430px">
+    <Wrapper height="500px">
       <div className="Age">
         <div className="Age__top">
           <svg

@@ -1,18 +1,33 @@
 .GreenBtn,
 .RedBtn {
-  width: 216px;
-  height: 60px;
+  width: 190px;
+  height: 48px;
   border-radius: 14px;
   border: 2px solid #000000;
   cursor: pointer;
   color: #fff;
   text-align: center;
   font-family: "Omnes Arabic";
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 22px;
   letter-spacing: -0.408px;
+  box-shadow: 0px 4px 0px 0px #000;
+}
+
+.Age {
+  .GreenBtn,
+  .RedBtn {
+    color: #fff;
+    text-align: center;
+    font-family: "Omnes Arabic";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+  }
 }
 
 .GreenBtn {
@@ -20,7 +35,7 @@
 }
 
 .RedBtn {
-  background-color: #f9295a;
+  background-color: #ff5f84;
 }
 
 .long {
@@ -39,7 +54,7 @@
   font-weight: 600;
   line-height: 22px;
   letter-spacing: -0.408px;
-  width: 490px;
+  width: 394px;
   height: 48px;
   flex-shrink: 0;
 

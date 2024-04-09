@@ -2,10 +2,12 @@ import Wrapper from "./reusable/Wrapper";
 import face from "../../assets/peekingEye.svg";
 import Green from "./reusable/Green";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Reassign() {
   const [focus, setFocus] = useState(false);
   const [focus2, setFocus2] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <Wrapper height="540px">
@@ -48,7 +50,7 @@ function Reassign() {
               كلمة المرور
             </label>
           </div>
-          <Green path="/parents">إنهاء</Green>
+          <Green onClick={() => navigate("")}>إنهاء</Green>
         </form>
       </div>
     </Wrapper>

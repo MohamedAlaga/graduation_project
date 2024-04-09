@@ -47,7 +47,7 @@ function LogIn({ first, handleFirst }) {
   return loading && first ? (
     <PreLoader />
   ) : (
-    <Wrapper height="650px">
+    <Wrapper height="690px">
       <div className="LogIn">
         <div className="title mb-3 ">تسجيل الدخول</div>
         <div className="shape">
@@ -118,12 +118,12 @@ function LogIn({ first, handleFirst }) {
         </div>
         <div className="btns">
           <Red>
-            <img src={google} alt="google" />
-            جــــوجــــل
-          </Red>
-          <Red>
             <img src={facebook} alt="facebook" />
             فيسبوك
+          </Red>
+          <Red>
+            <img src={google} alt="google" />
+            جــــوجــــل
           </Red>
         </div>
       </div>

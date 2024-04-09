@@ -3,8 +3,9 @@
   padding-top: 26px;
 
   .title {
+    margin-top: 14px;
     font-family: "AA-GALAXY";
-    font-size: 60px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.40799999237060547px;
@@ -44,18 +45,18 @@
 
       label {
         position: absolute;
-        right: 70px;
-        bottom: 14px;
+        right: 96px;
+        bottom: 16px;
         color: gray;
-        font-size: 18px;
+        font-size: 16px;
         transition: 0.5s;
       }
 
       input {
-        width: 80%;
+        width: 68%;
         text-align: right;
         font-family: "Omnes Arabic";
-        font-size: 24px;
+        font-size: 22px;
         font-style: normal;
         font-weight: 500;
         line-height: 22px;
@@ -78,7 +79,7 @@
 
     .forget {
       text-align: left;
-      width: 80%;
+      width: 66%;
       margin-bottom: 10px;
 
       button {
@@ -100,12 +101,12 @@
     text-align: center;
     -webkit-text-stroke-color: #000;
     font-family: "Omnes Arabic";
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 22px;
     letter-spacing: -0.408px;
-    margin-top: 14px;
+    margin-top: 22px;
     --s: 1.5px;
     text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
       0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
@@ -153,12 +154,12 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 22px;
+    margin-top: 34px;
     position: relative;
 
     .line {
       height: 1px;
-      width: 70%;
+      width: 67%;
       background-color: black;
     }
 
@@ -170,13 +171,13 @@
       color: var(--Gray-mid, #888);
       text-align: center;
       font-family: "Omnes Arabic";
-      font-size: 20px;
+      font-size: 16px;
       font-style: normal;
       font-weight: 500;
       line-height: 22px;
       letter-spacing: -0.408px;
       background-color: var(--window-background);
-      width: 184px;
+      width: 136px;
 
       @media (max-width: 680px) {
         font-size: 16px;
@@ -188,8 +189,8 @@
   .btns {
     display: flex;
     justify-content: center;
-    margin-top: 16px;
-    gap: 10px;
+    margin-top: 28px;
+    gap: 16px;
 
     button {
       @media (max-width: 680px) {
@@ -199,7 +200,7 @@
     }
 
     img {
-      margin-right: 4px;
+      margin-right: 10px;
     }
   }
 
