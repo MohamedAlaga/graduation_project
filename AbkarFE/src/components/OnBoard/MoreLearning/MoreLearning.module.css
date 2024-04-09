@@ -177,7 +177,7 @@ color: rgba(0, 0, 0, 1);
 .abuotLearn{
 margin: 0;
 margin-left: 50px;
-font-family:"Omnes Arabic";
+font-family:"Omnes Arabic Medium";
 font-size: 22px;
 font-weight: 500;
 line-height: 36px;
@@ -188,7 +188,7 @@ text-align: right;
 }
 .learnBtnDirection1 {
     background: rgba(31, 204, 123, 1) !important;
-    font-family: "Omnes Arabic";
+    font-family: "Omnes Arabic Semi Bold";
     font-size: 32px;
     font-weight: 600;
     line-height: 22px;
@@ -204,8 +204,8 @@ text-align: right;
     margin-left: 20px;
 }
 .learnBtnDirection2 {
-    background: rgba(249, 41, 90, 1);
-    font-family: "Omnes Arabic";
+    background: #FF5F84;
+    font-family: "Omnes Arabic Semi Bold";
     font-size: 32px;
     font-weight: 600;
     line-height: 22px;

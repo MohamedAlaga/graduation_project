@@ -242,7 +242,7 @@ color: #fff;
 
 }
 .computerParagraph{
-font-family: "Omnes Arabic";
+font-family: "Omnes Arabic Medium";
 font-size: 24px;
 font-weight: 600;
 line-height: 26px;
@@ -263,7 +263,7 @@ color: rgba(0, 0, 0, 1);
 margin: 40px 0px;
 }
 .rowparagraph{
-    font-family: "Omnes Arabic";
+    font-family: "Omnes Arabic Medium";
 font-size: 24px;
 font-weight: 600;
 line-height: 26px;
@@ -272,7 +272,7 @@ text-align: right;
 margin-right: 250px;
 }
 .rowparagraph2{
-    font-family: "Omnes Arabic";
+    font-family: "Omnes Arabic Medium";
 font-size: 24px;
 font-weight: 600;
 line-height: 26px;
@@ -282,7 +282,7 @@ margin-right: 20px;
 
 }
 .btn{
-font-family: "Omnes Arabic";
+font-family: "Omnes Arabic Semi Bold";
 font-size: 32px;
 font-weight: 600;
 line-height: 22px;
