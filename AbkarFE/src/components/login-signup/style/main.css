@@ -13,19 +13,13 @@
   src: url("../../../assets/AlaTypoo-Medium.ttf") format("truetype");
 }
 @font-face {
-<<<<<<< HEAD
   font-family: "Omnes Arabic Medium";
   src: url("../../../assets/OMNES-ARABIC-MEDIUM.ttf") format("truetype");
   font-weight: 500;
-=======
-  font-family: "Omnes Arabic Bold";
-  src: url("../../../assets/OMNES-ARABIC-BOLD.ttf") format("truetype");
->>>>>>> c50f32d97b7fd23363f42586c40148103a5d448a
 }
 @font-face {
   font-family: "Omnes Arabic Semi Bold";
   src: url("../../../assets/OMNES-ARABIC-SEMI-BOLD.ttf") format("truetype");
-<<<<<<< HEAD
   font-weight: 600;
 }
 @font-face {
@@ -47,12 +41,6 @@
   font-family: "Omnes Arabic";
   src: url("../../../assets/OMNES-ARABIC-BOLD.ttf") format("truetype");
   font-weight: 700;
-=======
-}
-@font-face {
-  font-family: "Omnes Arabic Medium";
-  src: url("../../../assets/OMNES-ARABIC-MEDIUM.ttf") format("truetype");
->>>>>>> c50f32d97b7fd23363f42586c40148103a5d448a
 }
 @font-face {
   font-family: "AA-GALAXY";
@@ -146,7 +134,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 24px;
   position: relative;
 }
 .Age__top p {
@@ -240,10 +228,15 @@
   font-family: "Omnes Arabic";
   font-size: 32px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 22px;
   letter-spacing: -0.408px;
   box-shadow: 0px 4px 0px 0px #000;
+}
+
+.social .GreenBtn,
+.social .RedBtn {
+  font-weight: 500;
 }
 
 .Age .GreenBtn,
@@ -253,7 +246,6 @@
   font-family: "Omnes Arabic";
   font-size: 40px;
   font-style: normal;
-  font-weight: 600;
   line-height: 22px;
   letter-spacing: -0.408px;
 }
@@ -306,7 +298,7 @@
   color: #fff;
   text-align: center;
   font-family: AA-GALAXY;
-  font-size: 60px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -511,7 +503,7 @@
 }
 
 .Forgot {
-  padding-top: 26px;
+  padding-top: 50px;
   height: 100%;
 }
 @media (max-width: 680px) {
@@ -524,7 +516,7 @@
   color: #fff;
   text-align: center;
   font-family: AA-GALAXY;
-  font-size: 60px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -540,6 +532,7 @@
 .Forgot .shape {
   position: relative;
   margin-top: 36px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
 }
@@ -550,8 +543,9 @@
   transform: translate(-50%, -50%);
 }
 .Forgot p:first-of-type {
+  padding: 0 70px;
   font-family: Omnes Arabic;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 44px;
   letter-spacing: -0.4079999924px;
@@ -576,6 +570,7 @@
   }
 }
 .Forgot form {
+  margin-top: 14px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -583,8 +578,8 @@
 }
 .Forgot form label {
   position: absolute;
-  right: 70px;
-  bottom: 87px;
+  right: 62px;
+  bottom: 24px;
   color: gray;
   font-size: 18px;
   transition: 0.5s;
@@ -623,7 +618,7 @@
 }
 
 .Check {
-  padding-top: 26px;
+  padding-top: 50px;
 }
 @media (max-width: 680px) {
   .Check {
@@ -635,7 +630,7 @@
   color: #fff;
   text-align: center;
   font-family: AA-GALAXY;
-  font-size: 60px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -653,6 +648,7 @@
   margin-top: 36px;
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 .Check .shape img {
   position: absolute;
@@ -699,8 +695,8 @@
 }
 .Check form label {
   position: absolute;
-  right: 70px;
-  bottom: 135px;
+  right: 62px;
+  bottom: 122px;
   color: gray;
   font-size: 18px;
   transition: 0.5s;
@@ -738,7 +734,7 @@
 }
 
 .Reassign {
-  padding-top: 26px;
+  padding-top: 50px;
   text-align: center;
 }
 @media (max-width: 680px) {
@@ -751,7 +747,7 @@
   color: #fff;
   text-align: center;
   font-family: AA-GALAXY;
-  font-size: 60px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -844,11 +840,11 @@
   color: #fff;
   text-align: center;
   font-family: AA-GALAXY;
-  font-size: 60px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: 88px;
-  letter-spacing: -0.408px;
+  letter-spacing: 1px;
   --s: 2.5px;
   text-shadow: 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 4px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
@@ -901,7 +897,7 @@
   color: #fff;
   text-align: center;
   font-family: AA-GALAXY;
-  font-size: 60px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -930,13 +926,13 @@
 }
 
 .FForm {
-  padding-top: 26px;
+  padding-top: 30px;
 }
 .FForm .title {
   color: #fff;
   text-align: center;
   font-family: AA-GALAXY;
-  font-size: 60px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -957,14 +953,14 @@
 }
 .FForm form div label {
   position: absolute;
-  right: 70px;
+  right: 100px;
   bottom: 14px;
   color: gray;
   font-size: 18px;
   transition: 0.5s;
 }
 .FForm form div input {
-  width: 80%;
+  width: 68%;
   text-align: right;
   font-family: "Omnes Arabic";
   font-size: 24px;
@@ -995,12 +991,12 @@
   color: #fff;
   text-align: center;
   font-family: "Omnes Arabic";
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 22px;
   letter-spacing: -0.408px;
-  margin-top: 14px;
+  margin-top: 24px;
   --s: 1.5px;
   text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000;
 }
@@ -1020,12 +1016,13 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 29px;
+  margin-bottom: 29px;
   position: relative;
 }
 .FForm .or .line {
   height: 1px;
-  width: 70%;
+  width: 67%;
   background-color: black;
 }
 .FForm .or span {

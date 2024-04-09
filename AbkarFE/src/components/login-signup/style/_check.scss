@@ -1,5 +1,5 @@
 .Check {
-  padding-top: 26px;
+  padding-top: 50px;
 
   @media (max-width: 680px) {
     height: 86%;
@@ -10,7 +10,7 @@
     color: #fff;
     text-align: center;
     font-family: AA-GALAXY;
-    font-size: 60px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
@@ -41,6 +41,7 @@
     margin-top: 36px;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 
     img {
       position: absolute;
@@ -94,8 +95,8 @@
 
     label {
       position: absolute;
-      right: 70px;
-      bottom: 135px;
+      right: 62px;
+      bottom: 122px;
       color: gray;
       font-size: 18px;
       transition: 0.5s;

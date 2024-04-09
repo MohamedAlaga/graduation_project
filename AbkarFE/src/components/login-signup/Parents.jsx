@@ -6,7 +6,7 @@ function Parents() {
   const navigate = useNavigate();
 
   return (
-    <Wrapper height="470px">
+    <Wrapper height="520px">
       <div className="Parents">
         <div className="shape">
           <svg
@@ -41,17 +41,20 @@ function Parents() {
               strokeLinecap="round"
             />
           </svg>
-          <p>اعطي الهاتف لوالديك</p>
+          <p style={{ width: "500px" }}>
+            يجب ان يقوم احد <br /> والديك بهذه الخطوة
+          </p>
         </div>
         <div
           style={{
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
+            marginTop: "40px",
           }}
         >
           <Long path="/welcome">انشاء حساب جديد</Long>
-          <div className="another" style={{ margin: "20px 0 0 0" }}>
+          <div className="another" style={{ margin: "40px 0 0 0" }}>
             <button onClick={() => navigate("/login")}>
               {" "}
               تــــســــــجـــيــــل الـــدخــــول

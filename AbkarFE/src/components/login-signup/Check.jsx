@@ -7,7 +7,7 @@ function Check() {
   const [focus, setFocus] = useState(false);
 
   return (
-    <Wrapper height="580px">
+    <Wrapper height="660px">
       <div className="Check">
         <div className="title">التحقق</div>
         <div className="shape">
@@ -33,7 +33,7 @@ function Check() {
           <input type="text" id="mail" onFocus={() => setFocus(true)} />
           <label
             htmlFor="mail"
-            style={focus ? { bottom: "170px", fontSize: "14px" } : {}}
+            style={focus ? { bottom: "160px", fontSize: "14px" } : {}}
           >
             كود التفعيل
           </label>

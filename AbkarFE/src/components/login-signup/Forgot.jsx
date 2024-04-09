@@ -22,7 +22,7 @@ function Forgot() {
   };
 
   return (
-    <Wrapper height="580px">
+    <Wrapper height="660px">
       <div className="Forgot">
         <div className="title">نسيت كلمة المرور</div>
         <div className="shape">
@@ -55,12 +55,20 @@ function Forgot() {
           />
           <label
             htmlFor="mail"
-            style={focus ? { bottom: "120px", fontSize: "14px" } : {}}
+            style={focus ? { bottom: "55px", fontSize: "14px" } : {}}
           >
             البريد الالكتروني
           </label>
-          <Green onClick={handleSubmit}>الـتـالــي</Green>
         </form>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "12px",
+          }}
+        >
+          <Green onClick={handleSubmit}>الـتـالــي</Green>
+        </div>
       </div>
     </Wrapper>
   );

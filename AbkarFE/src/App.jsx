@@ -5,7 +5,6 @@ import Teen from "./components/login-signup/Teen";
 import LogIn from "./components/login-signup/LogIn";
 import Age from "./components/login-signup/Age";
 import Forgot from "./components/login-signup/Forgot";
-import Check from "./components/login-signup/Check";
 import Reassign from "./components/login-signup/Reassign";
 import Parents from "./components/login-signup/Parents";
 import Welcome from "./components/login-signup/Welcome";
@@ -41,7 +40,6 @@ function App() {
           <Route path="/13-18" element={<Teen />} />
           <Route path="/age" element={<Age />} />
           <Route path="/password" element={<Forgot />} />
-          <Route path="/check-password" element={<Check />} />
           <Route path="/reassign-password" element={<Reassign />} />
           <Route path="/parents" element={<Parents />} />
           <Route path="/welcome" element={<Welcome />} />

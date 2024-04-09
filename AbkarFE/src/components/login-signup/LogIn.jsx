@@ -116,7 +116,7 @@ function LogIn({ first, handleFirst }) {
           <div className="line"></div>
           <span>او الدخول باستخدام</span>
         </div>
-        <div className="btns">
+        <div className="btns social">
           <Red>
             <img src={facebook} alt="facebook" />
             فيسبوك

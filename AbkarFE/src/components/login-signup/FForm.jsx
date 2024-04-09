@@ -35,7 +35,7 @@ function FForm() {
   };
 
   return (
-    <Wrapper height="660px">
+    <Wrapper height="690px">
       <div className="FForm">
         <div className="title">بياناتك</div>
         <form onSubmit={(e) => e.preventDefault}>
@@ -135,7 +135,7 @@ function FForm() {
               رقم الهاتف
             </label>
           </div>
-          <div>
+          <div style={{ marginTop: "20px" }}>
             <Long onClick={handleSubmit}>إنشاء حساب جديد</Long>
           </div>
         </form>
@@ -147,7 +147,7 @@ function FForm() {
           <div className="line"></div>
           <span>او الدخول باستخدام</span>
         </div>
-        <div className="btns">
+        <div className="btns social">
           <Red>
             <img src={google} alt="google" />
             جــــوجــــل

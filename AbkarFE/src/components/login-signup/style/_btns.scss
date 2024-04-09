@@ -10,12 +10,18 @@
   font-family: "Omnes Arabic";
   font-size: 32px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 22px;
   letter-spacing: -0.408px;
   box-shadow: 0px 4px 0px 0px #000;
 }
 
+.social {
+  .GreenBtn,
+  .RedBtn {
+    font-weight: 500;
+  }
+}
 .Age {
   .GreenBtn,
   .RedBtn {
@@ -24,7 +30,6 @@
     font-family: "Omnes Arabic";
     font-size: 40px;
     font-style: normal;
-    font-weight: 600;
     line-height: 22px;
     letter-spacing: -0.408px;
   }

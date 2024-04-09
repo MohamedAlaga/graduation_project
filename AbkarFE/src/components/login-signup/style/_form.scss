@@ -1,11 +1,11 @@
 .FForm {
-  padding-top: 26px;
+  padding-top: 30px;
 
   .title {
     color: #fff;
     text-align: center;
     font-family: AA-GALAXY;
-    font-size: 60px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
@@ -39,7 +39,7 @@
 
       label {
         position: absolute;
-        right: 70px;
+        right: 100px;
         bottom: 14px;
         color: gray;
         font-size: 18px;
@@ -47,7 +47,7 @@
       }
 
       input {
-        width: 80%;
+        width: 68%;
         text-align: right;
         font-family: "Omnes Arabic";
         font-size: 24px;
@@ -80,12 +80,12 @@
     color: #fff;
     text-align: center;
     font-family: "Omnes Arabic";
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 22px;
     letter-spacing: -0.408px;
-    margin-top: 14px;
+    margin-top: 24px;
     --s: 1.5px;
     text-shadow: 0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
       0 2px var(--s) #000, 0 2px var(--s) #000, 0 2px var(--s) #000,
@@ -133,12 +133,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 29px;
+    margin-bottom: 29px;
     position: relative;
 
     .line {
       height: 1px;
-      width: 70%;
+      width: 67%;
       background-color: black;
     }
 

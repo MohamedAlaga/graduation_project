@@ -10,7 +10,7 @@ function Reassign() {
   const navigate = useNavigate();
 
   return (
-    <Wrapper height="540px">
+    <Wrapper height="570px">
       <div className="Reassign">
         <div className="title">إعادة تعين كلمة المرور</div>
         <div className="shape">
@@ -50,7 +50,9 @@ function Reassign() {
               كلمة المرور
             </label>
           </div>
-          <Green onClick={() => navigate("")}>إنهاء</Green>
+          <div style={{ marginTop: "18px" }}>
+            <Green onClick={() => navigate("")}>إنهاء</Green>
+          </div>
         </form>
       </div>
     </Wrapper>

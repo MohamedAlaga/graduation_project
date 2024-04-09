@@ -155,23 +155,8 @@ const PageOne = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </>
   );
 };
-=======
-      <img className={`${style.headimage}`} src={headimage} alt="" />
-    </div>
-    <div className="container text-center ">
-      <h1 className={`${style.computer} mb-5 `}>أنا  الكمبيوتر</h1>
-      <p className={`${style.computerParagraph}  mt-5 mb-3 `}>هو كــورس عن تـاريخ الكمبيوتر بشكل بـســيط وممتع، يقدمه لكم ثمانية أصدقاء مبرمجين</p>
-      <p className={`${style.computerParagraph2} `}>🌟 فصول الكورس 🌟</p>
-      <div className={`${style.direction} row d-flex justify-content-center mb-3 `}>
-        <div className="col-md-6">
-          <p className={`${style.rowparagraph} mb-4 `}> ⭐ شرح مكونات الكمبيوتر ونظام التشغيل     </p>
-          <p className={`${style.rowparagraph} mb-4`}>  ⭐شرح الانترنت والشبكات والفرق بينهم     </p>
-          <p className={`${style.rowparagraph} mb-4`}>  ⭐ كيف تبحث عن حلول فعالة للمشكلات    </p>
-          <p className={`${style.rowparagraph} mb-4 `}> ⭐ تمهيد لمنهج المستوى الثاني من الكورس    </p>
->>>>>>> c50f32d97b7fd23363f42586c40148103a5d448a
 
 export default PageOne;

@@ -1,5 +1,5 @@
 .Forgot {
-  padding-top: 26px;
+  padding-top: 50px;
 
   height: 100%;
 
@@ -12,7 +12,7 @@
     color: #fff;
     text-align: center;
     font-family: AA-GALAXY;
-    font-size: 60px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
@@ -41,6 +41,7 @@
   .shape {
     position: relative;
     margin-top: 36px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
 
@@ -53,8 +54,9 @@
   }
 
   p:first-of-type {
+    padding: 0 70px;
     font-family: Omnes Arabic;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
     line-height: 44px;
     letter-spacing: -0.40799999237060547px;
@@ -79,6 +81,7 @@
   }
 
   form {
+    margin-top: 14px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -86,8 +89,8 @@
 
     label {
       position: absolute;
-      right: 70px;
-      bottom: 87px;
+      right: 62px;
+      bottom: 24px;
       color: gray;
       font-size: 18px;
       transition: 0.5s;
@@ -119,9 +122,6 @@
         border-top: none !important;
         border-left: none !important;
         border-right: none !important;
-      }
-
-      &:focus {
       }
     }
   }
