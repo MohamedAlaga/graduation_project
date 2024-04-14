@@ -2,12 +2,10 @@ import style from './Course.module.css'
 import headimage from '../../../assets/Vector 1702.png'
 import video from '../../../assets/videoo.mp4'
 import emogi from '../../../assets/Thinkingface.svg'
-import { useNavigate } from 'react-router-dom'
-import {  useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { useAuth } from "../../../../src/AuthContext";
 import axios from 'axios'
-import 'video-react/dist/video-react.css';
-import { Player } from 'video-react'
 
 const Course = () => {
     let [setting, setSetting] = useState(`d-none`)
@@ -15,27 +13,28 @@ const Course = () => {
     function toCommunity() {
         navigate('/community')
     }
+    
     function toSetting() {
         setSetting(`d-block ${style.setting}`)
     }
     function removeSetting() {
         setSetting(`d-none`)
     }
-    let [allVideos,setAllVideos]=useState([])
-    const {token}=useAuth();
- async function getAllVideos(){
-    let {data} = await axios.get("http://127.0.0.1:8000/api/courses/1/videos",{
-        headers:{
-            Authorization :`Bearer ${token}`
-        }
-    })
-    console.log(data.data);
-    setAllVideos(data.data)
-}
+    let [allVideos, setAllVideos] = useState([])
+    const { token } = useAuth();
+    async function getAllVideos() {
+        let { data } = await axios.get("http://127.0.0.1:8000/api/courses/1/videos", {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+        console.log(data.data);
+        setAllVideos(data.data)
+    }
 
-useEffect(()=>{
-getAllVideos()
-},[])
+    useEffect(() => {
+        getAllVideos()
+    }, [])
 
 
 
@@ -108,7 +107,7 @@ getAllVideos()
 
                     <div className="col-lg-4">
                         <div className={`${style.videocontent} rounded-5 mb-3`}>
-                            <div className=' p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src="https://www.youtube.com/watch?v=FplXMdZFAZ0" ></video></div>
+                            <div className=' p-3 d-flex justify-content-center'> <iframe className={`${style.video} w-100`} src="https://www.youtube.com/embed/Z6ytvzNlmRo?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=0" frameborder="0"  ></iframe></div>
                             <p className={`${style.videoParagraph} p-2`}>  رحلة تحويل الأفكار إلى الاختراعات ✨  </p>
                             <div className={`${style.videoIcon}`}> <p className={`${style.videoNumber}`}>1</p>
                             </div>
@@ -117,20 +116,31 @@ getAllVideos()
                             <p className={`${style.noteParagraph}`}> تعلم اكثر عن عالم الافكار 💡</p>
                         </div>
                     </div>
-                    {allVideos.map((ele)=><div className="col-lg-4">
+                    {allVideos.map((ele) => <div key={ele.id} className="col-lg-4">
+
                         <div className={`${style.videocontent} rounded-5 mb-3`}>
-                            <div className='p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src={ele.url}></video></div>
+                            <Link to={'/video/'+ele.id}>
+                            <div className='p-3 d-flex justify-content-center position-relative' > 
+                            <iframe className={`${style.video} w-100`} src={ele.url}></iframe>
+                            <div className=" position-absolute top-0 bottom-0 end-0 start-0  rounded-5"></div>
+                            </div>
+                            </Link>
+                            
                             <p className={`${style.videoParagraph} p-2`}> {ele.title} </p>
                             <div className={`${style.videoIcon}`}>
                                 <div className={`${style.videoLayer}`}></div>
                                 <p className={`${style.videoNumber}`}>{ele.id}</p>
                             </div>
                         </div>
+
+
+
+
                         <div className={`${style.note} w-100 p-3  `}>
                             <p className={`${style.noteParagraph}`}> تعلم اكثر عن عالم الافكار 💡</p>
                         </div>
                     </div>)}
-                    
+
 
 
 

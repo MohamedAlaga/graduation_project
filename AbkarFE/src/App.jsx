@@ -48,7 +48,7 @@ function App() {
           {/* Home flow */}
           <Route path="/pageone" element={<PageOne />} />
           <Route path="/course" element={<Course />} />
-          <Route path="/video" element={<Video />} />
+          <Route path="/video/:id" element={<Video />} />
           <Route path="/MoreLearning" element={<MoreLearning />} />
           <Route path="/community" element={<Community />} />
 

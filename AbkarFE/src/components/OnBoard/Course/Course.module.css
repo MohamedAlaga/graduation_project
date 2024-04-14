@@ -272,6 +272,7 @@ color: rgba(255, 255, 255, 1);
 .video {
     border: 3px solid #000;
     border-radius: 15px;
+    height: 200px;
 }
 
 
