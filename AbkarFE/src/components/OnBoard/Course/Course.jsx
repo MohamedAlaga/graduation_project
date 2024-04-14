@@ -4,8 +4,10 @@ import video from '../../../assets/videoo.mp4'
 import emogi from '../../../assets/Thinkingface.svg'
 import { useNavigate } from 'react-router-dom'
 import {  useEffect, useState } from 'react'
-// import { useAuth } from "../../../../src/AuthContext";
+import { useAuth } from "../../../../src/AuthContext";
 import axios from 'axios'
+import 'video-react/dist/video-react.css';
+import { Player } from 'video-react'
 
 const Course = () => {
     let [setting, setSetting] = useState(`d-none`)
@@ -20,12 +22,11 @@ const Course = () => {
         setSetting(`d-none`)
     }
     let [allVideos,setAllVideos]=useState([])
-    // const {token}=useAuth();
-let token="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzEzMDc3MzkyLCJleHAiOjE3MTMwODA5OTIsIm5iZiI6MTcxMzA3NzM5MiwianRpIjoiVjQ3ZThrSk1QYVQ1RDlpRSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HzOLTzaUouFQUgBbQscj1drkjNFBE2WeiwKgY4nWosc"
+    const {token}=useAuth();
  async function getAllVideos(){
     let {data} = await axios.get("http://127.0.0.1:8000/api/courses/1/videos",{
         headers:{
-            Authorization : token
+            Authorization :`Bearer ${token}`
         }
     })
     console.log(data.data);
@@ -107,7 +108,7 @@ getAllVideos()
 
                     <div className="col-lg-4">
                         <div className={`${style.videocontent} rounded-5 mb-3`}>
-                            <div className=' p-3 d-flex justify-content-center'> <iframe className={`${style.video} w-100`} src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"></iframe></div>
+                            <div className=' p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src="https://www.youtube.com/watch?v=FplXMdZFAZ0" ></video></div>
                             <p className={`${style.videoParagraph} p-2`}>  رحلة تحويل الأفكار إلى الاختراعات ✨  </p>
                             <div className={`${style.videoIcon}`}> <p className={`${style.videoNumber}`}>1</p>
                             </div>

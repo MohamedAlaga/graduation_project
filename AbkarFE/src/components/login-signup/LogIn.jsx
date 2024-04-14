@@ -38,6 +38,7 @@ function LogIn({ first, handleFirst }) {
     const { isOK, data } = await LogInUser(mail, pass);
     if (isOK) {
       login(data.access_token);
+      console.log(data.access_token);
       navigate("/pageone");
     } else {
       console.log("error");

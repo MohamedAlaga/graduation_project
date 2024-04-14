@@ -10,6 +10,7 @@ const AuthProvider = ({ children }) => {
   const login = (token) => {
     setLoggedIn(true);
     setToken(token);
+    console.log(token);
   };
 
   const logout = () => {
