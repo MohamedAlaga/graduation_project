@@ -3,7 +3,9 @@ import headimage from '../../../assets/Vector 1702.png'
 import video from '../../../assets/videoo.mp4'
 import emogi from '../../../assets/Thinkingface.svg'
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import {  useEffect, useState } from 'react'
+// import { useAuth } from "../../../../src/AuthContext";
+import axios from 'axios'
 
 const Course = () => {
     let [setting, setSetting] = useState(`d-none`)
@@ -17,6 +19,39 @@ const Course = () => {
     function removeSetting() {
         setSetting(`d-none`)
     }
+    let [allVideos,setAllVideos]=useState([])
+    // const {token}=useAuth();
+let token="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzEzMDc3MzkyLCJleHAiOjE3MTMwODA5OTIsIm5iZiI6MTcxMzA3NzM5MiwianRpIjoiVjQ3ZThrSk1QYVQ1RDlpRSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HzOLTzaUouFQUgBbQscj1drkjNFBE2WeiwKgY4nWosc"
+ async function getAllVideos(){
+    let {data} = await axios.get("http://127.0.0.1:8000/api/courses/1/videos",{
+        headers:{
+            Authorization : token
+        }
+    })
+    console.log(data.data);
+    setAllVideos(data.data)
+}
+
+useEffect(()=>{
+getAllVideos()
+},[])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (<>
         <div className="layer">
 
@@ -72,7 +107,7 @@ const Course = () => {
 
                     <div className="col-lg-4">
                         <div className={`${style.videocontent} rounded-5 mb-3`}>
-                            <div className=' p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src={video}></video></div>
+                            <div className=' p-3 d-flex justify-content-center'> <iframe className={`${style.video} w-100`} src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"></iframe></div>
                             <p className={`${style.videoParagraph} p-2`}>  رحلة تحويل الأفكار إلى الاختراعات ✨  </p>
                             <div className={`${style.videoIcon}`}> <p className={`${style.videoNumber}`}>1</p>
                             </div>
@@ -81,20 +116,20 @@ const Course = () => {
                             <p className={`${style.noteParagraph}`}> تعلم اكثر عن عالم الافكار 💡</p>
                         </div>
                     </div>
-
-                    <div className="col-lg-4">
+                    {allVideos.map((ele)=><div className="col-lg-4">
                         <div className={`${style.videocontent} rounded-5 mb-3`}>
-                            <div className='p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src={video}></video></div>
-                            <p className={`${style.videoParagraph} p-2`}>   رحلة تحويل الأفكار إلى الاختراعات ✨ </p>
+                            <div className='p-3 d-flex justify-content-center'> <video className={`${style.video} w-100`} src={ele.url}></video></div>
+                            <p className={`${style.videoParagraph} p-2`}> {ele.title} </p>
                             <div className={`${style.videoIcon}`}>
                                 <div className={`${style.videoLayer}`}></div>
-                                <p className={`${style.videoNumber}`}>2</p>
+                                <p className={`${style.videoNumber}`}>{ele.id}</p>
                             </div>
                         </div>
                         <div className={`${style.note} w-100 p-3  `}>
                             <p className={`${style.noteParagraph}`}> تعلم اكثر عن عالم الافكار 💡</p>
                         </div>
-                    </div>
+                    </div>)}
+                    
 
 
 
