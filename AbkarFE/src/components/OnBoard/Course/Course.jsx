@@ -23,25 +23,31 @@ const Course = () => {
 
 
 
-// this function to know are video is watced or not
-let [watch,setWatch] = useState({});
-async function WatchedVideo(id){
-    let data=await axios.post(`http://127.0.0.1:8000/api/videos/${id}/mark-as-watched`,
-  {
-    id
-},
-{
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-}
-);
-console.log(data.data.success);
- setWatch(data);
- console.log(watch);
+  // this function to know are video is watced or not
+  let [iswatch, setIswatch] = useState(Boolean);
+  async function WatchedVideo(id) {
+    setIswatch(true)
+    let data = await axios.post(`http://127.0.0.1:8000/api/videos/${id}/mark-as-watched`,
+      {
+        id
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    console.log(data.data);
+    if (data.data.success==true) {
+     setIswatch(true)
+    
+    }
+    console.log(iswatch);
+    
+   
 
-}
-
+  }
+ 
 
 
 
@@ -76,7 +82,7 @@ console.log(data.data.success);
     getAllVideos();
   }, []);
 
-  
+
 
   return (
     <>
@@ -193,7 +199,7 @@ console.log(data.data.success);
                         className={`${style.video} w-100`}
                         src={ele.url}
                       ></iframe>
-                      <div onClick={()=>WatchedVideo(ele.id)} className=" position-absolute top-0 bottom-0 end-0 start-0  rounded-5"></div>
+                      <div onClick={() => WatchedVideo(ele.id)} className=" position-absolute top-0 bottom-0 end-0 start-0  rounded-5"></div>
                     </div>
                   </Link>
 
