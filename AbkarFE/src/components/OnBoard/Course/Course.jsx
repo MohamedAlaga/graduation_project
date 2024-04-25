@@ -9,6 +9,7 @@ import axios from "axios";
 
 const Course = () => {
   let [setting, setSetting] = useState(`d-none`);
+  
   let navigate = useNavigate();
   function toCommunity() {
     navigate("/community");
@@ -24,9 +25,8 @@ const Course = () => {
 
 
   // this function to know are video is watced or not
-  let [iswatch, setIswatch] = useState(Boolean);
+  let [isWatch,setIsWatch]=useState(false)
   async function WatchedVideo(id) {
-    setIswatch(true)
     let data = await axios.post(`http://127.0.0.1:8000/api/videos/${id}/mark-as-watched`,
       {
         id
@@ -39,18 +39,15 @@ const Course = () => {
     );
     console.log(data.data);
     if (data.data.success==true) {
-     setIswatch(true)
+        setIsWatch(true)
     
     }
-    console.log(iswatch);
+    console.log(data.data);
+    console.log(isWatch);
     
    
 
   }
- 
-
-
-
 
 
 
