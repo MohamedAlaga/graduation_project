@@ -6,6 +6,7 @@ import delacc from "../../../assets/bedo/deleteicon.svg";
 import signout from "../../../assets/bedo/sign_out.svg";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+
 function Setting() {
   let navigate = useNavigate();
 	function toHello() {
