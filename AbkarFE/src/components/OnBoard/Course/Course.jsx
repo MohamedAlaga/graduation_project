@@ -1,6 +1,6 @@
+import React from "react";
 import style from "./Course.module.css";
 import headimage from "../../../assets/Vector 1702.png";
-import video from "../../../assets/videoo.mp4";
 import emogi from "../../../assets/Thinkingface.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -9,7 +9,9 @@ import axios from "axios";
 
 const Course = () => {
   let [setting, setSetting] = useState(`d-none`);
-  
+  let [allVideos, setAllVideos] = useState([]);
+  const { token } = useAuth();
+
   let navigate = useNavigate();
   function toCommunity() {
     navigate("/community");
@@ -24,45 +26,9 @@ const Course = () => {
 
 
 
-  // this function to know are video is watced or not
-  let [isWatch,setIsWatch]=useState(false)
-  async function WatchedVideo(id) {
-    let data = await axios.post(`http://127.0.0.1:8000/api/videos/${id}/mark-as-watched`,
-      {
-        id
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-    console.log(data.data);
-    if (data.data.success==true) {
-        setIsWatch(true)
-    
-    }
-    console.log(data.data);
-    console.log(isWatch);
-    
-   
-
-  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-  let [allVideos, setAllVideos] = useState([]);
-  const { token } = useAuth();
+  // this function to get all video
   async function getAllVideos() {
     let { data } = await axios.get(
       "http://127.0.0.1:8000/api/courses/1/videos",
@@ -74,10 +40,57 @@ const Course = () => {
     );
     setAllVideos(data.data);
   }
-
+  
   useEffect(() => {
     getAllVideos();
   }, []);
+
+// this function to mark video is watch
+  async function WatchedVideo(id) {
+    
+    let {data} = await axios.post(`http://127.0.0.1:8000/api/videos/${id}/mark-as-watched`,
+    {
+      id
+    },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+
+  );
+ 
+  console.log(data);
+  
+ 
+   
+
+  }
+//  this function to get value of progress bar
+const[progressValue,setProgressValue]=useState()
+async function getPrgressValue() {
+  let { data } = await axios.get(
+    "http://127.0.0.1:8000/api/progress/1",
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+  console.log(data.data);
+  setProgressValue(data.data.progress)
+  console.log(progressValue);
+}
+
+useEffect(() => {
+  getPrgressValue();
+}, []);
+
+
+
+
+
+
 
 
 
@@ -152,10 +165,10 @@ const Course = () => {
           <div className={`${style.progress}`}>
             <div
               className={`${style.skillProgress}`}
-              style={{ width: "7%" }}
+              style={{ width: `${progressValue}%` }}
             ></div>
             <div className={`${style.progressContent}`}>
-              <p className={`${style.progressPragraph}`}>0%</p>
+              <p className={`${style.progressPragraph}`}>{progressValue}%</p>
               <p className={`${style.progressPragraph}`}>تقدمك </p>
             </div>
           </div>
@@ -164,25 +177,20 @@ const Course = () => {
             <div className="col-lg-4">
               <div className={`${style.videocontent} rounded-5 mb-3`}>
                 <div className=" p-3 d-flex justify-content-center">
-                  {" "}
                   <iframe
                     className={`${style.video} w-100`}
-                    src="https://www.youtube.com/embed/Z6ytvzNlmRo?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=0"
-                    frameborder="0"
+                    src="https://www.youtube.com/embed/Z6ytvzNlmRo?modestbranding=0"
                   ></iframe>
                 </div>
                 <p className={`${style.videoParagraph} p-2`}>
-                  {" "}
                   رحلة تحويل الأفكار إلى الاختراعات ✨{" "}
                 </p>
                 <div className={`${style.videoIcon}`}>
-                  {" "}
                   <p className={`${style.videoNumber}`}>1</p>
                 </div>
               </div>
               <div className={`${style.note} w-100 p-3 `}>
                 <p className={`${style.noteParagraph}`}>
-                  {" "}
                   تعلم اكثر عن عالم الافكار 💡
                 </p>
               </div>
@@ -196,20 +204,19 @@ const Course = () => {
                         className={`${style.video} w-100`}
                         src={ele.url}
                       ></iframe>
-                      <div onClick={() => WatchedVideo(ele.id)} className=" position-absolute top-0 bottom-0 end-0 start-0  rounded-5"></div>
+                      <div onClick={() =>WatchedVideo(ele.id)} className=" position-absolute top-0 bottom-0 end-0 start-0  z-3 rounded-5"></div>
                     </div>
                   </Link>
 
                   <p className={`${style.videoParagraph} p-2`}> {ele.title} </p>
-                  <div className={`${style.videoIcon}`}>
-                    {/* {watched ? null:<div className={`${style.videoLayer}`}></div>} */}
+                   <div className={`${style.videoIcon}`}>
+                  <div className={`${style.videoLayer} videoLayer`}></div>
                     <p className={`${style.videoNumber}`}>{ele.id}</p>
                   </div>
                 </div>
 
                 <div className={`${style.note} w-100 p-3  `}>
                   <p className={`${style.noteParagraph}`}>
-                    {" "}
                     تعلم اكثر عن عالم الافكار 💡
                   </p>
                 </div>
@@ -220,7 +227,6 @@ const Course = () => {
               <div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
                 <img height={248} className="w-100" src={emogi} alt="" />
                 <p className={`${style.iconParagraph} mt-3 `}>
-                  {" "}
                   الاختبار النهائي
                 </p>
                 <div className={`${style.videoIcon}`}>
