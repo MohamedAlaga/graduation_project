@@ -2,23 +2,18 @@ import Wrapper from "./reusable/Wrapper";
 import sad from "../../assets/sad.svg";
 import Green from "./reusable/Green";
 import { useState } from "react";
-// import { ForgetPass } from "./services/ForgetPass";
-import { useNavigate } from "react-router-dom";
+import { ForgetPass } from "./services/ForgetPass";
+// import { useNavigate } from "react-router-dom";
 
 function Forgot() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [focus, setFocus] = useState(false);
   const [mail, setMail] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const result = await ForgetPass(mail);
-    // if (result) {
-    navigate("/reassign-password");
-    // } else {
-    //   console.log("error");
-    // }
+    await ForgetPass(mail);
   };
 
   return (

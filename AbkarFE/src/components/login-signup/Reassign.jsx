@@ -3,12 +3,21 @@ import face from "../../assets/peekingEye.svg";
 import Green from "./reusable/Green";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ResetPass } from "./services/ResetPass";
 
 function Reassign() {
   const [focus, setFocus] = useState(false);
   const [focus2, setFocus2] = useState(false);
+  const [pass, setPass] = useState("");
+  const [apass, setAPass] = useState("");
   const navigate = useNavigate();
 
+  const handleSubmit = () => {
+    const result = ResetPass(pass, apass);
+    if (result) {
+      navigate("");
+    }
+  };
   return (
     <Wrapper height="570px">
       <div className="Reassign">
@@ -33,7 +42,13 @@ function Reassign() {
         </div>
         <form>
           <div>
-            <input type="password" id="mail" onFocus={() => setFocus(true)} />
+            <input
+              type="password"
+              id="mail"
+              onFocus={() => setFocus(true)}
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+            />
             <label
               htmlFor="mail"
               style={focus ? { bottom: "45px", fontSize: "14px" } : {}}
@@ -42,7 +57,13 @@ function Reassign() {
             </label>
           </div>
           <div>
-            <input type="password" id="pass" onFocus={() => setFocus2(true)} />
+            <input
+              type="password"
+              id="pass"
+              onFocus={() => setFocus2(true)}
+              value={apass}
+              onChange={(e) => setAPass(e.target.value)}
+            />
             <label
               htmlFor="pass"
               style={focus2 ? { bottom: "45px", fontSize: "14px" } : {}}
@@ -51,7 +72,7 @@ function Reassign() {
             </label>
           </div>
           <div style={{ marginTop: "18px" }}>
-            <Green onClick={() => navigate("")}>إنهاء</Green>
+            <Green onClick={handleSubmit}>إنهاء</Green>
           </div>
         </form>
       </div>
