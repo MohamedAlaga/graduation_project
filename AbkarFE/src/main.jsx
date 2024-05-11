@@ -6,9 +6,11 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import { AuthProvider } from "./AuthContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  <AuthProvider>
   <React.StrictMode>
-    <AuthProvider>
+   
       <App />
-    </AuthProvider>
+    
   </React.StrictMode>
+  </AuthProvider>
 );

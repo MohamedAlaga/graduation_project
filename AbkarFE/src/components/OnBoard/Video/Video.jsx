@@ -6,6 +6,7 @@ import axios from "axios";
 import { useAuth } from "../../../../src/AuthContext";
 
 const Video = () => {
+  let [state,setState]=useState(false)
   let navigate = useNavigate();
   function toCourse() {
     navigate("/Course");
@@ -31,6 +32,7 @@ const Video = () => {
   useEffect(() => {
     getOneVideo(params.id);
   }, []);
+
 
   return (
     <>
@@ -65,8 +67,9 @@ const Video = () => {
 
         <div className={`${style.communityContent}`}>
           <div className={`${style.communitySite}`}>
-            <div className={`${style.communityVideo} `}>
+            <div  className={`${style.communityVideo} `}>
               <iframe
+              
                 className={`${style.iframe} p-5 `}
                 width={`883`}
                 height={`499`}
