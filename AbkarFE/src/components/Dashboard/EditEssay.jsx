@@ -1,5 +1,7 @@
+import Table from "./Table";
+
 function EditEssay() {
-  return <div>EditEssay</div>;
+  return <Table />;
 }
 
 export default EditEssay;

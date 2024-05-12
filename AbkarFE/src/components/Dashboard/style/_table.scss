@@ -1,0 +1,60 @@
+.MyTable {
+  thead {
+    background-color: #fff6cb;
+    height: 54px;
+    tr {
+      th {
+        color: #000;
+        font-family: "Omnes Arabic";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 26px;
+        letter-spacing: -0.408px;
+        text-align: justify;
+        margin-right: 10px;
+        margin-bottom: 14px;
+        border: 2px solid #d2d2d2;
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      height: 54px;
+
+      td {
+        color: #000;
+        text-align: center;
+        font-family: "Omnes Arabic";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: -0.408px;
+        border: 2px solid #d2d2d2;
+        text-align: center;
+
+        button {
+          height: 100%;
+          width: 50%;
+          background: transparent;
+          border: none;
+        }
+
+        position: relative;
+
+        span {
+          position: absolute;
+          height: 100%;
+          background: #d2d2d2;
+          width: 2px;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

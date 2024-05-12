@@ -1,5 +1,7 @@
+import Table from "./Table";
+
 function EditTest() {
-  return <div>EditTest</div>;
+  return <Table />;
 }
 
 export default EditTest;

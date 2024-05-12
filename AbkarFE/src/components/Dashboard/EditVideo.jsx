@@ -1,5 +1,7 @@
+import Table from "./Table";
+
 function Videos() {
-  return <div style={{ background: "white" }}>Videos</div>;
+  return <Table />;
 }
 
 export default Videos;

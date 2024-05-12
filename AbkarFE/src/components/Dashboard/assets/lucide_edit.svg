@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="lucide:edit">
+<g id="Group">
+<path id="Vector" d="M16 4H6.66667C5.95942 4 5.28115 4.28095 4.78105 4.78105C4.28095 5.28115 4 5.95942 4 6.66667V25.3333C4 26.0406 4.28095 26.7189 4.78105 27.219C5.28115 27.719 5.95942 28 6.66667 28H25.3333C26.0406 28 26.7189 27.719 27.219 27.219C27.719 26.7189 28 26.0406 28 25.3333V16" stroke="#1FCC7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M24.5 3.5C25.0304 2.96956 25.7498 2.67157 26.5 2.67157C27.2501 2.67157 27.9695 2.96956 28.5 3.5C29.0304 4.03043 29.3284 4.74985 29.3284 5.5C29.3284 6.25014 29.0304 6.96956 28.5 7.5L16 20L10.6666 21.3333L12 16L24.5 3.5Z" stroke="#1FCC7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

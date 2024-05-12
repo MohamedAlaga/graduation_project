@@ -1079,7 +1079,6 @@
 }
 .Dashboard__Sidebar__video > div, .Dashboard__Sidebar__essay > div, .Dashboard__Sidebar__test > div {
   color: #000;
-  text-align: center;
   font-family: "Omnes Arabic";
   font-size: 24px;
   font-style: normal;
@@ -1129,4 +1128,132 @@
   line-height: 26px;
   letter-spacing: -0.408px;
   margin-right: 10px;
+}
+
+.MyTable thead {
+  background-color: #fff6cb;
+  height: 54px;
+}
+.MyTable thead tr th {
+  color: #000;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+  text-align: justify;
+  margin-right: 10px;
+  margin-bottom: 14px;
+  border: 2px solid #d2d2d2;
+  text-align: center;
+}
+.MyTable tbody tr {
+  height: 54px;
+}
+.MyTable tbody tr td {
+  color: #000;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+  border: 2px solid #d2d2d2;
+  text-align: center;
+  position: relative;
+}
+.MyTable tbody tr td button {
+  height: 100%;
+  width: 50%;
+  background: transparent;
+  border: none;
+}
+.MyTable tbody tr td span {
+  position: absolute;
+  height: 100%;
+  background: #d2d2d2;
+  width: 2px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.deleteItem {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.deleteItem__window {
+  z-index: 100;
+  width: 654px;
+  height: 200px;
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.deleteItem__window__header {
+  display: flex;
+  justify-content: space-between;
+  background: #ffc700;
+  height: 48px;
+  padding: 8px 24px;
+}
+.deleteItem__window__header > div {
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.deleteItem__window__header button {
+  background-color: transparent;
+  border: none;
+}
+.deleteItem__window__body {
+  background-color: #fffaed;
+  height: 152px;
+}
+.deleteItem__window__body > div {
+  color: var(--stroke, #000);
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+  padding: 30px;
+}
+.deleteItem__window__body .btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+}
+.deleteItem__window__body .btns button {
+  display: flex;
+  width: 128px;
+  height: 48px;
+  padding: 11px 40px 11px 38px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: white;
+}
+.deleteItem__window__body .btns button:first-of-type {
+  background-color: #ff5f84;
+}
+.deleteItem__window__body .btns button:last-of-type {
+  background-color: #1fcc7b;
 }/*# sourceMappingURL=main.css.map */
