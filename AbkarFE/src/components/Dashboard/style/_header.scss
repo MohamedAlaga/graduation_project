@@ -1,0 +1,13 @@
+.Dashboard__header {
+  > div {
+    color: var(--stroke, white);
+    text-align: right;
+    font-family: "Omnes Arabic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.408px;
+    margin-right: 10px;
+  }
+}

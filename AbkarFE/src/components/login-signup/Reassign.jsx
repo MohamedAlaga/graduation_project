@@ -2,7 +2,7 @@ import Wrapper from "./reusable/Wrapper";
 import face from "../../assets/peekingEye.svg";
 import Green from "./reusable/Green";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ResetPass } from "./services/ResetPass";
 
 function Reassign() {
@@ -12,8 +12,10 @@ function Reassign() {
   const [apass, setAPass] = useState("");
   const navigate = useNavigate();
 
+  const { token } = useParams(token);
+
   const handleSubmit = () => {
-    const result = ResetPass(pass, apass);
+    const result = ResetPass(token, pass, apass);
     if (result) {
       navigate("");
     }

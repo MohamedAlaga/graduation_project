@@ -19,6 +19,13 @@ import Exam from "./components/Quiz/exam/Exam";
 import Result from "./components/Quiz/result/Result";
 import Level from "./components/Quiz/level/Level";
 import Setting from "./components/Quiz/seting/Setting";
+import Layout from "./components/Dashboard/Layout";
+import EditVideo from "./components/Dashboard/EditVideo";
+import AddVideo from "./components/Dashboard/AddVideo";
+import EditEssay from "./components/Dashboard/EditEssay";
+import AddEssay from "./components/Dashboard/AddEssay";
+import EditTest from "./components/Dashboard/EditTest";
+import AddTest from "./components/Dashboard/AddTest";
 
 function App() {
   const [first, setFirst] = useState(true);
@@ -31,6 +38,16 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          {/* Dashboard flow */}
+
+          <Route element={<Layout />}>
+            <Route path="videos" element={<EditVideo />} />
+            <Route path="addVideo" element={<AddVideo />} />
+            <Route path="essays" element={<EditEssay />} />
+            <Route path="addEssay" element={<AddEssay />} />
+            <Route path="tests" element={<EditTest />} />
+            <Route path="addTest" element={<AddTest />} />
+          </Route>
           {/* Login - Signup flow */}
 
           <Route
@@ -40,7 +57,7 @@ function App() {
           <Route path="/13-18" element={<Teen />} />
           <Route path="/age" element={<Age />} />
           <Route path="/password" element={<Forgot />} />
-          <Route path="/reassign-password" element={<Reassign />} />
+          <Route path="/reassign-password/:token" element={<Reassign />} />
           <Route path="/parents" element={<Parents />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/form" element={<FForm />} />

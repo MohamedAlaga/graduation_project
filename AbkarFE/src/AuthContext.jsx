@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { API_URL } from "./components/login-signup/services/API";
 import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
@@ -20,6 +21,29 @@ const AuthProvider = ({ children }) => {
 
   const [isLoggedIn, setLoggedIn] = useState(storedAuth === "true");
   const [token, setToken] = useState(storedToken);
+
+  const RefreshToken = async (token) => {
+    let headersList = {
+      Accept: "*/*",
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    };
+
+    let response = await fetch(`${API_URL}/reset-password`, {
+      method: "POST",
+      headers: headersList,
+    });
+
+    let data = await response.json();
+
+    setToken(data.data);
+  };
+
+  const myFunc = async () => {
+    await RefreshToken(token);
+  };
+
+  setInterval(myFunc, 55 * 60 * 1000);
 
   const login = (token) => {
     setLoggedIn(true);

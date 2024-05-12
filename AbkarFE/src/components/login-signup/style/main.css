@@ -1058,4 +1058,75 @@
 }
 .FForm input:focus {
   outline: none;
+}
+
+.Dashboard__Sidebar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 62px;
+  background-color: #ffd200;
+  color: #fff;
+  text-align: center;
+  font-family: AA-GALAXY;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  border-left: 1px solid white;
+}
+.Dashboard__Sidebar__video > div, .Dashboard__Sidebar__essay > div, .Dashboard__Sidebar__test > div {
+  color: #000;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+  text-align: justify;
+  margin-right: 10px;
+  margin-bottom: 14px;
+}
+.Dashboard__Sidebar__video > ul, .Dashboard__Sidebar__essay > ul, .Dashboard__Sidebar__test > ul {
+  list-style: none;
+  padding: 0;
+  transition: all 0.3s;
+}
+.Dashboard__Sidebar__video > ul li, .Dashboard__Sidebar__essay > ul li, .Dashboard__Sidebar__test > ul li {
+  margin-bottom: 20px;
+}
+.Dashboard__Sidebar__video > ul li a, .Dashboard__Sidebar__essay > ul li a, .Dashboard__Sidebar__test > ul li a {
+  text-decoration: none;
+  padding: 25px;
+}
+.Dashboard__Sidebar__video > ul li a.active, .Dashboard__Sidebar__essay > ul li a.active, .Dashboard__Sidebar__test > ul li a.active {
+  background-color: #ffd200;
+}
+.Dashboard__Sidebar__video > ul li span, .Dashboard__Sidebar__essay > ul li span, .Dashboard__Sidebar__test > ul li span {
+  color: #000;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.Dashboard__Sidebar__video > ul li img, .Dashboard__Sidebar__essay > ul li img, .Dashboard__Sidebar__test > ul li img {
+  margin-left: 10px;
+}
+
+.Dashboard__header > div {
+  color: var(--stroke, white);
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+  margin-right: 10px;
 }/*# sourceMappingURL=main.css.map */

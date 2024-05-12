@@ -1,0 +1,71 @@
+.Dashboard__Sidebar {
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    background-color: #ffd200;
+    color: #fff;
+    text-align: center;
+    font-family: AA-GALAXY;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    border-left: 1px solid white;
+  }
+
+  &__video,
+  &__essay,
+  &__test {
+    > div {
+      color: #000;
+      text-align: center;
+      font-family: "Omnes Arabic";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26px;
+      letter-spacing: -0.408px;
+      text-align: justify;
+      margin-right: 10px;
+      margin-bottom: 14px;
+    }
+
+    > ul {
+      list-style: none;
+      padding: 0;
+      transition: all 0.3s;
+
+      li {
+        margin-bottom: 20px;
+
+        a {
+          text-decoration: none;
+          padding: 25px;
+        }
+
+        a.active {
+          background-color: #ffd200;
+        }
+
+        span {
+          color: #000;
+          text-align: center;
+          font-family: "Omnes Arabic";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+          letter-spacing: -0.408px;
+        }
+
+        img {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
