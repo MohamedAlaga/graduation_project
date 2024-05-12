@@ -1101,6 +1101,9 @@
   text-decoration: none;
   padding: 25px;
 }
+.Dashboard__Sidebar__video > ul li a:hover, .Dashboard__Sidebar__essay > ul li a:hover, .Dashboard__Sidebar__test > ul li a:hover {
+  background-color: #ffefa3;
+}
 .Dashboard__Sidebar__video > ul li a.active, .Dashboard__Sidebar__essay > ul li a.active, .Dashboard__Sidebar__test > ul li a.active {
   background-color: #ffd200;
 }
@@ -1203,7 +1206,6 @@
   justify-content: space-between;
   background: #ffc700;
   height: 48px;
-  padding: 8px 24px;
 }
 .deleteItem__window__header > div {
   color: #fff;
@@ -1214,10 +1216,14 @@
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.408px;
+  padding: 10px;
 }
 .deleteItem__window__header button {
   background-color: transparent;
   border: none;
+}
+.deleteItem__window__header button:hover {
+  background-color: #ff5f84;
 }
 .deleteItem__window__body {
   background-color: #fffaed;
@@ -1236,7 +1242,7 @@
 }
 .deleteItem__window__body .btns {
   display: flex;
-  gap: 10px;
+  gap: 32px;
   justify-content: center;
   padding: 0;
 }
@@ -1280,7 +1286,6 @@
   justify-content: space-between;
   background: #ffc700;
   height: 48px;
-  padding: 8px 24px;
 }
 .editForTable__window__header > div {
   color: #fff;
@@ -1291,24 +1296,28 @@
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.408px;
+  padding: 10px;
 }
 .editForTable__window__header button {
   background-color: transparent;
   border: none;
 }
+.editForTable__window__header button:hover {
+  background-color: #ff5f84;
+}
 .editForTable__window__body {
   background-color: #fffaed;
-  height: 280px;
+  height: 332px;
 }
 .editForTable__window__body form {
   padding: 14px 30px;
-  height: 190px;
+  height: 245px;
 }
 .editForTable__window__body form > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block: 10px;
+  margin-block: 24px;
 }
 .editForTable__window__body form > div label {
   color: var(--stroke, #000);
@@ -1323,12 +1332,12 @@
 .editForTable__window__body form > div input {
   background: transparent;
   border: 2px solid #d2d2d2;
-  width: 423px;
+  width: 441px;
   height: 48px;
 }
 .editForTable__window__body .btns {
   display: flex;
-  gap: 10px;
+  gap: 32px;
   justify-content: center;
   padding: 0;
   margin-top: 25px;
@@ -1381,7 +1390,6 @@
   justify-content: space-between;
   background: #ffc700;
   height: 48px;
-  padding: 8px 24px;
 }
 .editForTableEssay__window__header > div {
   color: #fff;
@@ -1392,24 +1400,28 @@
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.408px;
+  padding: 10px;
 }
 .editForTableEssay__window__header button {
   background-color: transparent;
   border: none;
 }
+.editForTableEssay__window__header button:hover {
+  background-color: #ff5f84;
+}
 .editForTableEssay__window__body {
   background-color: #fffaed;
-  height: 218px;
+  height: 274px;
 }
 .editForTableEssay__window__body form {
   padding: 14px 30px;
-  height: 160px;
+  height: 196px;
 }
 .editForTableEssay__window__body form > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block: 10px;
+  margin-block: 24px;
 }
 .editForTableEssay__window__body form > div label {
   color: var(--stroke, #000);
@@ -1424,12 +1436,12 @@
 .editForTableEssay__window__body form > div input {
   background: transparent;
   border: 2px solid #d2d2d2;
-  width: 423px;
+  width: 460px;
   height: 48px;
 }
 .editForTableEssay__window__body .btns {
   display: flex;
-  gap: 10px;
+  gap: 32px;
   justify-content: center;
   padding: 0;
 }
@@ -1481,7 +1493,6 @@
   justify-content: space-between;
   background: #ffc700;
   height: 48px;
-  padding: 8px 24px;
 }
 .editForTableTest__window__header > div {
   color: #fff;
@@ -1492,24 +1503,28 @@
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.408px;
+  padding: 10px;
 }
 .editForTableTest__window__header button {
   background-color: transparent;
   border: none;
 }
+.editForTableTest__window__header button:hover {
+  background-color: #ff5f84;
+}
 .editForTableTest__window__body {
   background-color: #fffaed;
-  height: 170px;
+  height: 209px;
 }
 .editForTableTest__window__body form {
   padding: 14px 30px;
-  height: 110px;
+  height: 128px;
 }
 .editForTableTest__window__body form > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block: 10px;
+  margin-block: 20px;
 }
 .editForTableTest__window__body form > div label {
   color: var(--stroke, #000);
@@ -1524,12 +1539,12 @@
 .editForTableTest__window__body form > div input {
   background: transparent;
   border: 2px solid #d2d2d2;
-  width: 423px;
+  width: 442px;
   height: 48px;
 }
 .editForTableTest__window__body .btns {
   display: flex;
-  gap: 10px;
+  gap: 32px;
   justify-content: center;
   padding: 0;
 }
@@ -1581,7 +1596,7 @@
 .AddAVideo form > div input {
   background: transparent;
   border: 2px solid #d2d2d2;
-  width: 423px;
+  width: 480px;
   height: 48px;
   padding: 10px;
 }
@@ -1607,10 +1622,10 @@
 }
 .AddAVideo .btns {
   display: flex;
-  gap: 10px;
+  gap: 32px;
   padding: 0;
   margin-top: 40px;
-  margin-right: 210px;
+  margin-right: 152px;
 }
 .AddAVideo .btns button {
   display: flex;
@@ -1661,7 +1676,7 @@
 .AddAEssay form > div textarea {
   background: transparent;
   border: 2px solid #d2d2d2;
-  width: 423px;
+  width: 480px;
   height: 48px;
   padding: 10px;
 }
@@ -1691,10 +1706,10 @@
 }
 .AddAEssay .btns {
   display: flex;
-  gap: 10px;
+  gap: 32px;
   padding: 0;
   margin-top: 40px;
-  margin-right: 210px;
+  margin-right: 152px;
 }
 .AddAEssay .btns button {
   display: flex;
@@ -1771,7 +1786,7 @@
 }
 .AddATest .btns {
   display: flex;
-  gap: 10px;
+  gap: 32px;
   padding: 0;
   margin-top: 40px;
   margin-right: 210px;

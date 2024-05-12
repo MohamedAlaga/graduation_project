@@ -44,6 +44,10 @@
         a {
           text-decoration: none;
           padding: 25px;
+
+          &:hover {
+            background-color: #ffefa3;
+          }
         }
 
         a.active {
