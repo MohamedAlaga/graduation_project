@@ -1,0 +1,84 @@
+.AddAEssay {
+  form {
+    width: 60%;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-block: 20px;
+
+      label {
+        color: var(--stroke, #000);
+        text-align: center;
+        font-family: "Omnes Arabic";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: -0.408px;
+      }
+
+      input,
+      textarea {
+        background: transparent;
+        border: 2px solid #d2d2d2;
+        width: 423px;
+        height: 48px;
+        padding: 10px;
+
+        &::placeholder {
+          color: #d2d2d2;
+          text-align: right;
+          font-family: "Omnes Arabic";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+          letter-spacing: -0.408px;
+        }
+      }
+
+      textarea {
+        height: 240px;
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin-top: 40px;
+    margin-right: 210px;
+
+    button {
+      display: flex;
+      width: 128px;
+      height: 48px;
+      padding: 11px 40px 11px 38px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border: none;
+      color: white;
+
+      color: #fff;
+      text-align: center;
+      font-family: "Omnes Arabic";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: -0.408px;
+    }
+
+    button:first-of-type {
+      background-color: #ff5f84;
+    }
+
+    button:last-of-type {
+      background-color: #1fcc7b;
+    }
+  }
+}

@@ -13,7 +13,7 @@ const StyledHeader = {
 function Header() {
   const location = useLocation();
 
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState("تعديل الفيديوهات");
 
   useEffect(() => {
     const pathname = location.pathname;

@@ -1256,4 +1256,575 @@
 }
 .deleteItem__window__body .btns button:last-of-type {
   background-color: #1fcc7b;
+}
+
+.editForTable {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.editForTable__window {
+  z-index: 100;
+  width: 654px;
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.editForTable__window__header {
+  display: flex;
+  justify-content: space-between;
+  background: #ffc700;
+  height: 48px;
+  padding: 8px 24px;
+}
+.editForTable__window__header > div {
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTable__window__header button {
+  background-color: transparent;
+  border: none;
+}
+.editForTable__window__body {
+  background-color: #fffaed;
+  height: 280px;
+}
+.editForTable__window__body form {
+  padding: 14px 30px;
+  height: 190px;
+}
+.editForTable__window__body form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 10px;
+}
+.editForTable__window__body form > div label {
+  color: var(--stroke, #000);
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTable__window__body form > div input {
+  background: transparent;
+  border: 2px solid #d2d2d2;
+  width: 423px;
+  height: 48px;
+}
+.editForTable__window__body .btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+  margin-top: 25px;
+}
+.editForTable__window__body .btns button {
+  display: flex;
+  width: 128px;
+  height: 48px;
+  padding: 11px 40px 11px 38px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: white;
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTable__window__body .btns button:first-of-type {
+  background-color: #ff5f84;
+}
+.editForTable__window__body .btns button:last-of-type {
+  background-color: #1fcc7b;
+}
+
+.editForTableEssay {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.editForTableEssay__window {
+  z-index: 100;
+  width: 654px;
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.editForTableEssay__window__header {
+  display: flex;
+  justify-content: space-between;
+  background: #ffc700;
+  height: 48px;
+  padding: 8px 24px;
+}
+.editForTableEssay__window__header > div {
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTableEssay__window__header button {
+  background-color: transparent;
+  border: none;
+}
+.editForTableEssay__window__body {
+  background-color: #fffaed;
+  height: 218px;
+}
+.editForTableEssay__window__body form {
+  padding: 14px 30px;
+  height: 160px;
+}
+.editForTableEssay__window__body form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 10px;
+}
+.editForTableEssay__window__body form > div label {
+  color: var(--stroke, #000);
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTableEssay__window__body form > div input {
+  background: transparent;
+  border: 2px solid #d2d2d2;
+  width: 423px;
+  height: 48px;
+}
+.editForTableEssay__window__body .btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+}
+.editForTableEssay__window__body .btns button {
+  display: flex;
+  width: 128px;
+  height: 48px;
+  padding: 11px 40px 11px 38px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: white;
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTableEssay__window__body .btns button:first-of-type {
+  background-color: #ff5f84;
+}
+.editForTableEssay__window__body .btns button:last-of-type {
+  background-color: #1fcc7b;
+}
+
+.editForTableTest {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.editForTableTest__window {
+  z-index: 100;
+  width: 654px;
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.editForTableTest__window__header {
+  display: flex;
+  justify-content: space-between;
+  background: #ffc700;
+  height: 48px;
+  padding: 8px 24px;
+}
+.editForTableTest__window__header > div {
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTableTest__window__header button {
+  background-color: transparent;
+  border: none;
+}
+.editForTableTest__window__body {
+  background-color: #fffaed;
+  height: 170px;
+}
+.editForTableTest__window__body form {
+  padding: 14px 30px;
+  height: 110px;
+}
+.editForTableTest__window__body form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 10px;
+}
+.editForTableTest__window__body form > div label {
+  color: var(--stroke, #000);
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTableTest__window__body form > div input {
+  background: transparent;
+  border: 2px solid #d2d2d2;
+  width: 423px;
+  height: 48px;
+}
+.editForTableTest__window__body .btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+}
+.editForTableTest__window__body .btns button {
+  display: flex;
+  width: 128px;
+  height: 48px;
+  padding: 11px 40px 11px 38px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: white;
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.editForTableTest__window__body .btns button:first-of-type {
+  background-color: #ff5f84;
+}
+.editForTableTest__window__body .btns button:last-of-type {
+  background-color: #1fcc7b;
+}
+
+.AddAVideo form {
+  width: 60%;
+}
+.AddAVideo form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+}
+.AddAVideo form > div label {
+  color: var(--stroke, #000);
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddAVideo form > div input {
+  background: transparent;
+  border: 2px solid #d2d2d2;
+  width: 423px;
+  height: 48px;
+  padding: 10px;
+}
+.AddAVideo form > div input::-moz-placeholder {
+  color: #d2d2d2;
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddAVideo form > div input::placeholder {
+  color: #d2d2d2;
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddAVideo .btns {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin-top: 40px;
+  margin-right: 210px;
+}
+.AddAVideo .btns button {
+  display: flex;
+  width: 128px;
+  height: 48px;
+  padding: 11px 40px 11px 38px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: white;
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddAVideo .btns button:first-of-type {
+  background-color: #ff5f84;
+}
+.AddAVideo .btns button:last-of-type {
+  background-color: #1fcc7b;
+}
+
+.AddAEssay form {
+  width: 60%;
+}
+.AddAEssay form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+}
+.AddAEssay form > div label {
+  color: var(--stroke, #000);
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddAEssay form > div input,
+.AddAEssay form > div textarea {
+  background: transparent;
+  border: 2px solid #d2d2d2;
+  width: 423px;
+  height: 48px;
+  padding: 10px;
+}
+.AddAEssay form > div input::-moz-placeholder, .AddAEssay form > div textarea::-moz-placeholder {
+  color: #d2d2d2;
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddAEssay form > div input::placeholder,
+.AddAEssay form > div textarea::placeholder {
+  color: #d2d2d2;
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddAEssay form > div textarea {
+  height: 240px;
+}
+.AddAEssay .btns {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin-top: 40px;
+  margin-right: 210px;
+}
+.AddAEssay .btns button {
+  display: flex;
+  width: 128px;
+  height: 48px;
+  padding: 11px 40px 11px 38px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: white;
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddAEssay .btns button:first-of-type {
+  background-color: #ff5f84;
+}
+.AddAEssay .btns button:last-of-type {
+  background-color: #1fcc7b;
+}
+
+.AddATest form {
+  width: 100%;
+}
+.AddATest form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+}
+.AddATest form > div label {
+  color: var(--stroke, #000);
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddATest form > div input {
+  background: transparent;
+  border: 2px solid #d2d2d2;
+  width: 423px;
+  height: 48px;
+  padding: 10px;
+  width: 80%;
+}
+.AddATest form > div input::-moz-placeholder {
+  color: #d2d2d2;
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddATest form > div input::placeholder {
+  color: #d2d2d2;
+  text-align: right;
+  font-family: "Omnes Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddATest .btns {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin-top: 40px;
+  margin-right: 210px;
+}
+.AddATest .btns button {
+  display: flex;
+  width: 128px;
+  height: 48px;
+  padding: 11px 40px 11px 38px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: white;
+  color: #fff;
+  text-align: center;
+  font-family: "Omnes Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.408px;
+}
+.AddATest .btns button:first-of-type {
+  background-color: #ff5f84;
+}
+.AddATest .btns button:last-of-type {
+  background-color: #1fcc7b;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+}
+.question .first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.question .second {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 20px;
+}
+.question .second > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.question .second > div input {
+  width: 306px;
 }/*# sourceMappingURL=main.css.map */

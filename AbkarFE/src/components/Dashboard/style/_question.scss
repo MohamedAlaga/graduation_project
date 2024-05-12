@@ -1,0 +1,30 @@
+.question {
+  display: flex;
+  flex-direction: column;
+
+  .first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .second {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 20px;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+
+      input {
+        width: 306px;
+      }
+    }
+  }
+}
