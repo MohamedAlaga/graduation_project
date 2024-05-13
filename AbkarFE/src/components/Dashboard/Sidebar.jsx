@@ -53,13 +53,13 @@ function Sidebar() {
         <ul>
           <li>
             <NavLink to="tests" style={{ padding: "12px 25px 12px 112px" }}>
-              <img src={add} alt="add" />
+              <img src={edit} alt="edit" />
               <span>تعديل الإختبارات</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="addTest" style={{ padding: "12px 25px 12px 139px" }}>
-              <img src={edit} alt="edit" />
+              <img src={add} alt="add" />
               <span>إضافة إختبار</span>
             </NavLink>
           </li>
