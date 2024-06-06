@@ -37,8 +37,9 @@ function LogIn({ first, handleFirst }) {
     e.preventDefault();
     const { isOK, data } = await LogInUser(mail, pass);
     if (isOK) {
-      login(data.access_token);
-      navigate("/pageone");
+      login(data.role, data.access_token);
+      if (data.role == "user") navigate("/pageone");
+      else if (data.role == "admin") navigate("/videos");
     } else {
       console.log("error");
     }
