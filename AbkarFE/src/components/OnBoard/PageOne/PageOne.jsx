@@ -1,16 +1,10 @@
 import style from "./PageOne.module.css";
 import headimage from "../../../assets/Vector 1702.png";
-import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
+import { useNavigate } from "react-router-dom"
 import { useContext, useState } from "react";
 import { useFormik } from "formik";
 import { SettingContext } from "../../../../src/SettingContext";
 import { useAuth } from "../../../../src/AuthContext";
-
-=======
-import { useState } from "react";
-import { useAuth } from "../../../AuthContext";
->>>>>>> d15dbb00a72d4757be5a69de3e641d6b6e69177e
 
 const PageOne = () => {
 
