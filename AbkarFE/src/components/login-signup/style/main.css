@@ -1132,6 +1132,13 @@
   letter-spacing: -0.408px;
   margin-right: 10px;
 }
+.Dashboard__header > button {
+  font-family: "Omnes Arabic";
+  margin-left: 20px;
+  border: none;
+  background: transparent;
+  color: white;
+}
 
 .MyTable thead {
   background-color: #fff6cb;
