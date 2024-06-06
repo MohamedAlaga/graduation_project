@@ -26,6 +26,7 @@ import EditEssay from "./components/Dashboard/EditEssay";
 import AddEssay from "./components/Dashboard/AddEssay";
 import EditTest from "./components/Dashboard/EditTest";
 import AddTest from "./components/Dashboard/AddTest";
+import ProtectedRoutes from "./components/ProtectedRoutes";
 
 function App() {
   const [first, setFirst] = useState(true);
@@ -40,7 +41,13 @@ function App() {
         <Routes>
           {/* Dashboard flow */}
 
-          <Route element={<Layout />}>
+          <Route
+            element={
+              <ProtectedRoutes role="admin">
+                <Layout />
+              </ProtectedRoutes>
+            }
+          >
             <Route path="videos" element={<EditVideo />} />
             <Route path="addVideo" element={<AddVideo />} />
             <Route path="essays" element={<EditEssay />} />
