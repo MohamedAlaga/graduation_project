@@ -1,9 +1,14 @@
 import style from "./PageOne.module.css";
 import headimage from "../../../assets/Vector 1702.png";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { useFormik } from "formik";
+import { SettingContext } from "../../../../src/SettingContext";
+import { useAuth } from "../../../../src/AuthContext";
+
 
 const PageOne = () => {
+
   let [setting, setSetting] = useState(`d-none`);
   let navigate = useNavigate();
   function toCourse() {
@@ -18,19 +23,54 @@ const PageOne = () => {
   function removeSetting() {
     setSetting(`d-none`);
   }
+
+  let { goToSetting } = useContext(SettingContext)
+  const { token } = useAuth();
+
+  async function addPassword(password, token) {
+
+    let {data} = await goToSetting(password, token).catch(err => err.data)
+    console.log(data, `helooo`);
+    if (data==undefined) {
+      alert("your password is false")
+      removeSetting()
+    } else if (data.success === true) {
+      navigate('/Setting')
+
+    }
+
+  }
+
+  const checkPassword = useFormik({
+    initialValues: {
+      password: "",
+
+
+    },
+    onSubmit: (values) => {
+      addPassword(values.password, token);
+    }
+  })
+
+
+
   return (
     <>
       <div className={`${style.layer}`}>
-        <div
-          className={`d-flex justify-content-center align-items-center ${setting} `}
-        >
-          <div className=" position-relative d-flex justify-content-center">
+        <div className={`d-flex justify-content-center align-items-center  ${setting} `} >
+          <div  className=" position-relative d-flex justify-content-center ">
             <h1 className={`${style.settingTitle}`}>ادخل كلمة السر</h1>
             <div className={`${style.settingContent}`}>
-              <input className={`${style.settingPassword}`} type="password" />
-              <button onClick={removeSetting} className={`${style.settingBtn}`}>
-                الدخول الي الاعدادات
-              </button>
+              <form onSubmit={checkPassword.handleSubmit}>
+                <div className=" form-group ">
+                  <input className={`${style.settingPassword}`} type="password" name="password" value={checkPassword.values.password} onChange={checkPassword.handleChange} />
+                </div>
+                <button className={`${style.settingBtn}`}>
+                  الدخول الي الاعدادات
+                </button>
+
+              </form>
+
             </div>
           </div>
         </div>

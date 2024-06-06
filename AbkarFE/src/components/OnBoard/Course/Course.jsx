@@ -23,7 +23,6 @@ const Course = () => {
   function removeSetting() {
     setSetting(`d-none`);
   }
-
   // this function to get all video
   async function getAllVideos() {
     let { data } = await axios.get(
@@ -40,6 +39,46 @@ const Course = () => {
   useEffect(() => {
     getAllVideos();
   }, []);
+
+  // async function getAllVideos() {
+  //   try {
+  //     const response = await axios.get(
+  //       "http://127.0.0.1:8000/api/courses/1/videos",
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`,
+  //         },
+  //       }
+  //     );
+
+  //     const videos = response.data.data;
+  //     console.log(videos[1].map(ele => ele.video_id));
+
+  //     if (videos && Array.isArray(videos) && videos.length > 0) {
+  //       setAllVideos(videos);
+  //       console.log(videos);
+
+
+  //       // Check if the second element exists before accessing it
+  //       // if (videos.length > 1) {
+  //       //   const secondVideo = videos[1];
+  //       //   console.log(videos[1].map(ele=>ele.video_id));
+  //       //   setWatch(videos[1])
+  //       // } else {
+  //       //   console.log("There is no second video in the response.");
+  //       // }
+  //     } else {
+  //       console.error("No videos found in the response data.");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching videos:", error);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   getAllVideos();
+  // }, []);
+
 
   // this function to mark video is watch
   async function WatchedVideo(id) {
@@ -65,9 +104,7 @@ const Course = () => {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log(data.data);
     setProgressValue(data.data.progress);
-    console.log(progressValue);
   }
 
   useEffect(() => {
@@ -175,7 +212,7 @@ const Course = () => {
                 </p>
               </div>
             </div>
-            {allVideos.map((ele) => (
+            {allVideos[0]?.map((ele) => (
               <div key={ele.id} className="col-lg-4">
                 <div className={`${style.videocontent} rounded-5 mb-3`}>
                   <Link to={"/video/" + ele.id}>
@@ -193,7 +230,7 @@ const Course = () => {
 
                   <p className={`${style.videoParagraph} p-2`}> {ele.title} </p>
                   <div className={`${style.videoIcon}`}>
-                    <div className={`${style.videoLayer} videoLayer`}></div>
+                    {allVideos[1]?.map(ele=>ele.video_id).includes (ele.id)?  <div className={`${style.videoLayer} videoLayer`}></div> :null}
                     <p className={`${style.videoNumber}`}>{ele.id}</p>
                   </div>
                 </div>
