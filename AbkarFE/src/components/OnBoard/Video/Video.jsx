@@ -15,8 +15,8 @@ const Video = () => {
   function toCourse() {
     navigate("/Course");
   }
-  function toMoreLearning() {
-    navigate("/MoreLearning");
+  function toMoreLearning(id) {
+    navigate("/MoreLearning/"+id);
   }
   let params = useParams();
   let [video, setVideo] = useState({});
@@ -125,7 +125,7 @@ const Video = () => {
               </svg>
             </div>
             <div className="viedoBtn d-flex align-self-baseline my-5 me-4">
-              <button onClick={toMoreLearning} className={`${style.videoBtn1}`}>
+              <button onClick={()=>toMoreLearning(params.id)} className={`${style.videoBtn1}`}>
                 التالي
               </button>
               <button onClick={toCourse} className={`${style.videoBtn2}`}>

@@ -73,7 +73,7 @@ function App() {
           <Route path="/pageone" element={<PageOne />} />
           <Route path="/course" element={<Course />} />
           <Route path="/video/:id" element={<Video />} />
-          <Route path="/MoreLearning" element={<MoreLearning />} />
+          <Route path="/MoreLearning/:id" element={<MoreLearning />} />
           <Route path="/community" element={<Community />} />
 
           {/* Quiz & settings flow */}

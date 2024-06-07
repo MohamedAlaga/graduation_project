@@ -2,15 +2,16 @@ import style from "./Course.module.css";
 import headimage from "../../../assets/Vector 1702.png";
 import emogi from "../../../assets/Thinkingface.svg";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useAuth } from "../../../../src/AuthContext";
 import axios from "axios";
+import { useFormik } from "formik";
+import { SettingContext } from "../../../../src/SettingContext";
 
 const Course = () => {
   let [setting, setSetting] = useState(`d-none`);
   let [allVideos, setAllVideos] = useState([]);
-  const { token, isLoggedIn, userType } = useAuth();
-  if (!isLoggedIn || userType != "user") navigate("/");
+  const { token } = useAuth();
 
   let navigate = useNavigate();
   function toCommunity() {
@@ -23,22 +24,42 @@ const Course = () => {
   function removeSetting() {
     setSetting(`d-none`);
   }
-  // this function to get all video
-  async function getAllVideos() {
-    let { data } = await axios.get(
-      "http://127.0.0.1:8000/api/courses/1/videos",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-    setAllVideos(data.data);
-  }
 
-  useEffect(() => {
-    getAllVideos();
-  }, []);
+
+
+
+  // this function to call and contact settinContext to make user go to setting page
+  let { goToSetting } = useContext(SettingContext);
+  // this function there in settingContext.jsx 
+  // i`m distract it to use it here 
+
+  async function addPassword(password, token) {
+    let { data } = await goToSetting(password, token).catch((err) => err.data);
+    console.log(data, `helooo`);
+    if (data == undefined) {
+      alert("your password is false");
+      removeSetting();
+    } else if (data.success === true) {
+      navigate("/Setting");
+    }
+  }
+  // this function take valus and call api with send values
+  // api is there in settingContext.jsx so this function send values and token as parameter
+
+  const checkPassword = useFormik({
+    initialValues: {
+      password: "",
+    },
+    onSubmit: (values) => {
+      addPassword(values.password, token);
+    },
+  });
+  // is library => take values from form and handel errors and form refresh
+
+
+
+
+  // this function to get all video
 
   // async function getAllVideos() {
   //   try {
@@ -78,6 +99,25 @@ const Course = () => {
   // useEffect(() => {
   //   getAllVideos();
   // }, []);
+  async function getAllVideos() {
+    let { data } = await axios.get(
+      "http://127.0.0.1:8000/api/courses/1/videos",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    setAllVideos(data.data);
+  }
+  useEffect(() => {
+    getAllVideos();
+  }, []);
+
+
+
+
+
 
 
   // this function to mark video is watch
@@ -96,6 +136,12 @@ const Course = () => {
 
     console.log(data);
   }
+
+
+
+
+
+
   //  this function to get value of progress bar
   const [progressValue, setProgressValue] = useState();
   async function getPrgressValue() {
@@ -106,10 +152,14 @@ const Course = () => {
     });
     setProgressValue(data.data.progress);
   }
-
   useEffect(() => {
     getPrgressValue();
   }, []);
+
+
+
+
+
 
   return (
     <>
@@ -120,10 +170,19 @@ const Course = () => {
           <div className=" position-relative d-flex justify-content-center">
             <h1 className={`${style.settingTitle}`}>ادخل كلمة السر</h1>
             <div className={`${style.settingContent}`}>
-              <input className={`${style.settingPassword}`} type="password" />
-              <button onClick={removeSetting} className={`${style.settingBtn}`}>
-                الدخول الي الاعدادات
-              </button>
+              <form onSubmit={checkPassword.handleSubmit}>
+                <div className="form-group">
+                  <input className={`${style.settingPassword}`}
+                   type="password"
+                    name="password"
+                    value={checkPassword.values.password}
+                    onChange={checkPassword.handleChange} />
+                </div>
+                <button className={`${style.settingBtn}`}>
+                  الدخول الي الاعدادات
+                </button>
+              </form>
+
             </div>
           </div>
         </div>
@@ -230,7 +289,7 @@ const Course = () => {
 
                   <p className={`${style.videoParagraph} p-2`}> {ele.title} </p>
                   <div className={`${style.videoIcon}`}>
-                    {allVideos[1]?.map(ele=>ele.video_id).includes (ele.id)?  <div className={`${style.videoLayer} videoLayer`}></div> :null}
+                    {allVideos[1]?.map(ele => ele.video_id).includes(ele.id) ? <div className={`${style.videoLayer} videoLayer`}></div> : null}
                     <p className={`${style.videoNumber}`}>{ele.id}</p>
                   </div>
                 </div>
