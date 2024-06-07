@@ -7,7 +7,7 @@ export const CreateTest = async (token, values) => {
     "Content-Type": "application/json",
   };
 
-  let bodyContent = {
+  let bodyContent = JSON.stringify({
     title: `${values.title}`,
     course_id: 1,
     questions: [
@@ -192,7 +192,7 @@ export const CreateTest = async (token, values) => {
         ],
       },
     ],
-  };
+  });
 
   let response = await fetch(`${API_URL}/admin/tests/create`, {
     method: "POST",
@@ -201,5 +201,6 @@ export const CreateTest = async (token, values) => {
   });
 
   console.log(response);
+  console.log(bodyContent);
   return response;
 };

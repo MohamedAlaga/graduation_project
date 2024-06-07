@@ -6,10 +6,11 @@ import { useAuth } from "../../AuthContext";
 function AddTest() {
   const { token } = useAuth();
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSub = async (values) => {
     await CreateTest(token, values);
+    reset();
   };
 
   return (
@@ -28,7 +29,9 @@ function AddTest() {
           <Question key={index} num={index + 1} register={register} />
         ))}
         <div className="btns">
-          <button type="cancel">إلغاء</button>
+          <button type="cancel" onClick={() => reset()}>
+            إلغاء
+          </button>
           <button type="submit">إضافة</button>
         </div>
       </form>

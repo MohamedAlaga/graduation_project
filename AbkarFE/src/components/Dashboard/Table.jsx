@@ -65,6 +65,7 @@ function Table({ data, handleRender }) {
         break;
       case "الإختبار":
         setEditTest(true);
+        setName(name);
         break;
     }
   };
@@ -76,13 +77,17 @@ function Table({ data, handleRender }) {
     setEditTest(false);
   };
 
-  const [testName, setTestName] = useState("مثال");
-
   const handleEditVid = async (e) => {
     e.preventDefault();
     await UpdateVid(token, link, name, description, id);
     handleCancel();
   };
+
+  // const handleEditTest = async (e) => {
+  //   e.preventDefault();
+  //   await UpdateVid(token, link, name, description, id);
+  //   handleCancel();
+  // };
 
   return (
     <>
@@ -105,7 +110,7 @@ function Table({ data, handleRender }) {
               <td>{ele.title}</td>
               {title === "الفيديو" && <td>{ele.url}</td>}
               {title === "المقال" && <td>{ele.description}</td>}
-              {title === "الإختبار" && <td>{ele.url}</td>}
+              {title === "الإختبار" && <td>{ele.questions_count}</td>}
               <td>
                 <button
                   onClick={() =>
@@ -191,7 +196,7 @@ function Table({ data, handleRender }) {
               </button>
             </div>
             <div className="editForTableEssay__window__body">
-              <form>
+              <form onSubmit={handleEditVid}>
                 <div>
                   <label htmlFor="title">عنوان المقال</label>
                   <input
@@ -238,8 +243,8 @@ function Table({ data, handleRender }) {
                   <input
                     type="text"
                     id="title"
-                    value={testName}
-                    onChange={(e) => setTestName(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
               </form>

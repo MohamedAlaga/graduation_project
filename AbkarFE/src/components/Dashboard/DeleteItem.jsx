@@ -1,13 +1,18 @@
 import x from "./assets/teenyicons_x-outline.svg";
 import { DeleteVid } from "./services/DeleteVid.js";
 import { useAuth } from "../../AuthContext";
+import { DeleteTest } from "./services/DeleteTest.js";
 
 // eslint-disable-next-line react/prop-types
 function DeleteItem({ title, cancel, id, handleRender }) {
   const { token } = useAuth();
 
   const handleDelete = async () => {
-    await DeleteVid(token, id);
+    if (title !== "الإختبار") {
+      await DeleteVid(token, id);
+    } else {
+      await DeleteTest(token, id);
+    }
     cancel();
     handleRender(id);
   };
