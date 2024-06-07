@@ -13,6 +13,7 @@ function Table({ data, handleRender }) {
   const { token } = useAuth();
 
   const [title, setTitle] = useState("الفيديو");
+  const [specialCell, setSpecialCell] = useState("رابط الفيديو");
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -20,12 +21,15 @@ function Table({ data, handleRender }) {
     switch (pathname) {
       case "/videos":
         setTitle("الفيديو");
+        setSpecialCell("رابط الفيديو");
         break;
       case "/essays":
         setTitle("المقال");
+        setSpecialCell("نص المقال");
         break;
       case "/tests":
         setTitle("الإختبار");
+        setSpecialCell("عدد الأسئلة");
         break;
     }
   }, [location]);
@@ -56,6 +60,8 @@ function Table({ data, handleRender }) {
         break;
       case "المقال":
         setEditEssay(true);
+        setName(name);
+        setDescription(description);
         break;
       case "الإختبار":
         setEditTest(true);
@@ -69,9 +75,6 @@ function Table({ data, handleRender }) {
     setEditEssay(false);
     setEditTest(false);
   };
-
-  const [EName, setEName] = useState("مثال");
-  const [EContent, setEContent] = useState("مثال");
 
   const [testName, setTestName] = useState("مثال");
 
@@ -92,7 +95,7 @@ function Table({ data, handleRender }) {
         <thead>
           <tr>
             <th>عنوان {title}</th>
-            <th>رابط {title}</th>
+            <th>{specialCell}</th>
             <th>تعديل</th>
           </tr>
         </thead>
@@ -100,7 +103,9 @@ function Table({ data, handleRender }) {
           {data.map((ele) => (
             <tr key={ele.id}>
               <td>{ele.title}</td>
-              <td>{ele.description}</td>
+              {title === "الفيديو" && <td>{ele.url}</td>}
+              {title === "المقال" && <td>{ele.description}</td>}
+              {title === "الإختبار" && <td>{ele.url}</td>}
               <td>
                 <button
                   onClick={() =>
@@ -192,8 +197,8 @@ function Table({ data, handleRender }) {
                   <input
                     type="text"
                     id="title"
-                    value={EName}
-                    onChange={(e) => setEName(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div>
@@ -201,8 +206,8 @@ function Table({ data, handleRender }) {
                   <input
                     type="text"
                     id="description"
-                    value={EContent}
-                    onChange={(e) => setEContent(e.target.value)}
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
                   />
                 </div>
               </form>
