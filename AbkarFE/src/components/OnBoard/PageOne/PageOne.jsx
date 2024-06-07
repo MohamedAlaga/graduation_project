@@ -10,8 +10,7 @@ const PageOne = () => {
   let [setting, setSetting] = useState(`d-none`);
   let navigate = useNavigate();
 
-  const { isLoggedIn, userType } = useAuth();
-  if (!isLoggedIn || userType != "user") navigate("/");
+
 
   function toCourse() {
     navigate("/Course");
@@ -27,7 +26,11 @@ const PageOne = () => {
   }
 
   let { goToSetting } = useContext(SettingContext);
+  // this function there in settingContext.jsx 
+  // i`m distract it to use it here 
   const { token } = useAuth();
+  // this from Auth context this is token that i will pass to api for authorization
+  // i pass token a parameter to addPassword
 
   async function addPassword(password, token) {
     let { data } = await goToSetting(password, token).catch((err) => err.data);
@@ -39,6 +42,8 @@ const PageOne = () => {
       navigate("/Setting");
     }
   }
+  // this function take valus and call api with send values
+  // api is there in settingContext.jsx so this function send values and token as parameter 
 
   const checkPassword = useFormik({
     initialValues: {
@@ -48,6 +53,7 @@ const PageOne = () => {
       addPassword(values.password, token);
     },
   });
+  // is library => take values from form and handel errors and form refresh
 
   return (
     <>
