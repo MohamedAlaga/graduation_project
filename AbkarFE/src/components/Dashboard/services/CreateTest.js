@@ -13,11 +13,12 @@ export const StoreVideo = async (token, url, title, description) => {
     description: description,
   });
 
-  let response = await fetch(`${API_URL}/admin/videos`, {
+  let response = await fetch(`${API_URL}/admin/tests/create`, {
     method: "POST",
     body: bodyContent,
     headers: headersList,
   });
 
+  console.log(response);
   return response;
 };

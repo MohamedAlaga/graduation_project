@@ -45,6 +45,10 @@ function LogIn({ first, handleFirst }) {
     }
   };
 
+  const handleGoogleLogin = () => {
+    window.location.href = "http://127.0.0.1:8000/auth/google";
+  };
+
   return loading && first ? (
     <PreLoader />
   ) : (
@@ -122,10 +126,10 @@ function LogIn({ first, handleFirst }) {
             <img src={facebook} alt="facebook" />
             فيسبوك
           </Red>
-          <Red>
+          <button onClick={handleGoogleLogin} className="RedBtn">
             <img src={google} alt="google" />
             جــــوجــــل
-          </Red>
+          </button>
         </div>
       </div>
     </Wrapper>

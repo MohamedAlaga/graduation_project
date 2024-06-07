@@ -1,6 +1,6 @@
 import { API_URL } from "../../login-signup/services/API";
 
-export const StoreVideo = async (token, url, title, description) => {
+export const UpdateVid = async (token, url, title, description, id) => {
   let headersList = {
     Accept: "*/*",
     Authorization: `Bearer ${token}`,
@@ -13,11 +13,12 @@ export const StoreVideo = async (token, url, title, description) => {
     description: description,
   });
 
-  let response = await fetch(`${API_URL}/admin/videos`, {
+  let response = await fetch(`${API_URL}/admin/videos/${id}`, {
     method: "POST",
     body: bodyContent,
     headers: headersList,
   });
 
+  console.log(response);
   return response;
 };

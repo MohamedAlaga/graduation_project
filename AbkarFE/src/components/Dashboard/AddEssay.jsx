@@ -15,7 +15,7 @@ function AddEssay() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await StoreVideo(token, "", EName, EContent);
+    await StoreVideo(token, null, EName, EContent);
     EmptyAll();
   };
 
