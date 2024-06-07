@@ -64,7 +64,7 @@ function App() {
           <Route path="/13-18" element={<Teen />} />
           <Route path="/age" element={<Age />} />
           <Route path="/password" element={<Forgot />} />
-          <Route path="/reassign-password/:token" element={<Reassign />} />
+          <Route path="/reassign-password/:id" element={<Reassign />} />
           <Route path="/parents" element={<Parents />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/form" element={<FForm />} />

@@ -19,5 +19,6 @@ export const StoreVideo = async (token, url, title, description) => {
     headers: headersList,
   });
 
+  console.log(response);
   return response;
 };

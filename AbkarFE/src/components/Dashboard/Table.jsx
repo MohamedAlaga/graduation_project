@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useLocation } from "react-router-dom";
 import edit from "./assets/lucide_edit.svg";
 import dlt from "./assets/material-symbols_delete-outline.svg";
@@ -5,7 +6,7 @@ import { useEffect, useState } from "react";
 import DeleteItem from "./DeleteItem";
 import x from "./assets/teenyicons_x-outline.svg";
 
-function Table() {
+function Table({ data }) {
   const location = useLocation();
 
   const [title, setTitle] = useState("الفيديو");
@@ -81,19 +82,21 @@ function Table() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>مثال</td>
-            <td>مثال</td>
-            <td>
-              <button onClick={handleEdit}>
-                <img src={edit} alt="edit" />
-              </button>
-              <button onClick={handleDelete}>
-                <img src={dlt} alt="delete" />
-              </button>
-              <span></span>
-            </td>
-          </tr>
+          {data.map((ele) => (
+            <tr key={ele.id}>
+              <td>{ele.title}</td>
+              <td>{ele.description}</td>
+              <td>
+                <button onClick={handleEdit}>
+                  <img src={edit} alt="edit" />
+                </button>
+                <button onClick={handleDelete}>
+                  <img src={dlt} alt="delete" />
+                </button>
+                <span></span>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
       {del && <DeleteItem title={title} cancel={() => handleCancel()} />}

@@ -12,10 +12,10 @@ function Reassign() {
   const [apass, setAPass] = useState("");
   const navigate = useNavigate();
 
-  const { token } = useParams(token);
+  const { id } = useParams();
 
   const handleSubmit = () => {
-    const result = ResetPass(token, pass, apass);
+    const result = ResetPass(id, pass, apass);
     if (result) {
       navigate("");
     }

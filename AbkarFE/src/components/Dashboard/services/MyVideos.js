@@ -13,5 +13,5 @@ export const MyVideos = async (token) => {
   });
 
   let data = await response.json();
-  return data;
+  return data.data;
 };

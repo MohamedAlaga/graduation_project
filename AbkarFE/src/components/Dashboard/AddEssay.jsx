@@ -1,12 +1,27 @@
 import { useState } from "react";
+import { StoreVideo } from "./services/StoreVideo";
+import { useAuth } from "../../AuthContext";
 
 function AddEssay() {
   const [EName, setEName] = useState("");
   const [EContent, setEContent] = useState("");
 
+  const { token } = useAuth();
+
+  const EmptyAll = () => {
+    setEName("");
+    setEContent("");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await StoreVideo(token, "", EName, EContent);
+    EmptyAll();
+  };
+
   return (
     <div className="AddAEssay">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">عنوان المقال</label>
           <input
@@ -27,11 +42,13 @@ function AddEssay() {
             placeholder="أضف نص المقال"
           />
         </div>
+        <div className="btns">
+          <button type="cancel" onClick={() => EmptyAll()}>
+            إلغاء
+          </button>
+          <button type="submit">إضافة</button>
+        </div>
       </form>
-      <div className="btns">
-        <button>حذف</button>
-        <button>إلغاء</button>
-      </div>
     </div>
   );
 }

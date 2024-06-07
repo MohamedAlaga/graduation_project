@@ -9,9 +9,16 @@ function AddVideo() {
 
   const { token } = useAuth();
 
+  const EmptyAll = () => {
+    setName("");
+    setDescription("");
+    setLink("");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await StoreVideo(token, link, name, description);
+    EmptyAll();
   };
 
   return (
@@ -48,7 +55,9 @@ function AddVideo() {
           />
         </div>
         <div className="btns">
-          <button type="cancel">إلغاء</button>
+          <button type="cancel" onClick={() => EmptyAll()}>
+            إلغاء
+          </button>
           <button type="submit">إضافة</button>
         </div>
       </form>
