@@ -1139,6 +1139,9 @@
   background: transparent;
   color: white;
 }
+.Dashboard__header > button:hover {
+  color: red;
+}
 
 .MyTable thead {
   background-color: #fff6cb;

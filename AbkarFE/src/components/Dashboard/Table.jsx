@@ -212,8 +212,10 @@ function Table({ data, handleRender }) {
                 </div>
               </form>
               <div className="btns">
-                <button>حذف</button>
-                <button onClick={() => handleCancel()}>إلغاء</button>
+                <button type="cancel" onClick={handleCancel}>
+                  إلغاء
+                </button>
+                <button type="submit">إضافة</button>
               </div>
             </div>
           </div>{" "}
@@ -242,8 +244,10 @@ function Table({ data, handleRender }) {
                 </div>
               </form>
               <div className="btns">
-                <button>حذف</button>
-                <button onClick={() => handleCancel()}>إلغاء</button>
+                <button type="cancel" onClick={handleCancel}>
+                  إلغاء
+                </button>
+                <button type="submit">إضافة</button>
               </div>
             </div>
           </div>{" "}

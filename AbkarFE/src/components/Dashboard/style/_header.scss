@@ -17,5 +17,9 @@
     border: none;
     background: transparent;
     color: white;
+
+    &:hover {
+      color: red;
+    }
   }
 }
