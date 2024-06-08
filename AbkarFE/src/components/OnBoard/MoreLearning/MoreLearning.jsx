@@ -1,21 +1,23 @@
 import style from "./MoreLearning.module.css";
 import headimage from "../../../assets/Vector 1702.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../../AuthContext";
 
 const MoreLearning = () => {
   // let [setting,setSetting]=useState(`d-none`)
 
   let navigate = useNavigate();
+  const param=useParams()
+  console.log(param.id);
 
   const { isLoggedIn, userType } = useAuth();
   if (!isLoggedIn || userType != "user") navigate("/");
 
   function toVideo() {
-    navigate("/Video");
+    navigate("/Video/" + param.id);
   }
   function toCommunity() {
-    navigate("/community");
+    navigate("/community/"+param.id);
   }
   // function toSetting(){
   //     setSetting(`d-block ${style.setting}`)

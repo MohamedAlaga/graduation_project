@@ -250,7 +250,7 @@ const Course = () => {
           </div>
 
           <div className="row gy-5 mt-4">
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <div className={`${style.videocontent} rounded-5 mb-3`}>
                 <div className=" p-3 d-flex justify-content-center">
                   <iframe
@@ -270,11 +270,11 @@ const Course = () => {
                   تعلم اكثر عن عالم الافكار 💡
                 </p>
               </div>
-            </div>
+            </div> */}
             {allVideos[0]?.map((ele) => (
               <div key={ele.id} className="col-lg-4">
                 <div className={`${style.videocontent} rounded-5 mb-3`}>
-                  <Link to={"/video/" + ele.id}>
+                  {allVideos[1]?.map(ele => ele.video_id).includes(ele.id-1)||ele.id==1 ?<Link  to={"/video/" + ele.id}>
                     <div className="p-3 d-flex justify-content-center position-relative">
                       <iframe
                         className={`${style.video} w-100`}
@@ -285,7 +285,17 @@ const Course = () => {
                         className=" position-absolute top-0 bottom-0 end-0 start-0  z-3 rounded-5"
                       ></div>
                     </div>
-                  </Link>
+                  </Link>: <div className="p-3 d-flex justify-content-center position-relative">
+                      <iframe
+                        className={`${style.video} w-100`}
+                        src={ele.url}
+                      ></iframe>
+                      <div
+                        // onClick={() => WatchedVideo(ele.id)}
+                        className=" position-absolute top-0 bottom-0 end-0 start-0  z-3 rounded-5"
+                      ></div>
+                    </div>}
+                  
 
                   <p className={`${style.videoParagraph} p-2`}> {ele.title} </p>
                   <div className={`${style.videoIcon}`}>
@@ -303,7 +313,7 @@ const Course = () => {
             ))}
 
             <div className="col-lg-4">
-              <div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
+              {progressValue===100?<Link to={"/hello"} className=" text-decoration-none"><div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
                 <img height={248} className="w-100" src={emogi} alt="" />
                 <p className={`${style.iconParagraph} mt-3 `}>
                   الاختبار النهائي
@@ -311,7 +321,17 @@ const Course = () => {
                 <div className={`${style.videoIcon}`}>
                   <div className={`${style.videoLayer}`}></div>
                 </div>
-              </div>
+              </div></Link>:<div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
+                <img height={248} className="w-100" src={emogi} alt="" />
+                <p className={`${style.iconParagraph} mt-3 `}>
+                  الاختبار النهائي
+                </p>
+                <div className={`${style.videoIcon}`}>
+                  <div className={`${style.videoLayer}`}></div>
+                </div>
+              </div>}
+              
+              
             </div>
           </div>
         </div>

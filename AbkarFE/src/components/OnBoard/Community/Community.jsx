@@ -1,6 +1,6 @@
 import style from "./Community.module.css";
 import headimage from "../../../assets/Vector 1702.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../../AuthContext";
 
 const Community = () => {
@@ -9,14 +9,16 @@ const Community = () => {
   const { isLoggedIn, userType } = useAuth();
   if (!isLoggedIn || userType != "user") navigate("/");
 
-  function toVedio() {
-    navigate("/MoreLearning");
+  const param=useParams()
+
+  function toMoreLearning() {
+    navigate("/MoreLearning/"+param.id);
   }
   return (
     <>
       <div className="3bkr w-100 mb-lg-3">
         <div className={`${style.head} `}>
-          <div onClick={toVedio} className={` ${style.pointerIcon}  `}>
+          <div onClick={toMoreLearning} className={` ${style.pointerIcon}  `}>
             <svg
               className={`${style.communityIcon} `}
               width="36"

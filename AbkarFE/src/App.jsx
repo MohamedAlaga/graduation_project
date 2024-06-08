@@ -74,7 +74,7 @@ function App() {
           <Route path="/course" element={<Course />} />
           <Route path="/video/:id" element={<Video />} />
           <Route path="/MoreLearning/:id" element={<MoreLearning />} />
-          <Route path="/community" element={<Community />} />
+          <Route path="/community/:id" element={<Community />} />
 
           {/* Quiz & settings flow */}
           <Route path="/hello" element={<Hello />} />
