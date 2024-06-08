@@ -44,24 +44,20 @@ function Table({ data, handleRender }) {
     setId(id);
   };
 
-  const [name, setName] = useState("مثال");
-  const [description, setDescription] = useState("مثال");
-  const [link, setLink] = useState("مثال");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [link, setLink] = useState("");
   const [id, setId] = useState("");
 
   const handleEdit = (name, description, link, id) => {
     switch (title) {
       case "الفيديو":
+      case "المقال":
         setEditVideo(true);
         setName(name);
         setDescription(description);
         setLink(link);
         setId(id);
-        break;
-      case "المقال":
-        setEditEssay(true);
-        setName(name);
-        setDescription(description);
         break;
       case "الإختبار":
         setEditTest(true);
@@ -80,6 +76,7 @@ function Table({ data, handleRender }) {
   const handleEditVid = async (e) => {
     e.preventDefault();
     await UpdateVid(token, link, name, description, id);
+    handleRender(id);
     handleCancel();
   };
 
@@ -215,13 +212,13 @@ function Table({ data, handleRender }) {
                     onChange={(e) => setDescription(e.target.value)}
                   />
                 </div>
+                <div className="btns">
+                  <button type="cancel" onClick={handleCancel}>
+                    إلغاء
+                  </button>
+                  <button type="submit">إضافة</button>
+                </div>
               </form>
-              <div className="btns">
-                <button type="cancel" onClick={handleCancel}>
-                  إلغاء
-                </button>
-                <button type="submit">إضافة</button>
-              </div>
             </div>
           </div>{" "}
         </div>
