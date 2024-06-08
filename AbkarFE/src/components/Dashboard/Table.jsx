@@ -7,6 +7,7 @@ import DeleteItem from "./DeleteItem";
 import x from "./assets/teenyicons_x-outline.svg";
 import { UpdateVid } from "./services/UpdateVid";
 import { useAuth } from "../../AuthContext";
+import { UpdateTest } from "./services/UpdateTest";
 
 function Table({ data, handleRender }) {
   const location = useLocation();
@@ -62,6 +63,7 @@ function Table({ data, handleRender }) {
       case "الإختبار":
         setEditTest(true);
         setName(name);
+        setId(id);
         break;
     }
   };
@@ -80,11 +82,12 @@ function Table({ data, handleRender }) {
     handleCancel();
   };
 
-  // const handleEditTest = async (e) => {
-  //   e.preventDefault();
-  //   await UpdateVid(token, link, name, description, id);
-  //   handleCancel();
-  // };
+  const handleEditTest = async (e) => {
+    e.preventDefault();
+    await UpdateTest(token, name, id);
+    handleRender(id);
+    handleCancel();
+  };
 
   return (
     <>
@@ -234,7 +237,7 @@ function Table({ data, handleRender }) {
               </button>
             </div>
             <div className="editForTableTest__window__body">
-              <form>
+              <form onSubmit={handleEditTest}>
                 <div>
                   <label htmlFor="title">عنوان الإختبار</label>
                   <input
@@ -244,13 +247,13 @@ function Table({ data, handleRender }) {
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
+                <div className="btns">
+                  <button type="cancel" onClick={handleCancel}>
+                    إلغاء
+                  </button>
+                  <button type="submit">إضافة</button>
+                </div>
               </form>
-              <div className="btns">
-                <button type="cancel" onClick={handleCancel}>
-                  إلغاء
-                </button>
-                <button type="submit">إضافة</button>
-              </div>
             </div>
           </div>{" "}
         </div>
