@@ -52,6 +52,47 @@
 		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
 		0 0 var(--s) #000, 0 0 var(--s) #000;
 }
+.correctCircle {
+	z-index: 10;
+	position: absolute;
+	right: 21%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* cursor: pointer; */
+	display: grid;
+	justify-items: center;
+}
+.correctText {
+	color: var(--Green, #1fcc7b);
+	text-align: center;
+	font-family: "Omnes Arabic";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 26px; /* 108.333% */
+	letter-spacing: -0.408px;
+}
+.incorrectCircle {
+	z-index: 10;
+	position: absolute;
+	right: 23%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* cursor: pointer; */
+	display: grid;
+	justify-items: center;
+	margin-right: 20px;
+}
+.incorrectText {
+	color: var(--Red, #ff5f84);
+	text-align: center;
+	font-family: "Omnes Arabic";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 26px; /* 108.333% */
+	letter-spacing: -0.408px;
+}
 
 .arr {
 	z-index: 10;
@@ -87,7 +128,7 @@
 	/* left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%); */
-	width: 70%;
+	/* width: 70%; */
 }
 
 .qbox1 {
@@ -102,6 +143,7 @@
 }
 
 .question {
+	direction: rtl;
 	color: #000;
 	text-align: right;
 	font-family: "Omnes Arabic Semi Bold";
@@ -133,7 +175,8 @@
 	padding: 5px;
 }
 
-.label,.correct,
+.label,
+.correct,
 .incorrect {
 	appearance: none;
 	width: 24px;
@@ -145,7 +188,6 @@
 	background: #fffaed;
 }
 
-
 .label:checked {
 	background: yellow;
 }
@@ -155,7 +197,7 @@
 }
 
 .correct:checked {
-	background-color: #1FCC7B;
+	background-color: #1fcc7b;
 }
 
 .correctChecked {
@@ -163,7 +205,7 @@
 }
 
 .incorrect:checked {
-	background-color: #FF5F84;
+	background-color: #ff5f84;
 }
 
 .incorrectChecked {

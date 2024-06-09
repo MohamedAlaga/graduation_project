@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Answers.module.css";
 import up from "../../../assets/bedo/Vector 1701 (3.svg";
 import arrow from "../../../assets/bedo/arrow_back (1).svg";
+import right from "../../../assets/bedo/correct circle.svg";
+import wrong from "../../../assets/bedo/incorrect circle.svg";
 import { useAuth } from "../../../AuthContext";
 
 const Answers = () => {
@@ -74,6 +76,16 @@ const Answers = () => {
 					>
 						<img className={styles.img} src={up} alt="Landscape picture" />
 						<div>
+							<div className={styles.circles}>
+								<div className={styles.correctCircle}>
+									<p className={styles.correctText}>صح</p>
+									<img src={right} alt="right" />
+								</div>
+								<div className={styles.incorrectCircle}>
+									<p className={styles.incorrectText}>خطا</p>
+									<img src={wrong} alt="wrong" />
+								</div>
+							</div>
 							<p className={styles.title}>اجاباتك</p>
 							<img
 								onClick={toHello}
@@ -105,12 +117,12 @@ const Answers = () => {
 																		answer.is_correct
 																			? styles.correct
 																			: styles.correct
-																  }`
+																}`
 																: `${
 																		answer.is_correct
 																			? styles.incorrect
 																			: styles.incorrect
-																  }`
+																}`
 														}
 														id={`${question.id}-${answer.id}`}
 														type="checkbox"

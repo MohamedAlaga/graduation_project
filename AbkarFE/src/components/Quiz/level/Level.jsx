@@ -27,7 +27,7 @@ function Level() {
             <p className={styles.title}>شهادةالمستوي</p>
 
             <img
-              onClick={toCourse}
+              onClick={toHello}
               className={styles.arr}
               src={arrow}
               alt="arrow-back"
@@ -53,7 +53,7 @@ function Level() {
             انت الأن مؤهل للانتقال الي المستوي الثاني
           </p>
           <div className={`${styles.btn2}`}>
-            <button onClick={toHello} className="btn main-btn">
+            <button onClick={toCourse} className="btn main-btn">
               <p className={`${styles.certificate_text3}`}>
                 انتقل الي المستوي الثاني
               </p>
