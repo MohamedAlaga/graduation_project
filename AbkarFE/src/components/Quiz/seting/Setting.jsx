@@ -5,22 +5,61 @@ import eye from "../../../assets/bedo/mdi_eye-off-outline.svg";
 import delacc from "../../../assets/bedo/deleteicon.svg";
 import signout from "../../../assets/bedo/sign_out.svg";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useAuth } from "../../../AuthContext";
+import { useFormik } from "formik";
 
-function Setting() {
-  let navigate = useNavigate();
+
+function Setting( ) {
+	let navigate = useNavigate();
 	function toHello() {
 		navigate("/hello");
 	}
-	let [eyee ,setEyee ] = useState("password");
+	let [eyee, setEyee] = useState("password");
 	function removeEye() {
 		if (eyee == "password") {
 			setEyee("text");
-			
-		}else{
+		} else {
 			setEyee("password");
 		}
 	}
+
+	let { token } = useAuth();
+let [user, setUser] = useState([]);
+	async function updateUser() {
+		const user = await axios.get("http://127.0.0.1:8000/api/user/setting", {
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
+		});
+		
+		setUser(user.data);
+		console.log(user.data);
+		
+	}
+	useEffect(() => {
+		updateUser();
+	}, []);
+	
+
+	const userInfo = useFormik({
+		initialValues: {
+			age: "22",
+			email: "bedo@abo.kw",
+			father_name: user.father_name,
+			name: user.name,
+			phone: "",
+		},
+		onSubmit: (values) => {
+			if (!values.password) {
+				delete values.password;
+			}
+			console.log(values);
+			console.log(values);
+		},
+	});
+
 	return (
 		<>
 			<main className={styles.body}>
@@ -45,28 +84,31 @@ function Setting() {
 				<div
 					className={`${styles.content} text-center d-flex flex-column align-items-center`}
 				>
-					<form>
+					<form onSubmit={userInfo.handleSubmit}>
 						<div className={styles.info}>
-							<label className={styles.label} htmlFor="3">
+							<label className={styles.label} htmlFor="1">
 								اسم العبقري
 							</label>
 							<input
 								className={styles.input}
 								id="1"
 								type="text"
-								name="name1"
-								required
+								name="name"
+								value={userInfo.values.name}
+								onChange={userInfo.handleChange}
 							/>
 						</div>
 						<div className={styles.info}>
-							<label className={styles.label} htmlFor="3">
+							<label className={styles.label} htmlFor="2">
 								اسمك
 							</label>
 							<input
 								className={styles.input}
-								id="1"
+								id="2"
 								type="text"
 								name="name1"
+								value={userInfo.values.father_name}
+								onChange={userInfo.handleChange}
 								required
 							/>
 						</div>
@@ -76,27 +118,31 @@ function Setting() {
 							</label>
 							<input
 								className={styles.input}
-								id="1"
+								id="3"
 								type="number"
 								maxLength={2}
-								name="name1"
+								name="age"
+								value={userInfo.values.age}
+								onChange={userInfo.handleChange}
 								required
 							/>
 						</div>
 						<div className={styles.info}>
-							<label className={styles.label} htmlFor="3">
-								اسم العبقري
+							<label className={styles.label} htmlFor="4">
+								البريد الالكتروني
 							</label>
 							<input
 								className={styles.input}
-								id="1"
+								id="4"
 								type="email"
-								name="name1"
+								name="email"
+								value={userInfo.values.email}
+								onChange={userInfo.handleChange}
 								required
 							/>
 						</div>
 						<div className={styles.info}>
-							<label className={styles.label} htmlFor="3">
+							<label className={styles.label} htmlFor="5">
 								كلمة المرور
 							</label>
 							<img
@@ -105,24 +151,28 @@ function Setting() {
 								src={eye}
 								alt="arrow-back"
 							/>
+
 							<input
 								className={styles.input}
-								id="1"
 								type={eyee}
-								name="name1"
-								required
+								name="password"
+								value={userInfo.values.password}
+								onChange={userInfo.handleChange}
+								id="5"
 							/>
 						</div>
 						<div className={styles.info}>
-							<label className={styles.label} htmlFor="3">
+							<label className={styles.label} htmlFor="6">
 								رقم الهاتف
 							</label>
 							<input
 								className={styles.input}
-								id="1"
+								id="6"
 								type="tel"
 								maxLength={11}
-								name="name1"
+								name="phone"
+								value={userInfo.values.phone}
+								onChange={userInfo.handleChange}
 								required
 							/>
 						</div>

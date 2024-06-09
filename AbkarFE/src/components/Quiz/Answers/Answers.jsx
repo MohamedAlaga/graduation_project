@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./Exam.module.css";
+import styles from "./Answers.module.css";
 import up from "../../../assets/bedo/Vector 1701 (3.svg";
 import arrow from "../../../assets/bedo/arrow_back (1).svg";
 import { useAuth } from "../../../AuthContext";
-import { useFormik } from "formik";
-import axios from "axios";
 
-const Exam = () => {
+const Answers = () => {
 	const { token } = useAuth();
 	const [testData, setTestData] = useState(null);
+	// const [userAnswers, setUserAnswers] = useState([]);
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -27,6 +26,19 @@ const Exam = () => {
 				const data = await response.json();
 				console.log("Fetched test data:", data);
 				setTestData(data.data.test);
+
+				// Fetch user's answers
+				const answersResponse = await fetch(
+					`http://127.0.0.1:8000/api/user-tests/1/answers`, // Replace with the correct endpoint for fetching user's answers
+					{
+						headers: {
+							Authorization: `Bearer ${token}`,
+						},
+					}
+				);
+				const answersData = await answersResponse.json();
+				console.log("Fetched user answers:", answersData);
+				// setUserAnswers(answersData.answers || []);
 			} catch (error) {
 				console.error("Error fetching test data:", error);
 			}
@@ -35,46 +47,26 @@ const Exam = () => {
 		fetchTestData();
 	}, [token]);
 
-	// console.log("Test data:", testData);
-
 	function toHello() {
 		navigate("/hello");
 	}
 
-	const answerss = useFormik({
-		initialValues: {
-			answers: [],
-		},
-		onSubmit: async (values) => {
-			try {
-				const response = await axios.post(
-					`http://127.0.0.1:8000/api/user-tests/1/answers`,
-					{ answers: values.answers },
-					{
-						headers: {
-							Authorization: `Bearer ${token}`,
-							"Content-Type": "application/json",
-						},
-					}
-				);
-				console.log(response.data);
-				if (response.data.success === true) {
-					navigate("/result/" + response.data.data.percentage);
-				}
-				// Handle the response as needed
-			} catch (error) {
-				console.error("Error submitting answers:", error);
-			}
-		},
-	});
+	// const handleAnswerChange = (questionId, answerId) => {
+	// 	const newAnswers = userAnswers.filter(
+	// 		(ans) => ans.question_id !== questionId
+	// 	);
+	// 	newAnswers.push({ question_id: questionId, answer_id: answerId });
+	// 	setUserAnswers(newAnswers);
+	// };
 
-	const handleAnswerChange = (questionId, answerId) => {
-		const newAnswers = answerss.values.answers.filter(
-			(ans) => ans.question_id !== questionId
-		);
-		newAnswers.push({ question_id: questionId, answer_id: answerId });
-		answerss.setFieldValue("answers", newAnswers);
-	};
+	// const isCorrectAnswer = (question, answerId) => {
+	// 	return question.correct_answer_id === answerId; // Adjust this based on your data structure
+	// };
+
+	// const getUserAnswer = (questionId) => {
+	// 	const answer = userAnswers.find((ans) => ans.question_id === questionId);
+	// 	return answer ? answer.answer_id : null;
+	// };
 
 	return (
 		<>
@@ -98,7 +90,7 @@ const Exam = () => {
 					{/* Form */}
 					<div className={`${styles.form_edit}`}>
 						{testData && (
-							<form onSubmit={answerss.handleSubmit} className={styles.form}>
+							<form  className={styles.form}>
 								{testData.questions.map((question, index) => (
 									<div key={question.id} className={styles.qbox}>
 										<div className={styles.question}>
@@ -113,12 +105,10 @@ const Exam = () => {
 													<input
 														className={styles.label}
 														id={`${question.id}-${answer.id}`}
-														type="radio"
+														type="checkbox"
 														name={`question-${question.id}`}
 														value={answer.id}
-														onChange={() =>
-															handleAnswerChange(question.id, answer.id)
-														}
+														
 													/>
 												</div>
 											))}
@@ -148,4 +138,4 @@ const Exam = () => {
 	);
 };
 
-export default Exam;
+export default Answers;
