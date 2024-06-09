@@ -1,14 +1,20 @@
+/* eslint-disable react/prop-types */
 import { useLocation } from "react-router-dom";
 import edit from "./assets/lucide_edit.svg";
 import dlt from "./assets/material-symbols_delete-outline.svg";
 import { useEffect, useState } from "react";
 import DeleteItem from "./DeleteItem";
 import x from "./assets/teenyicons_x-outline.svg";
+import { UpdateVid } from "./services/UpdateVid";
+import { useAuth } from "../../AuthContext";
+import { UpdateTest } from "./services/UpdateTest";
 
-function Table() {
+function Table({ data, handleRender }) {
   const location = useLocation();
+  const { token } = useAuth();
 
   const [title, setTitle] = useState("الفيديو");
+  const [specialCell, setSpecialCell] = useState("رابط الفيديو");
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -16,12 +22,15 @@ function Table() {
     switch (pathname) {
       case "/videos":
         setTitle("الفيديو");
+        setSpecialCell("رابط الفيديو");
         break;
       case "/essays":
         setTitle("المقال");
+        setSpecialCell("نص المقال");
         break;
       case "/tests":
         setTitle("الإختبار");
+        setSpecialCell("عدد الأسئلة");
         break;
     }
   }, [location]);
@@ -31,20 +40,30 @@ function Table() {
   const [editEssay, setEditEssay] = useState(false);
   const [editTest, setEditTest] = useState(false);
 
-  const handleDelete = () => {
+  const handleDelete = (id) => {
     setDel(true);
+    setId(id);
   };
 
-  const handleEdit = () => {
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [link, setLink] = useState("");
+  const [id, setId] = useState("");
+
+  const handleEdit = (name, description, link, id) => {
     switch (title) {
       case "الفيديو":
-        setEditVideo(true);
-        break;
       case "المقال":
-        setEditEssay(true);
+        setEditVideo(true);
+        setName(name);
+        setDescription(description);
+        setLink(link);
+        setId(id);
         break;
       case "الإختبار":
         setEditTest(true);
+        setName(name);
+        setId(id);
         break;
     }
   };
@@ -56,14 +75,19 @@ function Table() {
     setEditTest(false);
   };
 
-  const [name, setName] = useState("مثال");
-  const [description, setDescription] = useState("مثال");
-  const [link, setLink] = useState("مثال");
+  const handleEditVid = async (e) => {
+    e.preventDefault();
+    await UpdateVid(token, link, name, description, id);
+    handleRender(id);
+    handleCancel();
+  };
 
-  const [EName, setEName] = useState("مثال");
-  const [EContent, setEContent] = useState("مثال");
-
-  const [testName, setTestName] = useState("مثال");
+  const handleEditTest = async (e) => {
+    e.preventDefault();
+    await UpdateTest(token, name, id);
+    handleRender(id);
+    handleCancel();
+  };
 
   return (
     <>
@@ -76,27 +100,42 @@ function Table() {
         <thead>
           <tr>
             <th>عنوان {title}</th>
-            <th>رابط {title}</th>
+            <th>{specialCell}</th>
             <th>تعديل</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>مثال</td>
-            <td>مثال</td>
-            <td>
-              <button onClick={handleEdit}>
-                <img src={edit} alt="edit" />
-              </button>
-              <button onClick={handleDelete}>
-                <img src={dlt} alt="delete" />
-              </button>
-              <span></span>
-            </td>
-          </tr>
+          {data.map((ele) => (
+            <tr key={ele.id}>
+              <td>{ele.title}</td>
+              {title === "الفيديو" && <td>{ele.url}</td>}
+              {title === "المقال" && <td>{ele.description}</td>}
+              {title === "الإختبار" && <td>{ele.questions_count}</td>}
+              <td>
+                <button
+                  onClick={() =>
+                    handleEdit(ele.title, ele.description, ele.url, ele.id)
+                  }
+                >
+                  <img src={edit} alt="edit" />
+                </button>
+                <button onClick={() => handleDelete(ele.id)}>
+                  <img src={dlt} alt="delete" />
+                </button>
+                <span></span>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
-      {del && <DeleteItem title={title} cancel={() => handleCancel()} />}
+      {del && (
+        <DeleteItem
+          title={title}
+          cancel={() => handleCancel()}
+          id={id}
+          handleRender={handleRender}
+        />
+      )}
       {editVideo && (
         <div className="editForTable">
           <div className="editForTable__window">
@@ -107,7 +146,7 @@ function Table() {
               </button>
             </div>
             <div className="editForTable__window__body">
-              <form>
+              <form onSubmit={handleEditVid}>
                 <div>
                   <label htmlFor="title">عنوان الفيديو</label>
                   <input
@@ -135,11 +174,13 @@ function Table() {
                     onChange={(e) => setLink(e.target.value)}
                   />
                 </div>
+                <div className="btns">
+                  <button type="cancel" onClick={handleCancel}>
+                    إلغاء
+                  </button>
+                  <button type="submit">إضافة</button>
+                </div>
               </form>
-              <div className="btns">
-                <button>حذف</button>
-                <button onClick={() => handleCancel()}>إلغاء</button>
-              </div>
             </div>
           </div>{" "}
         </div>
@@ -155,14 +196,14 @@ function Table() {
               </button>
             </div>
             <div className="editForTableEssay__window__body">
-              <form>
+              <form onSubmit={handleEditVid}>
                 <div>
                   <label htmlFor="title">عنوان المقال</label>
                   <input
                     type="text"
                     id="title"
-                    value={EName}
-                    onChange={(e) => setEName(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div>
@@ -170,15 +211,17 @@ function Table() {
                   <input
                     type="text"
                     id="description"
-                    value={EContent}
-                    onChange={(e) => setEContent(e.target.value)}
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
                   />
                 </div>
+                <div className="btns">
+                  <button type="cancel" onClick={handleCancel}>
+                    إلغاء
+                  </button>
+                  <button type="submit">إضافة</button>
+                </div>
               </form>
-              <div className="btns">
-                <button>حذف</button>
-                <button onClick={() => handleCancel()}>إلغاء</button>
-              </div>
             </div>
           </div>{" "}
         </div>
@@ -194,21 +237,23 @@ function Table() {
               </button>
             </div>
             <div className="editForTableTest__window__body">
-              <form>
+              <form onSubmit={handleEditTest}>
                 <div>
                   <label htmlFor="title">عنوان الإختبار</label>
                   <input
                     type="text"
                     id="title"
-                    value={testName}
-                    onChange={(e) => setTestName(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
+                <div className="btns">
+                  <button type="cancel" onClick={handleCancel}>
+                    إلغاء
+                  </button>
+                  <button type="submit">إضافة</button>
+                </div>
               </form>
-              <div className="btns">
-                <button>حذف</button>
-                <button onClick={() => handleCancel()}>إلغاء</button>
-              </div>
             </div>
           </div>{" "}
         </div>

@@ -26,7 +26,11 @@ import EditEssay from "./components/Dashboard/EditEssay";
 import AddEssay from "./components/Dashboard/AddEssay";
 import EditTest from "./components/Dashboard/EditTest";
 import AddTest from "./components/Dashboard/AddTest";
+<<<<<<< HEAD
 import Answers from "./components/Quiz/Answers/Answers";
+=======
+import ProtectedRoutes from "./components/ProtectedRoutes";
+>>>>>>> 5fe7723fda4c2296e86678147f64220b229c99e4
 
 function App() {
   const [first, setFirst] = useState(true);
@@ -41,6 +45,7 @@ function App() {
 				<Routes>
 					{/* Dashboard flow */}
 
+<<<<<<< HEAD
 					<Route element={<Layout />}>
 						<Route path="videos" element={<EditVideo />} />
 						<Route path="addVideo" element={<AddVideo />} />
@@ -69,6 +74,42 @@ function App() {
 					<Route path="/video/:id" element={<Video />} />
 					<Route path="/MoreLearning" element={<MoreLearning />} />
 					<Route path="/community" element={<Community />} />
+=======
+          <Route
+            element={
+              <ProtectedRoutes role="admin">
+                <Layout />
+              </ProtectedRoutes>
+            }
+          >
+            <Route path="videos" element={<EditVideo />} />
+            <Route path="addVideo" element={<AddVideo />} />
+            <Route path="essays" element={<EditEssay />} />
+            <Route path="addEssay" element={<AddEssay />} />
+            <Route path="tests" element={<EditTest />} />
+            <Route path="addTest" element={<AddTest />} />
+          </Route>
+          {/* Login - Signup flow */}
+
+          <Route
+            path="/"
+            element={<LogIn first={first} handleFirst={handleFirst} />}
+          />
+          <Route path="/13-18" element={<Teen />} />
+          <Route path="/age" element={<Age />} />
+          <Route path="/password" element={<Forgot />} />
+          <Route path="/reassign-password/:id" element={<Reassign />} />
+          <Route path="/parents" element={<Parents />} />
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/form" element={<FForm />} />
+
+          {/* Home flow */}
+          <Route path="/pageone" element={<PageOne />} />
+          <Route path="/course" element={<Course />} />
+          <Route path="/video/:id" element={<Video />} />
+          <Route path="/MoreLearning/:id" element={<MoreLearning />} />
+          <Route path="/community/:id" element={<Community />} />
+>>>>>>> 5fe7723fda4c2296e86678147f64220b229c99e4
 
 					{/* Quiz & settings flow */}
 					<Route path="/hello" element={<Hello />} />

@@ -1,13 +1,29 @@
 import { useState } from "react";
+import { useAuth } from "../../AuthContext";
+import { StoreVideo } from "./services/StoreVideo";
 
 function AddVideo() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
 
+  const { token } = useAuth();
+
+  const EmptyAll = () => {
+    setName("");
+    setDescription("");
+    setLink("");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await StoreVideo(token, link, name, description);
+    EmptyAll();
+  };
+
   return (
     <div className="AddAVideo">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">عنوان الفيديو</label>
           <input
@@ -38,11 +54,13 @@ function AddVideo() {
             placeholder="أضف رابط الفيديو"
           />
         </div>
+        <div className="btns">
+          <button type="cancel" onClick={() => EmptyAll()}>
+            إلغاء
+          </button>
+          <button type="submit">إضافة</button>
+        </div>
       </form>
-      <div className="btns">
-        <button>حذف</button>
-        <button>إلغاء</button>
-      </div>
     </div>
   );
 }
