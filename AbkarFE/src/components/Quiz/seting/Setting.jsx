@@ -1,64 +1,111 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useAuth } from "../../../AuthContext";
+import { useFormik } from "formik";
 import styles from "./Setting.module.css";
 import up from "../../../assets/bedo/Vector 1701g.svg";
 import arrow from "../../../assets/bedo/arrow_backg.svg";
 import eye from "../../../assets/bedo/mdi_eye-off-outline.svg";
 import delacc from "../../../assets/bedo/deleteicon.svg";
 import signout from "../../../assets/bedo/sign_out.svg";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { useAuth } from "../../../AuthContext";
-import { useFormik } from "formik";
 
-
-function Setting( ) {
+function Setting() {
 	let navigate = useNavigate();
 	function toHello() {
 		navigate("/hello");
 	}
 	let [eyee, setEyee] = useState("password");
 	function removeEye() {
-		if (eyee == "password") {
-			setEyee("text");
-		} else {
-			setEyee("password");
+		setEyee(eyee === "password" ? "text" : "password");
+	}
+
+	const { token } = useAuth();
+	let [userr, setUserr] = useState({});
+	let [isDataFetched, setIsDataFetched] = useState(false);
+
+	async function getUserInfo() {
+		try {
+			const response = await axios.get(
+				"http://127.0.0.1:8000/api/user/setting",
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
+			setUserr(response.data);
+			setIsDataFetched(true);
+		} catch (error) {
+			console.error("Error fetching user data:", error);
 		}
 	}
 
-	let { token } = useAuth();
-let [user, setUser] = useState([]);
-	async function updateUser() {
-		const user = await axios.get("http://127.0.0.1:8000/api/user/setting", {
+	useEffect(() => {
+		getUserInfo();
+	}, [token]);
+
+
+
+	async function updateUser(data) {
+		let user = await axios.post("http://127.0.0.1:8000/api/user/update", data, {
 			headers: {
 				Authorization: `Bearer ${token}`,
 			},
 		});
-		
-		setUser(user.data);
-		console.log(user.data);
-		
+		console.log(user);
+		if (user.status === 200) {
+			navigate("/pageone");
+		}
 	}
-	useEffect(() => {
-		updateUser();
-	}, []);
-	
+
+
+
+	const validate = (values) => {
+		const errors = {};
+		if (values.password !== values.repassword) {
+			errors.repassword = "كلمة المرور غير متطابقة";
+		}
+		return errors;
+	};
 
 	const userInfo = useFormik({
 		initialValues: {
-			age: "22",
-			email: "bedo@abo.kw",
-			father_name: user.father_name,
-			name: user.name,
+			age: "",
+			email: "",
+			father_name: "",
+			name: "",
 			phone: "",
+			password: "",
+			repassword: "",
 		},
+		validate,
 		onSubmit: (values) => {
-			if (!values.password) {
-				delete values.password;
+			const errors = validate(values);
+			if (Object.keys(errors).length > 0) {
+				if (errors.repassword) {
+					alert(errors.repassword);
+				}
+			} else {
+				console.log(values);
+				updateUser(values);
+				// Submit the form data here, for example:
+				// axios.post('your-api-endpoint', values);
 			}
-			console.log(values);
-			console.log(values);
 		},
 	});
+
+	useEffect(() => {
+		if (isDataFetched) {
+			userInfo.setValues({
+				age: userr.age || "",
+				email: userr.email || "",
+				father_name: userr.father_name || "",
+				name: userr.name || "",
+				phone: userr.phone || "",
+			});
+		}
+	}, [isDataFetched, userr]);
 
 	return (
 		<>
@@ -104,7 +151,7 @@ let [user, setUser] = useState([]);
 								className={styles.input}
 								id="2"
 								type="text"
-								name="name1"
+								name="father_name"
 								value={userInfo.values.father_name}
 								onChange={userInfo.handleChange}
 								required
@@ -147,9 +194,8 @@ let [user, setUser] = useState([]);
 								onClick={removeEye}
 								className={styles.eye}
 								src={eye}
-								alt="arrow-back"
+								alt="toggle visibility"
 							/>
-
 							<input
 								className={styles.input}
 								type={eyee}
@@ -157,15 +203,40 @@ let [user, setUser] = useState([]);
 								value={userInfo.values.password}
 								onChange={userInfo.handleChange}
 								id="5"
+								
 							/>
 						</div>
 						<div className={styles.info}>
 							<label className={styles.label} htmlFor="6">
+								تاكيد كلمة المرور
+							</label>
+							<img
+								onClick={removeEye}
+								className={styles.eye}
+								src={eye}
+								alt="toggle visibility"
+							/>
+							<input
+								className={styles.input}
+								type={eyee}
+								name="repassword"
+								value={userInfo.values.repassword}
+								onChange={userInfo.handleChange}
+								onBlur={userInfo.handleBlur}
+								id="6"
+								
+							/>
+							{userInfo.errors.repassword && userInfo.touched.repassword ? (
+								<div className={styles.error}>{userInfo.errors.repassword}</div>
+							) : null}
+						</div>
+						<div className={styles.info}>
+							<label className={styles.label} htmlFor="7">
 								رقم الهاتف
 							</label>
 							<input
 								className={styles.input}
-								id="6"
+								id="7"
 								type="tel"
 								maxLength={11}
 								name="phone"
@@ -174,7 +245,6 @@ let [user, setUser] = useState([]);
 								required
 							/>
 						</div>
-						{/* ---------------------------------------------------- */}
 						<div
 							className={`${styles.buttons} mt-3 text-center d-flex align-items-right justify-content-right`}
 						>
@@ -185,28 +255,30 @@ let [user, setUser] = useState([]);
 								</div>
 								<div>
 									<img className={styles.signout} src={signout} alt="signout" />
-  <p className={styles.caption}>تسجيل الخروج</p>
-                </div>
-              </div>
-              <div className={styles.btn1}>
-                <button className="btn main-btn text-center">
-                  <p className={styles.btext}>الغاء</p>
-                </button>
-              </div>
-              <div className={styles.btn2}>
-                <button type="submit" className="btn main-btn">
-                  <p className={styles.btext}>حفظ</p>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-        {/*--------------------------- Third ---------------------------*/}
-      </main>
-    </>
-  );
+									<p className={styles.caption}>تسجيل الخروج</p>
+								</div>
+							</div>
+							<div className={styles.btn1}>
+								<button
+									className="btn main-btn text-center"
+									type="button"
+									onClick={toHello}
+								>
+									<p className={styles.btext}>الغاء</p>
+								</button>
+							</div>
+							<div className={styles.btn2}>
+								<button type="submit" className="btn main-btn">
+									<p className={styles.btext}>حفظ</p>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				{/*--------------------------- Third ---------------------------*/}
+			</main>
+		</>
+	);
 }
+
 export default Setting;
-
-
-     
