@@ -16,7 +16,7 @@ const Result = () => {
 		navigate("/Answers");
 	}
 	function toExam() {
-		navigate("/Exam");
+		navigate("/Hello");
 	}
 	function toLevel() {
 		navigate("/Level");

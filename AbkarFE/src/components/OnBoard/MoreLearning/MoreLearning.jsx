@@ -17,7 +17,7 @@ const MoreLearning = () => {
     navigate("/Video/" + param.id);
   }
   function toCommunity() {
-    navigate("/community/"+param.id);
+    navigate("/community");
   }
   // function toSetting(){
   //     setSetting(`d-block ${style.setting}`)

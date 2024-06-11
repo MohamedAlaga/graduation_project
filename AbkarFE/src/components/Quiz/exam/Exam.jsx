@@ -40,27 +40,7 @@ const Exam = () => {
 	}, [token]);
 
 
-	// useEffect(() => {
-	// 	const fetchTestData = async () => {
-	// 		try {
-	// 			const testId = 1; // Replace this with your actual test ID variable
-	// 			const response = await fetch(
-	// 				`http://127.0.0.1:8000/api/tests/create/${testId}`,
-	// 				{
-	// 					headers: {
-	// 						Authorization: `Bearer ${token}`,
-	// 						// Replace the token above with your actual token
-	// 					},
-	// 				}
-	// 			);
-	// 			const data = await response.json();
-	// 			setTestData(data.data.test);
-	// 		} catch (error) {
-	// 			console.error("Error fetching test data:", error);
-	// 		}
-	// 	};
-	// 	fetchTestData();
-	// }, []);
+	
 
 	const answerss = useFormik({
 		initialValues: {

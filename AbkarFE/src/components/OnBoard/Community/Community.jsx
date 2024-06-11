@@ -1,18 +1,18 @@
 import style from "./Community.module.css";
 import headimage from "../../../assets/Vector 1702.png";
-import { useNavigate, useParams } from "react-router-dom";
-import { useAuth } from "../../../AuthContext";
+import { useNavigate} from "react-router-dom";
 
 const Community = () => {
   let navigate = useNavigate();
 
-  const { isLoggedIn, userType } = useAuth();
-  if (!isLoggedIn || userType != "user") navigate("/");
 
-  const param=useParams()
+
+  function JoinTheCommunity(){
+    window.location.href="https://discord.gg/e5JusfRw"
+  }
 
   function toMoreLearning() {
-    navigate("/MoreLearning/"+param.id);
+    navigate("/Course");
   }
   return (
     <>
@@ -84,6 +84,7 @@ const Community = () => {
             </div>
           </div>
           <button
+          onClick={JoinTheCommunity}
             className={`${style.CommunityBtn} d-block m-auto mb-5 mb-lg-0`}
           >
             الانضمام الي المجتمع
