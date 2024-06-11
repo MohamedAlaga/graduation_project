@@ -31,101 +31,94 @@ import ProtectedRoutes from "./components/ProtectedRoutes";
 import Certi from "./components/Quiz/certi/Certi";
 
 function App() {
-	const [userName, setUserName] = useState("");
-	const handleuserName = (userName) => {
-		setUserName(userName);
-	};
-	const [first, setFirst] = useState(true);
+  const [first, setFirst] = useState(true);
 
-	const handleFirst = () => {
-		setFirst(false);
-	};
+  const handleFirst = () => {
+    setFirst(false);
+  };
 
-	return (
-		<Router>
-			<div className="App">
-				<Routes>
-					{/* Dashboard flow */}
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Dashboard flow */}
 
-					<Route element={<Layout />}>
-						<Route path="videos" element={<EditVideo />} />
-						<Route path="addVideo" element={<AddVideo />} />
-						<Route path="essays" element={<EditEssay />} />
-						<Route path="addEssay" element={<AddEssay />} />
-						<Route path="tests" element={<EditTest />} />
-						<Route path="addTest" element={<AddTest />} />
-					</Route>
-					{/* Login - Signup flow */}
+          <Route element={<Layout />}>
+            <Route path="videos" element={<EditVideo />} />
+            <Route path="addVideo" element={<AddVideo />} />
+            <Route path="essays" element={<EditEssay />} />
+            <Route path="addEssay" element={<AddEssay />} />
+            <Route path="tests" element={<EditTest />} />
+            <Route path="addTest" element={<AddTest />} />
+          </Route>
+          {/* Login - Signup flow */}
 
-					<Route
-						path="/"
-						element={<LogIn first={first} handleFirst={handleFirst} />}
-					/>
-					<Route path="/13-18" element={<Teen />} />
-					<Route path="/age" element={<Age />} />
-					<Route path="/password" element={<Forgot />} />
-					<Route path="/reassign-password/:token" element={<Reassign />} />
-					<Route path="/parents" element={<Parents />} />
-					<Route path="/welcome" element={<Welcome />} />
-					<Route path="/form" element={<FForm />} />
+          <Route
+            path="/"
+            element={<LogIn first={first} handleFirst={handleFirst} />}
+          />
+          <Route path="/13-18" element={<Teen />} />
+          <Route path="/age" element={<Age />} />
+          <Route path="/password" element={<Forgot />} />
+          <Route path="/reassign-password/:token" element={<Reassign />} />
+          <Route path="/parents" element={<Parents />} />
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/form" element={<FForm />} />
 
-					{/* Home flow */}
-					<Route path="/pageone" element={<PageOne />} />
-					<Route path="/course" element={<Course />} />
-					<Route path="/video/:id" element={<Video />} />
-					<Route path="/MoreLearning" element={<MoreLearning />} />
-					<Route path="/community" element={<Community />} />
+          {/* Home flow */}
+          <Route path="/pageone" element={<PageOne />} />
+          <Route path="/course" element={<Course />} />
+          <Route path="/video/:id" element={<Video />} />
+          <Route path="/MoreLearning" element={<MoreLearning />} />
+          <Route path="/community" element={<Community />} />
 
-					<Route
-						element={
-							<ProtectedRoutes role="admin">
-								<Layout />
-							</ProtectedRoutes>
-						}
-					>
-						<Route path="videos" element={<EditVideo />} />
-						<Route path="addVideo" element={<AddVideo />} />
-						<Route path="essays" element={<EditEssay />} />
-						<Route path="addEssay" element={<AddEssay />} />
-						<Route path="tests" element={<EditTest />} />
-						<Route path="addTest" element={<AddTest />} />
-					</Route>
-					{/* Login - Signup flow */}
+          <Route
+            element={
+              <ProtectedRoutes role="admin">
+                <Layout />
+              </ProtectedRoutes>
+            }
+          >
+            <Route path="videos" element={<EditVideo />} />
+            <Route path="addVideo" element={<AddVideo />} />
+            <Route path="essays" element={<EditEssay />} />
+            <Route path="addEssay" element={<AddEssay />} />
+            <Route path="tests" element={<EditTest />} />
+            <Route path="addTest" element={<AddTest />} />
+          </Route>
+          {/* Login - Signup flow */}
 
-					<Route
-						path="/"
-						element={<LogIn first={first} handleFirst={handleFirst} />}
-					/>
-					<Route path="/13-18" element={<Teen />} />
-					<Route path="/age" element={<Age />} />
-					<Route path="/password" element={<Forgot />} />
-					<Route path="/reassign-password/:id" element={<Reassign />} />
-					<Route path="/parents" element={<Parents />} />
-					<Route path="/welcome" element={<Welcome />} />
-					<Route path="/form" element={<FForm />} />
+          <Route
+            path="/"
+            element={<LogIn first={first} handleFirst={handleFirst} />}
+          />
+          <Route path="/13-18" element={<Teen />} />
+          <Route path="/age" element={<Age />} />
+          <Route path="/password" element={<Forgot />} />
+          <Route path="/reassign-password/:id" element={<Reassign />} />
+          <Route path="/parents" element={<Parents />} />
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/form" element={<FForm />} />
 
-					{/* Home flow */}
-					<Route path="/pageone" element={<PageOne />} />
-					<Route path="/course" element={<Course />} />
-					<Route path="/video/:id" element={<Video />} />
-					<Route path="/MoreLearning/:id" element={<MoreLearning />} />
-					<Route path="/community" element={<Community />} />
+          {/* Home flow */}
+          <Route path="/pageone" element={<PageOne />} />
+          <Route path="/course" element={<Course />} />
+          <Route path="/video/:id" element={<Video />} />
+          <Route path="/MoreLearning/:id" element={<MoreLearning />} />
+          <Route path="/community" element={<Community />} />
 
-					{/* Quiz & settings flow */}
-					<Route path="/hello" element={<Hello />} />
-					<Route path="/Exam" element={<Exam />} />
-					<Route path="/Result/:percentage" element={<Result />} />
-					<Route
-						path="/Level"
-						element={<Level />}
-					/>
-					<Route path="/Setting" element={<Setting />} />
-					<Route path="/Answers" element={<Answers />} />
-					<Route path="/Certi/:name" element={<Certi/>} />
-				</Routes>
-			</div>
-		</Router>
-	);
+          {/* Quiz & settings flow */}
+          <Route path="/hello" element={<Hello />} />
+          <Route path="/Exam" element={<Exam />} />
+          <Route path="/Result/:percentage" element={<Result />} />
+          <Route path="/Level" element={<Level />} />
+          <Route path="/Setting" element={<Setting />} />
+          <Route path="/Answers" element={<Answers />} />
+          <Route path="/Certi/:name" element={<Certi />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

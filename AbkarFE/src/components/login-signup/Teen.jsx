@@ -1,8 +1,9 @@
 import Wrapper from "./reusable/Wrapper";
-import Green from "./reusable/Green";
 import glass from "../../assets/Hourglass done.svg";
+import { useNavigate } from "react-router-dom";
 
 function Teen() {
+  const navigate = useNavigate();
   return (
     <Wrapper height="630px">
       <div className="Teen">
@@ -43,7 +44,9 @@ function Teen() {
           <img src={glass} alt="glass" />
         </div>
         <p>سيتم إضافة قسم (18 - 13) في التحديث القادم</p>
-        <Green path="/age">رجوع</Green>
+        <button className="GreenBtn" onClick={() => navigate("/age")}>
+          رجوع
+        </button>
       </div>
     </Wrapper>
   );

@@ -1,7 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import Wrapper from "./reusable/Wrapper";
-import Green from "./reusable/Green";
 
 function Welcome() {
+  const navigate = useNavigate();
   return (
     <Wrapper height="670px">
       <div className="Welcome">
@@ -27,7 +28,9 @@ function Welcome() {
             المستوي الأول .
           </p>
         </div>
-        <Green path="/age">الـتـالــي</Green>
+        <button className="GreenBtn" onClick={() => navigate("/age")}>
+          الـتـالــي
+        </button>
       </div>
     </Wrapper>
   );

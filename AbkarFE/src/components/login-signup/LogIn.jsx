@@ -38,7 +38,7 @@ function LogIn({ first, handleFirst }) {
     const { isOK, data } = await LogInUser(mail, pass);
     if (isOK) {
       login(data.role, data.access_token);
-      if (data.role == "user") navigate("/pageone");
+      if (data.role == "user") navigate("/welcome");
       else if (data.role == "admin") navigate("/videos");
     } else {
       alert("بياناتك غير صحيحة");
