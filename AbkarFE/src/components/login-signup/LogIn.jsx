@@ -41,7 +41,7 @@ function LogIn({ first, handleFirst }) {
       if (data.role == "user") navigate("/pageone");
       else if (data.role == "admin") navigate("/videos");
     } else {
-      console.log("error");
+      alert("بياناتك غير صحيحة");
     }
   };
 
