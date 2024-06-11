@@ -16,7 +16,7 @@ const Answers = () => {
 	useEffect(() => {
 		const fetchTestData = async () => {
 			try {
-				const testId = 1; // Replace this with your actual test ID variable
+				let testId = 4; // Replace this with your actual test ID variable
 				const response = await fetch(
 					`http://127.0.0.1:8000/api/tests/create/${testId}`,
 					{
@@ -26,8 +26,9 @@ const Answers = () => {
 					}
 				);
 				const data = await response.json();
-				console.log("Fetched test data:", data);
+				// console.log("Fetched test data:", data);
 				setTestData(data.data.test);
+				console.log("testData", testData.questions);
 			} catch (error) {
 				console.error("Error fetching test data:", error);
 			}
@@ -39,7 +40,7 @@ const Answers = () => {
 	useEffect(() => {
 		const fetchUserAnswers = async () => {
 			try {
-				const testId = 1; // Replace this with your actual test ID variable
+				const testId = "4"; // Replace this with your actual test ID variable
 				const response = await fetch(
 					`http://127.0.0.1:8000/api/user-tests/${testId}/answers`,
 					{
@@ -49,8 +50,9 @@ const Answers = () => {
 					}
 				);
 				const data = await response.json();
-				console.log("Fetched user answers:", data);
+				// console.log("Fetched user answers:", data);
 				setUserAnswers(data?.data?.user_test_answers || []);
+				console.log("userAnswers", userAnswers);
 			} catch (error) {
 				console.error("Error fetching user answers:", error);
 			}
@@ -99,7 +101,9 @@ const Answers = () => {
 					<div className={`${styles.form_edit}`}>
 						{testData && (
 							<form className={styles.form}>
-								{testData.questions.slice(0, 10).map((question, index) => (
+								{testData?.questions.filter(question =>
+									userAnswers.some(answer => answer.question_id === question.id)
+								).map((question, index) => (
 									<div key={question.id} className={styles.qbox}>
 										<div className={styles.question}>
 											<p>{`${index + 1}- ${question.text}`}</p>
@@ -113,15 +117,13 @@ const Answers = () => {
 													<input
 														className={
 															answer.is_correct
-																? `${
-																		answer.is_correct
-																			? styles.correct
-																			: styles.correct
+																? `${answer.is_correct
+																	? styles.correct
+																	: styles.correct
 																}`
-																: `${
-																		answer.is_correct
-																			? styles.incorrect
-																			: styles.incorrect
+																: `${answer.is_correct
+																	? styles.incorrect
+																	: styles.incorrect
 																}`
 														}
 														id={`${question.id}-${answer.id}`}

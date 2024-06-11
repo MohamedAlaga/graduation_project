@@ -1,30 +1,31 @@
-// import  useRef  from "react";
 import styles from "./ceri.module.css";
 import certificate from "../../../assets/bedo/certificate.jpg";
 import html2canvas from "html2canvas";
 import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
-// eslint-disable-next-line react/prop-types
-function Certi({ userName }) {
-	// const certificateRef = useRef(null);
-	console.log(userName);
+function Certi() {
+	let param=useParams()
+	let navigate=useNavigate()
 	useEffect(() => {
 		handleScreenshot();
+		setTimeout(()=>{
+			navigate('/Level')
+		})
+
 	}, []);
+
 	async function handleScreenshot() {
 		try {
-			const element = document.body; // Use the ref to get the element
-			if (!element) {
-				console.error("Element not found!");
-				return;
-			}
+			const element = document.body;
+		
 			const canvas = await html2canvas(element, { useCORS: true });
-			const image = canvas.toDataURL("image/png");
+			const image = canvas.toDataURL("image/jpeg");
 
 			// Create a link to download the image
 			const link = document.createElement("a");
 			link.href = image;
-			link.download = "certificate.png"; // Name of the downloaded file
+			link.download = "certificate.jpeg"; // Name of the downloaded file
 			document.body.appendChild(link);
 			link.click();
 			document.body.removeChild(link);
@@ -36,18 +37,16 @@ function Certi({ userName }) {
 	return (
 		<>
 			<main className={`${styles.body}`}>
-				<div className={`${styles.certificate} my-3`}>
+				<div className={`${styles.certificate}`}>
 					<div
-						// ref={certificateRef}
-						id="certificateContainer"
-						className={`${styles.certificate_full} certificate_full`}
+						className={`${styles.certificate_full} `}
 					>
 						<img
-							className={styles.certificate_img}
+							className={`${styles.certificate_img}`}
 							src={certificate}
 							alt="Overlay"
 						/>
-						<p className={`${styles.certificate_text} `}>{userName}</p>
+						<p className={`${styles.certificate_text} `}>{param.name}</p>
 					</div>
 				</div>
 			</main>

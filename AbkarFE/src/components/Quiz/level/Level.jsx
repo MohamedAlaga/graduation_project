@@ -1,46 +1,19 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./Level.module.css";
 import up from "../../../assets/bedo/Vector 1701 (3.svg";
 import arrow from "../../../assets/bedo/arrow_back (1).svg";
 import rectanle from "../../../assets/bedo/Rectangle 10.svg";
 import certificate from "../../../assets/bedo/certificate.jpg";
 import { useNavigate } from "react-router-dom";
-import html2canvas from "html2canvas";
 import { useFormik } from "formik";
 import axios from "axios";
 import { useAuth } from "../../../AuthContext";
 
-// eslint-disable-next-line react/prop-types
-function Level({ handleuserName }) {
-	function tohandle(userName) {
-		navigate("/Certi");
-		handleuserName(userName);
-	}
-	let navigate = useNavigate();
+function Level() {
 	let [userNamee, setUserNamee] = useState("");
-	const certificateRef = useRef(null); // Create a ref
 
-	async function handleScreenshot() {
-		try {
-			const element = document.body; // Use the ref to get the element
-			if (!element) {
-				console.error("Element not found!");
-				return;
-			}
-			const canvas = await html2canvas(element, { useCORS: true });
-			const image = canvas.toDataURL("image/png");
-
-			// Create a link to download the image
-			const link = document.createElement("a");
-			link.href = image;
-			link.download = "certificate.png"; // Name of the downloaded file
-			document.body.appendChild(link);
-			link.click();
-			document.body.removeChild(link);
-		} catch (error) {
-			console.error("Error taking screenshot:", error);
-		}
-	}
+	console.log(userNamee);
+	let navigate = useNavigate();
 
 	function toCourse() {
 		navigate("/Course");
@@ -48,7 +21,6 @@ function Level({ handleuserName }) {
 	function toHello() {
 		navigate("/hello");
 	}
-
 	const { token } = useAuth();
 	const formik = useFormik({
 		initialValues: {
@@ -56,7 +28,7 @@ function Level({ handleuserName }) {
 		},
 		onSubmit: async (values) => {
 			try {
-				const response = await axios.post(
+				const { data } = await axios.post(
 					`http://127.0.0.1:8000/api/certificate`,
 					values,
 					{
@@ -66,12 +38,12 @@ function Level({ handleuserName }) {
 						},
 					}
 				);
-				console.log(response.data.data.name);
-				setUserNamee(response.data.data.name); // Assuming the API returns the name in response.data.name
-				tohandle(userNamee);
+				console.log(data.data.name);
+				setUserNamee(data.data.name); // Assuming the API returns the name in response.data.name
 
-				// Wait a moment to ensure the username is updated in the DOM
-				setTimeout(handleScreenshot, 1000);
+				setTimeout(() => {
+					navigate("/Certi/" + data.data.name);
+				}, 1000); // 1 seconds
 			} catch (error) {
 				console.error("Error Retrieving Names:", error);
 			}
@@ -110,8 +82,6 @@ function Level({ handleuserName }) {
 							alt="Landscape picture"
 						/>
 						<div
-							ref={certificateRef}
-							id="certificateContainer"
 							className={`${styles.certificate_full} certificate_full`}
 						>
 							<img

@@ -9,8 +9,7 @@ const Video = () => {
   // let [state, setState] = useState(false);
   let navigate = useNavigate();
 
-  const { isLoggedIn, userType, token } = useAuth();
-  if (!isLoggedIn || userType != "user") navigate("/");
+  const { token } = useAuth();
 
   function toCourse() {
     navigate("/Course");

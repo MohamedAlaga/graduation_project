@@ -60,45 +60,6 @@ const Course = () => {
 
 
   // this function to get all video
-
-  // async function getAllVideos() {
-  //   try {
-  //     const response = await axios.get(
-  //       "http://127.0.0.1:8000/api/courses/1/videos",
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     );
-
-  //     const videos = response.data.data;
-  //     console.log(videos[1].map(ele => ele.video_id));
-
-  //     if (videos && Array.isArray(videos) && videos.length > 0) {
-  //       setAllVideos(videos);
-  //       console.log(videos);
-
-
-  //       // Check if the second element exists before accessing it
-  //       // if (videos.length > 1) {
-  //       //   const secondVideo = videos[1];
-  //       //   console.log(videos[1].map(ele=>ele.video_id));
-  //       //   setWatch(videos[1])
-  //       // } else {
-  //       //   console.log("There is no second video in the response.");
-  //       // }
-  //     } else {
-  //       console.error("No videos found in the response data.");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error fetching videos:", error);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getAllVideos();
-  // }, []);
   async function getAllVideos() {
     let { data } = await axios.get(
       "http://127.0.0.1:8000/api/courses/1/videos",
@@ -109,6 +70,7 @@ const Course = () => {
       }
     );
     setAllVideos(data.data);
+    console.log(data.data);
   }
   useEffect(() => {
     getAllVideos();

@@ -5,16 +5,13 @@ import { useContext, useState } from "react";
 import { useFormik } from "formik";
 import { SettingContext } from "../../../../src/SettingContext";
 import { useAuth } from "../../../../src/AuthContext";
+import axios from "axios";
 
 const PageOne = () => {
   let [setting, setSetting] = useState(`d-none`);
   let navigate = useNavigate();
 
 
-
-  function toCourse() {
-    navigate("/Course");
-  }
   function toCommunity() {
     navigate("/community");
   }
@@ -54,6 +51,21 @@ const PageOne = () => {
     },
   });
   // is library => take values from form and handel errors and form refresh
+
+  async function userCourse(courseId){
+    let {data}= await axios.post(`http://127.0.0.1:8000/api/courses/${courseId}/enroll`,
+      courseId,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+    console.log(data);
+    if (data.success==true) {
+      navigate("/course")
+    }
+  }
 
   return (
     <>
@@ -196,7 +208,7 @@ const PageOne = () => {
             </div>
           </div>
           <div className="computerBtn d-flex justify-content-center mb-5 mb-lg-0">
-            <button onClick={toCourse} className={`${style.btn}  `}>
+            <button onClick={()=>userCourse(1)} className={`${style.btn}  `}>
               الـتـالــي
             </button>
           </div>

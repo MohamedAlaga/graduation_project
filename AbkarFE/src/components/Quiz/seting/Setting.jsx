@@ -103,7 +103,9 @@ function Setting() {
 				father_name: userr.father_name || "",
 				name: userr.name || "",
 				phone: userr.phone || "",
+				
 			});
+			
 		}
 	}, [isDataFetched, userr]);
 

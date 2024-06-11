@@ -8,17 +8,18 @@ import { useFormik } from "formik";
 import axios from "axios";
 
 const Exam = () => {
-
 	const { token } = useAuth();
 	const [testData, setTestData] = useState(null);
 	const navigate = useNavigate();
   function toHello() {
     navigate("/hello");
   }
+
+
 	useEffect(() => {
 		const fetchTestData = async () => {
 			try {
-				const testId = 1; // Replace this with your actual test ID variable
+				let testId = 4; // Replace this with your actual test ID variable
 				const response = await fetch(
 					`http://127.0.0.1:8000/api/tests/create/${testId}`,
 					{
@@ -39,30 +40,27 @@ const Exam = () => {
 	}, [token]);
 
 
-	useEffect(() => {
-		const fetchTestData = async () => {
-			try {
-				const testId = 1; // Replace this with your actual test ID variable
-				const response = await fetch(
-					`http://127.0.0.1:8000/api/tests/create/${testId}`,
-					{
-						headers: {
-							Authorization: `Bearer ${token}`,
-							// Replace the token above with your actual token
-						},
-					}
-				);
-				const data = await response.json();
-				console.log("Fetched test data:", data);
-				setTestData(data.data.test);
-			} catch (error) {
-				console.error("Error fetching test data:", error);
-			}
-		};
-
-
-		fetchTestData();
-	}, []);
+	// useEffect(() => {
+	// 	const fetchTestData = async () => {
+	// 		try {
+	// 			const testId = 1; // Replace this with your actual test ID variable
+	// 			const response = await fetch(
+	// 				`http://127.0.0.1:8000/api/tests/create/${testId}`,
+	// 				{
+	// 					headers: {
+	// 						Authorization: `Bearer ${token}`,
+	// 						// Replace the token above with your actual token
+	// 					},
+	// 				}
+	// 			);
+	// 			const data = await response.json();
+	// 			setTestData(data.data.test);
+	// 		} catch (error) {
+	// 			console.error("Error fetching test data:", error);
+	// 		}
+	// 	};
+	// 	fetchTestData();
+	// }, []);
 
 	const answerss = useFormik({
 		initialValues: {
@@ -71,7 +69,7 @@ const Exam = () => {
 		onSubmit: async (values) => {
 			try {
 				const response = await axios.post(
-					`http://127.0.0.1:8000/api/user-tests/1/answers`,
+					`http://127.0.0.1:8000/api/user-tests/4/answers`,
 					{ answers: values.answers },
 					{
 						headers: {

@@ -26,9 +26,7 @@ import EditEssay from "./components/Dashboard/EditEssay";
 import AddEssay from "./components/Dashboard/AddEssay";
 import EditTest from "./components/Dashboard/EditTest";
 import AddTest from "./components/Dashboard/AddTest";
-
 import Answers from "./components/Quiz/Answers/Answers";
-
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import Certi from "./components/Quiz/certi/Certi";
 
@@ -119,11 +117,11 @@ function App() {
 					<Route path="/Result/:percentage" element={<Result />} />
 					<Route
 						path="/Level"
-						element={<Level handleuserName={handleuserName} />}
+						element={<Level />}
 					/>
 					<Route path="/Setting" element={<Setting />} />
 					<Route path="/Answers" element={<Answers />} />
-					<Route path="/Certi" element={<Certi userName={userName} />} />
+					<Route path="/Certi/:name" element={<Certi/>} />
 				</Routes>
 			</div>
 		</Router>
