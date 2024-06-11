@@ -1,0 +1,39 @@
+.body {
+	background-color: transparent !important;
+}
+.certificate {
+	/* width: 234px;
+	height: 372px; */
+	/* transform: rotate(-90deg); */
+	flex-shrink: 0;
+	/* position: relative; */
+	z-index: 2;
+	width: fit-content; /* أو تحديد عرض محدد */
+	height: fit-content; /* أو تحديد ارتفاع محدد */
+}
+.certificate_img {
+	/* position: absolute; */
+	top: 13px;
+	left: 34px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+.certificate_text {
+	width: 220px;
+	height: 41.17px;
+	top: 401px;
+	left: 610px;
+	font-family: "Omnes Arabic Semi Bold";
+	font-size: 23px;
+	font-weight: 600;
+	line-height: 26px;
+	letter-spacing: -0.40799999237060547px;
+	text-align: center;
+	/* position: absolute; */
+	z-index: 3;
+	left: 50%;
+	top: 63%;
+	transform: translate(-50%, -50%);
+}

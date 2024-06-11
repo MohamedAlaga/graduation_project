@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./Level.module.css";
 import up from "../../../assets/bedo/Vector 1701 (3.svg";
 import arrow from "../../../assets/bedo/arrow_back (1).svg";
@@ -10,9 +10,14 @@ import { useFormik } from "formik";
 import axios from "axios";
 import { useAuth } from "../../../AuthContext";
 
-function Level() {
+// eslint-disable-next-line react/prop-types
+function Level({ handleuserName }) {
+	function tohandle(userName) {
+		navigate("/Certi");
+		handleuserName(userName);
+	}
 	let navigate = useNavigate();
-	let [userName, setUserName] = useState("");
+	let [userNamee, setUserNamee] = useState("");
 	const certificateRef = useRef(null); // Create a ref
 
 	async function handleScreenshot() {
@@ -62,7 +67,8 @@ function Level() {
 					}
 				);
 				console.log(response.data.data.name);
-				setUserName(response.data.data.name); // Assuming the API returns the name in response.data.name
+				setUserNamee(response.data.data.name); // Assuming the API returns the name in response.data.name
+				tohandle(userNamee);
 
 				// Wait a moment to ensure the username is updated in the DOM
 				setTimeout(handleScreenshot, 1000);
@@ -113,7 +119,7 @@ function Level() {
 								src={certificate}
 								alt="Overlay"
 							/>
-							<p className={`${styles.certificate_text} `}>{userName}</p>
+							<p className={`${styles.certificate_text} `}>{userNamee}</p>
 						</div>
 					</div>
 					<form onSubmit={formik.handleSubmit}>

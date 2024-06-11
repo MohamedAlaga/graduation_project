@@ -25,7 +25,7 @@ function AddTest() {
             {...register("title")}
           />
         </div>
-        {Array.from({ length: 2 }).map((_, index) => (
+        {Array.from({ length: 20 }).map((_, index) => (
           <Question key={index} num={index + 1} register={register} />
         ))}
         <div className="btns">
