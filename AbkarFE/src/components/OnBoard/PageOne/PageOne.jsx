@@ -1,5 +1,6 @@
 import style from "./PageOne.module.css";
 import headimage from "../../../assets/Vector 1702.png";
+import logo from "../../../assets/Logo/full logo 1.svg"
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { useFormik } from "formik";
@@ -120,7 +121,8 @@ const PageOne = () => {
               <p className={`${style.editIconP}`}>الاعدادات</p>
             </div>
             <div className="position-relative">
-              <p className={`${style.P3bkr}`}>عبقر</p>
+              <img src={logo} alt="abkar logo or photo" />
+              {/* <p className={`${style.P3bkr}`}>عبقر</p>
               <svg
                 className={`${style.editIcon3bkr}`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +138,7 @@ const PageOne = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-              </svg>
+              </svg> */}
             </div>
             <div
               onClick={toCommunity}

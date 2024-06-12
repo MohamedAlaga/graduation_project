@@ -13,7 +13,7 @@ import signout from "../../../assets/bedo/sign_out.svg";
 function Setting() {
 	let navigate = useNavigate();
 	function toHello() {
-		navigate("/hello");
+		navigate("/pageone");
 	}
 	let [eyee, setEyee] = useState("password");
 	function removeEye() {

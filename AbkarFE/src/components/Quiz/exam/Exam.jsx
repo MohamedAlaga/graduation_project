@@ -19,7 +19,7 @@ const Exam = () => {
 	useEffect(() => {
 		const fetchTestData = async () => {
 			try {
-				let testId = 4; // Replace this with your actual test ID variable
+				let testId = 1; // Replace this with your actual test ID variable
 				const response = await fetch(
 					`http://127.0.0.1:8000/api/tests/create/${testId}`,
 					{
@@ -49,7 +49,7 @@ const Exam = () => {
 		onSubmit: async (values) => {
 			try {
 				const response = await axios.post(
-					`http://127.0.0.1:8000/api/user-tests/4/answers`,
+					`http://127.0.0.1:8000/api/user-tests/1/answers`,
 					{ answers: values.answers },
 					{
 						headers: {
