@@ -7,11 +7,11 @@ const MoreLearning = () => {
   // let [setting,setSetting]=useState(`d-none`)
 
   let navigate = useNavigate();
-  const param=useParams()
+  const param = useParams();
   console.log(param.id);
 
-  const { isLoggedIn, userType } = useAuth();
-  if (!isLoggedIn || userType != "user") navigate("/");
+  const { isLoggedIn } = useAuth();
+  if (!isLoggedIn) navigate("/");
 
   function toVideo() {
     navigate("/Video/" + param.id);

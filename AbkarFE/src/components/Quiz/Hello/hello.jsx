@@ -4,9 +4,13 @@ import arrow from "../../../assets/bedo/arrow_back (1).svg";
 import vector from "../../../assets/bedo/Vector 27.svg";
 import nerd from "../../../assets/bedo/Nerd face.svg";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../AuthContext";
 
 const Hello = () => {
   let navigate = useNavigate();
+
+  let { isLoggedIn } = useAuth();
+  if (!isLoggedIn) navigate("/login");
 
   function toExam() {
     navigate("/Exam");
@@ -14,8 +18,7 @@ const Hello = () => {
   function toSetting() {
     navigate("/course");
   }
-  
-  
+
   return (
     <>
       <main className={styles.body}>
@@ -51,7 +54,7 @@ const Hello = () => {
           <div className={styles.content}>
             اختبار بسيط لمعلوماتك علي الكورس بالكامل من البداية الي النهاية
             <br />
-            مكون من ١٠  اسئله بسيطه
+            مكون من ١٠ اسئله بسيطه
             <br />
             يمكنك اعادة الاختبار اكثر من مره
             <br />

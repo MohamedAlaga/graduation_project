@@ -11,7 +11,9 @@ import { SettingContext } from "../../../../src/SettingContext";
 const Course = () => {
   let [setting, setSetting] = useState(`d-none`);
   let [allVideos, setAllVideos] = useState([]);
-  const { token } = useAuth();
+  const { token, isLoggedIn } = useAuth();
+
+  if (!isLoggedIn) navigate("/login");
 
   let navigate = useNavigate();
   function toCommunity() {
@@ -25,13 +27,10 @@ const Course = () => {
     setSetting(`d-none`);
   }
 
-
-
-
   // this function to call and contact settinContext to make user go to setting page
   let { goToSetting } = useContext(SettingContext);
-  // this function there in settingContext.jsx 
-  // i`m distract it to use it here 
+  // this function there in settingContext.jsx
+  // i`m distract it to use it here
 
   async function addPassword(password, token) {
     let { data } = await goToSetting(password, token).catch((err) => err.data);
@@ -56,9 +55,6 @@ const Course = () => {
   });
   // is library => take values from form and handel errors and form refresh
 
-
-
-
   // this function to get all video
   async function getAllVideos() {
     let { data } = await axios.get(
@@ -75,12 +71,6 @@ const Course = () => {
   useEffect(() => {
     getAllVideos();
   }, []);
-
-
-
-
-
-
 
   // this function to mark video is watch
   async function WatchedVideo(id) {
@@ -99,11 +89,6 @@ const Course = () => {
     console.log(data);
   }
 
-
-
-
-
-
   //  this function to get value of progress bar
   const [progressValue, setProgressValue] = useState();
   async function getPrgressValue() {
@@ -118,11 +103,6 @@ const Course = () => {
     getPrgressValue();
   }, []);
 
-
-
-
-
-
   return (
     <>
       <div className="layer">
@@ -134,17 +114,18 @@ const Course = () => {
             <div className={`${style.settingContent}`}>
               <form onSubmit={checkPassword.handleSubmit}>
                 <div className="form-group">
-                  <input className={`${style.settingPassword}`}
-                   type="password"
+                  <input
+                    className={`${style.settingPassword}`}
+                    type="password"
                     name="password"
                     value={checkPassword.values.password}
-                    onChange={checkPassword.handleChange} />
+                    onChange={checkPassword.handleChange}
+                  />
                 </div>
                 <button className={`${style.settingBtn}`}>
                   الدخول الي الاعدادات
                 </button>
               </form>
-
             </div>
           </div>
         </div>
@@ -236,18 +217,23 @@ const Course = () => {
             {allVideos[0]?.map((ele) => (
               <div key={ele.id} className="col-lg-4">
                 <div className={`${style.videocontent} rounded-5 mb-3`}>
-                  {allVideos[1]?.map(ele => ele.video_id).includes(ele.id-1)||ele.id==1 ?<Link  to={"/video/" + ele.id}>
+                  {allVideos[1]
+                    ?.map((ele) => ele.video_id)
+                    .includes(ele.id - 1) || ele.id == 1 ? (
+                    <Link to={"/video/" + ele.id}>
+                      <div className="p-3 d-flex justify-content-center position-relative">
+                        <iframe
+                          className={`${style.video} w-100`}
+                          src={ele.url}
+                        ></iframe>
+                        <div
+                          onClick={() => WatchedVideo(ele.id)}
+                          className=" position-absolute top-0 bottom-0 end-0 start-0  z-3 rounded-5"
+                        ></div>
+                      </div>
+                    </Link>
+                  ) : (
                     <div className="p-3 d-flex justify-content-center position-relative">
-                      <iframe
-                        className={`${style.video} w-100`}
-                        src={ele.url}
-                      ></iframe>
-                      <div
-                        onClick={() => WatchedVideo(ele.id)}
-                        className=" position-absolute top-0 bottom-0 end-0 start-0  z-3 rounded-5"
-                      ></div>
-                    </div>
-                  </Link>: <div className="p-3 d-flex justify-content-center position-relative">
                       <iframe
                         className={`${style.video} w-100`}
                         src={ele.url}
@@ -256,12 +242,16 @@ const Course = () => {
                         // onClick={() => WatchedVideo(ele.id)}
                         className=" position-absolute top-0 bottom-0 end-0 start-0  z-3 rounded-5"
                       ></div>
-                    </div>}
-                  
+                    </div>
+                  )}
 
                   <p className={`${style.videoParagraph} p-2`}> {ele.title} </p>
                   <div className={`${style.videoIcon}`}>
-                    {allVideos[1]?.map(ele => ele.video_id).includes(ele.id) ? <div className={`${style.videoLayer} videoLayer`}></div> : null}
+                    {allVideos[1]
+                      ?.map((ele) => ele.video_id)
+                      .includes(ele.id) ? (
+                      <div className={`${style.videoLayer} videoLayer`}></div>
+                    ) : null}
                     <p className={`${style.videoNumber}`}>{ele.id}</p>
                   </div>
                 </div>
@@ -275,25 +265,29 @@ const Course = () => {
             ))}
 
             <div className="col-lg-4">
-              {progressValue===100?<Link to={"/hello"} className=" text-decoration-none"><div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
-                <img height={248} className="w-100" src={emogi} alt="" />
-                <p className={`${style.iconParagraph} mt-3 `}>
-                  الاختبار النهائي
-                </p>
-                <div className={`${style.videoIcon}`}>
-                  <div className={`${style.videoLayer}`}></div>
+              {progressValue === 100 ? (
+                <Link to={"/hello"} className=" text-decoration-none">
+                  <div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
+                    <img height={248} className="w-100" src={emogi} alt="" />
+                    <p className={`${style.iconParagraph} mt-3 `}>
+                      الاختبار النهائي
+                    </p>
+                    <div className={`${style.videoIcon}`}>
+                      <div className={`${style.videoLayer}`}></div>
+                    </div>
+                  </div>
+                </Link>
+              ) : (
+                <div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
+                  <img height={248} className="w-100" src={emogi} alt="" />
+                  <p className={`${style.iconParagraph} mt-3 `}>
+                    الاختبار النهائي
+                  </p>
+                  <div className={`${style.videoIcon}`}>
+                    <div className={`${style.videoLayer}`}></div>
+                  </div>
                 </div>
-              </div></Link>:<div className={`${style.iconContent} rounded-5 mb-3 p-4`}>
-                <img height={248} className="w-100" src={emogi} alt="" />
-                <p className={`${style.iconParagraph} mt-3 `}>
-                  الاختبار النهائي
-                </p>
-                <div className={`${style.videoIcon}`}>
-                  <div className={`${style.videoLayer}`}></div>
-                </div>
-              </div>}
-              
-              
+              )}
             </div>
           </div>
         </div>
