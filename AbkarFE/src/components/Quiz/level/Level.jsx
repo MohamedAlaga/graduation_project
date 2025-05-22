@@ -9,8 +9,8 @@ function Level() {
 
   const { isLoggedIn, userType } = useAuth();
   if (!isLoggedIn || userType != "user") navigate("/");
-  function toResult() {
-    navigate("/Result");
+  function toCourse() {
+    navigate("/Course");
   }
   function toHello() {
     navigate("/hello");
@@ -27,7 +27,7 @@ function Level() {
             <p className={styles.title}>شهادةالمستوي</p>
 
             <img
-              onClick={toResult}
+              onClick={toCourse}
               className={styles.arr}
               src={arrow}
               alt="arrow-back"

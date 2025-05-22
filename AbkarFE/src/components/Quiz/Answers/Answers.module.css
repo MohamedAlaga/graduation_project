@@ -1,6 +1,7 @@
 .body {
 	background-color: #fffaed;
 }
+
 .header {
 	position: relative;
 	z-index: 1;
@@ -19,6 +20,7 @@
 	height: 215px;
 	top: -30px;
 }
+
 .title {
 	color: #ffffff;
 	text-align: center;
@@ -50,6 +52,7 @@
 		0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000, 0 0 var(--s) #000,
 		0 0 var(--s) #000, 0 0 var(--s) #000;
 }
+
 .arr {
 	z-index: 10;
 	position: absolute;
@@ -58,7 +61,8 @@
 	transform: translate(-50%, -50%);
 	cursor: pointer;
 }
-/* F-2  */
+
+/* F-2 */
 .form_edit {
 	padding-top: 200px;
 	display: flex;
@@ -66,12 +70,14 @@
 	margin-right: 400px;
 	/* margin-left: 400px; */
 }
+
 .form {
 	display: flex;
 	flex-direction: column;
 	/* justify-content: center; */
 	align-items: flex-end;
 }
+
 .qbox {
 	/* padding: 5px; */
 	/* text-align: center; */
@@ -83,6 +89,7 @@
 	transform: translate(-50%, -50%); */
 	width: 70%;
 }
+
 .qbox1 {
 	padding: 5px;
 	/* text-align: center; */
@@ -104,9 +111,11 @@
 	line-height: 26px; /* 108.333% */
 	letter-spacing: -0.408px;
 }
+
 .question p {
 	line-height: 32px;
 }
+
 .answer {
 	display: flex;
 	gap: 10px;
@@ -123,7 +132,9 @@
 	letter-spacing: -0.408px;
 	padding: 5px;
 }
-.label {
+
+.label,.correct,
+.incorrect {
 	appearance: none;
 	width: 24px;
 	height: 24px;
@@ -133,20 +144,39 @@
 	border: 3px solid #000;
 	background: #fffaed;
 }
+
+
 .label:checked {
-	background: #ffd200;
+	background: yellow;
 }
+
 .label:hover {
 	cursor: pointer;
 }
-.correct {
-    background-color: lightgreen;
+
+.correct:checked {
+	background-color: #1FCC7B;
 }
 
-.incorrect {
-    background-color: #ffcccc;
+.correctChecked {
+	background-color: lightgreen;
 }
 
+.incorrect:checked {
+	background-color: #FF5F84;
+}
+
+.incorrectChecked {
+	background-color: lightcoral;
+}
+
+.checked.correctChecked {
+	background: green;
+}
+
+.checked.incorrectChecked {
+	background: red;
+}
 
 .buttons {
 	gap: 40px;
@@ -155,17 +185,19 @@
 	justify-content: flex-end;
 	width: 70%;
 }
+
 .btn1 {
 	width: 112px;
 	height: 48px;
 	flex-shrink: 0;
 	border-radius: 14px;
 	border: 2px solid #000;
-	background: #00dcea;
+	background: #1fcc7b;
 
 	/* Main shadow */
 	box-shadow: 0px 4px 0px 0px #000;
 }
+
 .btn2 {
 	width: 112px;
 	height: 48px;
@@ -173,9 +205,10 @@
 	border-radius: 14px;
 	border: 2px solid #000;
 	background: #f9295a;
-	/*Mainshadow*/
+	/* Main shadow */
 	box-shadow: 0px 4px 0px 0px #000;
 }
+
 .btn_text {
 	/* width: 224px;
 	height: 22px; */
@@ -194,7 +227,8 @@
 	left: 10px;
 	padding-top: 5px;
 }
-/* ---------------------------------------------------------------------  */
+
+/* --------------------------------------------------------------------- */
 @media only screen and (max-width: 480px) {
 	.arr {
 		width: 36px;
@@ -202,28 +236,35 @@
 		left: 5%;
 		margin-right: 3px;
 	}
+
 	.content p {
 		font-size: 34px;
 	}
+
 	.certificate img {
 		width: 250px;
 		height: 200px;
 	}
+
 	.certificate p {
 		font-size: 34px;
 	}
+
 	.buttons {
 		gap: 20px;
 	}
 }
+
 @media only screen and (max-width: 300px) {
 	.arr {
 		margin-left: 10px;
 	}
+
 	.title {
 		font-size: 45px;
 	}
 }
+
 @media only screen and (max-width: 1200px) {
 	.form_edit {
 		padding-top: 200px;
@@ -235,6 +276,7 @@
 		margin-right: 0;
 		/* margin-left: 0; */
 	}
+
 	.form {
 		align-items: center;
 	}
