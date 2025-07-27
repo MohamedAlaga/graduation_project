@@ -9,14 +9,15 @@ const Video = () => {
   // let [state, setState] = useState(false);
   let navigate = useNavigate();
 
-  const { isLoggedIn, userType, token } = useAuth();
-  if (!isLoggedIn || userType != "user") navigate("/");
+  const { token, isLoggedIn } = useAuth();
+
+  if (!isLoggedIn) navigate("/login");
 
   function toCourse() {
     navigate("/Course");
   }
   function toMoreLearning(id) {
-    navigate("/MoreLearning/"+id);
+    navigate("/MoreLearning/" + id);
   }
   let params = useParams();
   let [video, setVideo] = useState({});
@@ -125,7 +126,10 @@ const Video = () => {
               </svg>
             </div>
             <div className="viedoBtn d-flex align-self-baseline my-5 me-4">
-              <button onClick={()=>toMoreLearning(params.id)} className={`${style.videoBtn1}`}>
+              <button
+                onClick={() => toMoreLearning(params.id)}
+                className={`${style.videoBtn1}`}
+              >
                 التالي
               </button>
               <button onClick={toCourse} className={`${style.videoBtn2}`}>

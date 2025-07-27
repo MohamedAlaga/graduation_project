@@ -8,17 +8,19 @@ import { useFormik } from "formik";
 import axios from "axios";
 
 const Exam = () => {
-
-	const { token } = useAuth();
+	const { token, isLoggedIn } = useAuth();
 	const [testData, setTestData] = useState(null);
 	const navigate = useNavigate();
-  function toHello() {
-    navigate("/hello");
-  }
+	function toHello() {
+		navigate("/hello");
+	}
+
+	if (!isLoggedIn) navigate("/login");
+
 	useEffect(() => {
 		const fetchTestData = async () => {
 			try {
-				const testId = 1; // Replace this with your actual test ID variable
+				let testId = 1; // Replace this with your actual test ID variable
 				const response = await fetch(
 					`http://127.0.0.1:8000/api/tests/create/${testId}`,
 					{
@@ -37,32 +39,6 @@ const Exam = () => {
 
 		fetchTestData();
 	}, [token]);
-
-
-	useEffect(() => {
-		const fetchTestData = async () => {
-			try {
-				const testId = 1; // Replace this with your actual test ID variable
-				const response = await fetch(
-					`http://127.0.0.1:8000/api/tests/create/${testId}`,
-					{
-						headers: {
-							Authorization: `Bearer ${token}`,
-							// Replace the token above with your actual token
-						},
-					}
-				);
-				const data = await response.json();
-				console.log("Fetched test data:", data);
-				setTestData(data.data.test);
-			} catch (error) {
-				console.error("Error fetching test data:", error);
-			}
-		};
-
-
-		fetchTestData();
-	}, []);
 
 	const answerss = useFormik({
 		initialValues: {
@@ -122,7 +98,7 @@ const Exam = () => {
 					<div className={`${styles.form_edit}`}>
 						{testData && (
 							<form onSubmit={answerss.handleSubmit} className={styles.form}>
-								{testData.questions.slice(0,10).map((question, index) => (
+								{testData.questions.slice(0, 10).map((question, index) => (
 									<div key={question.id} className={styles.qbox}>
 										<div className={styles.question}>
 											<p>{`${index + 1}- ${question.text}`}</p>
@@ -169,6 +145,6 @@ const Exam = () => {
 			</main>
 		</>
 	);
-}
+};
 
 export default Exam;

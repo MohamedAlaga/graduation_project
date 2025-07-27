@@ -30,7 +30,7 @@ function FForm() {
     if (result) {
       navigate("/");
     } else {
-      console.log("error signing up!!!");
+      alert("حدث خطأ ما");
     }
   };
 

@@ -1,20 +1,20 @@
 import style from "./PageOne.module.css";
 import headimage from "../../../assets/Vector 1702.png";
+import logo from "../../../assets/Logo/full logo 1.svg";
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { useFormik } from "formik";
 import { SettingContext } from "../../../../src/SettingContext";
 import { useAuth } from "../../../../src/AuthContext";
+import axios from "axios";
 
 const PageOne = () => {
   let [setting, setSetting] = useState(`d-none`);
   let navigate = useNavigate();
 
+  let { token, isLoggedIn } = useAuth();
+  if (!isLoggedIn) navigate("/login");
 
-
-  function toCourse() {
-    navigate("/Course");
-  }
   function toCommunity() {
     navigate("/community");
   }
@@ -26,9 +26,8 @@ const PageOne = () => {
   }
 
   let { goToSetting } = useContext(SettingContext);
-  // this function there in settingContext.jsx 
-  // i`m distract it to use it here 
-  const { token } = useAuth();
+  // this function there in settingContext.jsx
+  // i`m distract it to use it here
   // this from Auth context this is token that i will pass to api for authorization
   // i pass token a parameter to addPassword
 
@@ -43,7 +42,7 @@ const PageOne = () => {
     }
   }
   // this function take valus and call api with send values
-  // api is there in settingContext.jsx so this function send values and token as parameter 
+  // api is there in settingContext.jsx so this function send values and token as parameter
 
   const checkPassword = useFormik({
     initialValues: {
@@ -54,6 +53,22 @@ const PageOne = () => {
     },
   });
   // is library => take values from form and handel errors and form refresh
+
+  async function userCourse(courseId) {
+    let { data } = await axios.post(
+      `http://127.0.0.1:8000/api/courses/${courseId}/enroll`,
+      courseId,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    console.log(data);
+    if (data.success == true) {
+      navigate("/course");
+    }
+  }
 
   return (
     <>
@@ -108,7 +123,8 @@ const PageOne = () => {
               <p className={`${style.editIconP}`}>الاعدادات</p>
             </div>
             <div className="position-relative">
-              <p className={`${style.P3bkr}`}>عبقر</p>
+              <img src={logo} alt="abkar logo or photo" />
+              {/* <p className={`${style.P3bkr}`}>عبقر</p>
               <svg
                 className={`${style.editIcon3bkr}`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +140,7 @@ const PageOne = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-              </svg>
+              </svg> */}
             </div>
             <div
               onClick={toCommunity}
@@ -196,7 +212,7 @@ const PageOne = () => {
             </div>
           </div>
           <div className="computerBtn d-flex justify-content-center mb-5 mb-lg-0">
-            <button onClick={toCourse} className={`${style.btn}  `}>
+            <button onClick={() => userCourse(1)} className={`${style.btn}  `}>
               الـتـالــي
             </button>
           </div>

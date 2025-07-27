@@ -12,15 +12,18 @@ import signout from "../../../assets/bedo/sign_out.svg";
 
 function Setting() {
 	let navigate = useNavigate();
+
+	let { token, isLoggedIn } = useAuth();
+	if (!isLoggedIn) navigate("/login");
+
 	function toHello() {
-		navigate("/hello");
+		navigate("/pageone");
 	}
 	let [eyee, setEyee] = useState("password");
 	function removeEye() {
 		setEyee(eyee === "password" ? "text" : "password");
 	}
 
-	const { token } = useAuth();
 	let [userr, setUserr] = useState({});
 	let [isDataFetched, setIsDataFetched] = useState(false);
 
@@ -45,8 +48,6 @@ function Setting() {
 		getUserInfo();
 	}, [token]);
 
-
-
 	async function updateUser(data) {
 		let user = await axios.post("http://127.0.0.1:8000/api/user/update", data, {
 			headers: {
@@ -58,8 +59,6 @@ function Setting() {
 			navigate("/pageone");
 		}
 	}
-
-
 
 	const validate = (values) => {
 		const errors = {};
@@ -203,7 +202,6 @@ function Setting() {
 								value={userInfo.values.password}
 								onChange={userInfo.handleChange}
 								id="5"
-								
 							/>
 						</div>
 						<div className={styles.info}>
@@ -224,7 +222,6 @@ function Setting() {
 								onChange={userInfo.handleChange}
 								onBlur={userInfo.handleBlur}
 								id="6"
-								
 							/>
 							{userInfo.errors.repassword && userInfo.touched.repassword ? (
 								<div className={styles.error}>{userInfo.errors.repassword}</div>

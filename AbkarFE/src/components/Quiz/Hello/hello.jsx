@@ -9,8 +9,8 @@ import { useAuth } from "../../../AuthContext";
 const Hello = () => {
   let navigate = useNavigate();
 
-  const { isLoggedIn, userType } = useAuth();
-  if (!isLoggedIn || userType != "user") navigate("/");
+  let { isLoggedIn } = useAuth();
+  if (!isLoggedIn) navigate("/login");
 
   function toExam() {
     navigate("/Exam");
@@ -18,6 +18,7 @@ const Hello = () => {
   function toSetting() {
     navigate("/course");
   }
+
   return (
     <>
       <main className={styles.body}>
@@ -53,7 +54,7 @@ const Hello = () => {
           <div className={styles.content}>
             اختبار بسيط لمعلوماتك علي الكورس بالكامل من البداية الي النهاية
             <br />
-            مكون من 20 سؤال بسيط
+            مكون من ١٠ اسئله بسيطه
             <br />
             يمكنك اعادة الاختبار اكثر من مره
             <br />

@@ -1,8 +1,8 @@
 import Wrapper from "./reusable/Wrapper";
-import Green from "./reusable/Green";
-import Red from "./reusable/Red";
+import { useNavigate } from "react-router-dom";
 
 function Age() {
+  const navigate = useNavigate();
   return (
     <Wrapper height="460px">
       <div className="Age" style={{ paddingTop: "20px" }}>
@@ -42,8 +42,12 @@ function Age() {
           <p>كم عمرك</p>
         </div>
         <div className="Age__bottom">
-          <Green path="/pageone">6 - 12</Green>
-          <Red path="/13-18">13 - 18</Red>
+          <button className="GreenBtn" onClick={() => navigate("/pageone")}>
+            6 - 12
+          </button>
+          <button className="RedBtn" onClick={() => navigate("/13-18")}>
+            13 - 18
+          </button>
         </div>
       </div>
     </Wrapper>
